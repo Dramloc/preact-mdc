@@ -1,12 +1,20 @@
 import { h, Component } from 'preact';
 import { MDCIconToggle } from '@material/icon-toggle';
+import { strings } from '@material/icon-toggle/constants';
 import cx from 'bem-classnames';
 
 class IconToggle extends Component {
+	onChange = e => {
+		if (this.props.onChange) {
+			this.props.onChange(e);
+		}
+	};
 	componentDidMount() {
 		this.MDCComponent = new MDCIconToggle(this.__root);
+		this.MDCComponent.listen(strings.CHANGE_EVENT, this.onChange);
 	}
 	componentWillUnmount() {
+		this.MDCComponent.unlisten(strings.CHANGE_EVENT, this.onChange);
 		this.MDCComponent.destroy();
 	}
 	render({ className, children, ...props }) {
