@@ -2,12 +2,15 @@ import { h } from 'preact';
 import cx from 'bem-classnames';
 
 function Fab({ className, children, ...props }) {
+	const modifiers = ['mini', 'exited'];
 	const classes = {
 		name: 'mdc-fab',
-		modifiers: ['mini', 'exited']
+		modifiers
 	};
+	const combinedClassName = cx(classes, props, className);
+	modifiers.forEach(modifier => delete props[modifier]);
 	return (
-		<button className={cx(classes, props, className)} {...props}>
+		<button className={combinedClassName} {...props}>
 			{children}
 		</button>
 	);
