@@ -2,6 +2,7 @@ import { h } from 'preact';
 import { Router } from 'preact-router';
 
 import ButtonShowcase from '../routes/button';
+import CardShowcase from '../routes/card';
 import FabShowcase from '../routes/fab';
 import IconToggleShowcase from '../routes/icon-toggle';
 import RippleShowcase from '../routes/ripple';
@@ -23,6 +24,7 @@ export default function App() {
 			/>
 			<Router>
 				<ButtonShowcase path="/button" />
+				<CardShowcase path="/card" />
 				<FabShowcase path="/fab" />
 				<IconToggleShowcase path="/icon-toggle" />
 				<RippleShowcase path="/ripple" />
