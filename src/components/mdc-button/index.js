@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import cx from 'bem-classnames';
 
+import Icon from '../mdc-icon';
+
 function Button({ className, children, ...props }) {
 	const modifiers = ['raised', 'unelevated', 'outlined', 'dense'];
 	const classes = {
@@ -21,9 +23,9 @@ function ButtonIcon({ className, children, ...props }) {
 		name: 'mdc-button__icon'
 	};
 	return (
-		<i className={cx(classes, props, 'material-icons', className)} {...props}>
+		<Icon className={cx(classes, props, className)} {...props}>
 			{children}
-		</i>
+		</Icon>
 	);
 }
 

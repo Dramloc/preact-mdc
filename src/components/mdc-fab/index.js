@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import cx from 'bem-classnames';
 
+import Icon from '../mdc-icon';
+
 function Fab({ className, children, ...props }) {
 	const modifiers = ['mini', 'exited'];
 	const classes = {
@@ -21,9 +23,9 @@ function FabIcon({ className, children, ...props }) {
 		name: 'mdc-fab__icon'
 	};
 	return (
-		<i className={cx(classes, props, 'material-icons', className)} {...props}>
+		<Icon className={cx(classes, props, className)} {...props}>
 			{children}
-		</i>
+		</Icon>
 	);
 }
 

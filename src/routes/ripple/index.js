@@ -8,17 +8,10 @@ import {
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
+import Icon from '../../components/mdc-icon';
 
 function Box({ children, ...props }) {
 	return <div {...props}>{children}</div>;
-}
-
-function Icon({ className, children, ...props }) {
-	return (
-		<i className={cx(className, 'material-icons')} {...props}>
-			{children}
-		</i>
-	);
 }
 
 const RippledBox = withSurfaceRipple(Box);

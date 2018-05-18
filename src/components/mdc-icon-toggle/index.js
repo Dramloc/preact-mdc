@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { MDCIconToggle } from '@material/icon-toggle';
 import { strings } from '@material/icon-toggle/constants';
 import cx from 'bem-classnames';
+import Icon from '../mdc-icon';
 
 class IconToggle extends Component {
 	onChange = e => {
@@ -10,7 +11,7 @@ class IconToggle extends Component {
 		}
 	};
 	componentDidMount() {
-		this.MDCComponent = new MDCIconToggle(this.__root);
+		this.MDCComponent = new MDCIconToggle(this.__root.base);
 		this.MDCComponent.listen(strings.CHANGE_EVENT, this.onChange);
 	}
 	componentWillUnmount() {
@@ -28,14 +29,14 @@ class IconToggle extends Component {
 			name: 'mdc-icon-toggle'
 		};
 		return (
-			<i
+			<Icon
 				ref={ref => (this.__root = ref)}
-				className={cx(classes, props, 'material-icons', className)}
+				className={cx(classes, props, className)}
 				role="button"
 				{...props}
 			>
 				{children}
-			</i>
+			</Icon>
 		);
 	}
 }
