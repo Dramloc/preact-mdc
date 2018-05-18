@@ -1,0 +1,31 @@
+.ripple-demo-box {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 200px;
+  padding: 16px;
+
+  // FIXME: should use theming
+  &--primary {
+    color: #6200ee;
+    color: var(--mdc-theme-primary, #6200ee);
+  }
+
+  // FIXME: should use theming
+  &--secondary {
+    color: #018786;
+    color: var(--mdc-theme-secondary, #018786);
+  }
+}
+
+.ripple-demo-icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+}

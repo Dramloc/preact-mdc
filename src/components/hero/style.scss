@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 24px;
+  background-color: #f2f2f2;
+}

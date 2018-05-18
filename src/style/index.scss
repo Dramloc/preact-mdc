@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+@import "@material/button/mdc-button";
+@import "@material/ripple/mdc-ripple";
+@import "@material/typography/mdc-typography";
