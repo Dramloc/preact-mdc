@@ -2,22 +2,21 @@ import { h } from 'preact';
 
 import { withRipple } from '../../components/mdc-ripple';
 import Button from '../../components/mdc-button';
-import Hero from '../../components/hero';
-import Page from '../../components/page';
 
 import style from './style.scss';
+import Showcase from '../../components/showcase';
 
 const RippledButton = withRipple(Button);
 
 export default function ButtonRoute() {
 	return (
-		<Page className="mdc-typography">
-			<h1 class="mdc-typography--headline5">Button</h1>
-			<p class="mdc-typography--body1">
+		<Showcase>
+			<Showcase.Title>Button</Showcase.Title>
+			<Showcase.Description>
 				Buttons communicate an action a user can take. They are typically placed
 				throughout your UI, in places like dialogs, forms, cards, and toolbars.
-			</p>
-			<Hero>
+			</Showcase.Description>
+			<Showcase.Hero>
 				<RippledButton className={style['hero-button']}>Text</RippledButton>
 				<RippledButton className={style['hero-button']} raised>
 					Raised
@@ -28,10 +27,10 @@ export default function ButtonRoute() {
 				<RippledButton className={style['hero-button']} outlined>
 					Outlined
 				</RippledButton>
-			</Hero>
-			<h2 class="mdc-typography--headline6">Demos</h2>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Text Button</h3>
+			</Showcase.Hero>
+			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+			<Showcase.Section>
+				<Showcase.Section.Title>Text Button</Showcase.Section.Title>
 				<RippledButton className={style['demo-button']}>Default</RippledButton>
 				<RippledButton className={style['demo-button']} dense>
 					Dense
@@ -39,9 +38,9 @@ export default function ButtonRoute() {
 				<RippledButton className={style['demo-button']}>
 					<Button.Icon>favorite</Button.Icon>Icon
 				</RippledButton>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Raised Button</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
 				<RippledButton className={style['demo-button']} raised>
 					Default
 				</RippledButton>
@@ -51,9 +50,9 @@ export default function ButtonRoute() {
 				<RippledButton className={style['demo-button']} raised>
 					<Button.Icon>favorite</Button.Icon>Icon
 				</RippledButton>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Raised Button</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
 				<RippledButton className={style['demo-button']} unelevated>
 					Default
 				</RippledButton>
@@ -63,9 +62,9 @@ export default function ButtonRoute() {
 				<RippledButton className={style['demo-button']} unelevated>
 					<Button.Icon>favorite</Button.Icon>Icon
 				</RippledButton>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Outlined Button</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined Button</Showcase.Section.Title>
 				<RippledButton className={style['demo-button']} outlined>
 					Default
 				</RippledButton>
@@ -75,7 +74,7 @@ export default function ButtonRoute() {
 				<RippledButton className={style['demo-button']} outlined>
 					<Button.Icon>favorite</Button.Icon>Icon
 				</RippledButton>
-			</div>
-		</Page>
+			</Showcase.Section>
+		</Showcase>
 	);
 }

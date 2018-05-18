@@ -2,8 +2,7 @@ import { h } from 'preact';
 import cx from 'classnames';
 
 import { withRippleSurface } from '../../components/mdc-ripple';
-import Hero from '../../components/hero';
-import Page from '../../components/page';
+import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
@@ -24,35 +23,35 @@ const RippledIcon = withRippleSurface(Icon);
 
 export default function RippleRoute() {
 	return (
-		<Page className="mdc-typography">
-			<h1 class="mdc-typography--headline5">Ripple</h1>
-			<p class="mdc-typography--body1">
+		<Showcase>
+			<Showcase.Title>Ripple</Showcase.Title>
+			<Showcase.Description>
 				Ripples are visual representations used to communicate the status of a
 				component or interactive element.
-			</p>
-			<Hero>
+			</Showcase.Description>
+			<Showcase.Hero>
 				<RippledBox className={style['ripple-demo-box']}>
 					Click here!
 				</RippledBox>
-			</Hero>
-			<h2 class="mdc-typography--headline6">Demos</h2>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Bounded Ripple</h3>
+			</Showcase.Hero>
+			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+			<Showcase.Section>
+				<Showcase.Section.Title>Bounded Ripple</Showcase.Section.Title>
 				<RippledBox className={style['ripple-demo-box']}>
 					Interact with me!
 				</RippledBox>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Unbounded Ripple</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Unbounded Ripple</Showcase.Section.Title>
 				<RippledIcon
 					data-mdc-ripple-is-unbounded
 					className={style['ripple-demo-icon']}
 				>
 					favorite
 				</RippledIcon>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Theme Colors: Primary</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Theme Colors: Primary</Showcase.Section.Title>
 				<RippledBox
 					className={cx(
 						style['ripple-demo-box'],
@@ -62,9 +61,9 @@ export default function RippleRoute() {
 				>
 					Primary
 				</RippledBox>
-			</div>
-			<div>
-				<h3 className="mdc-typography--subtitle1">Theme Colors: Secondary</h3>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Theme Colors: Secondary</Showcase.Section.Title>
 				<RippledBox
 					className={cx(
 						style['ripple-demo-box'],
@@ -74,7 +73,7 @@ export default function RippleRoute() {
 				>
 					Secondary
 				</RippledBox>
-			</div>
-		</Page>
+			</Showcase.Section>
+		</Showcase>
 	);
 }
