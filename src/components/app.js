@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { Router } from 'preact-router';
 
+import ButtonRoute from '../routes/button';
 import RippleRoute from '../routes/ripple';
 
 if (module.hot) {
@@ -19,6 +20,7 @@ export default function App() {
 				rel="stylesheet"
 			/>
 			<Router>
+				<ButtonRoute path="/button" />
 				<RippleRoute path="/ripple" />
 			</Router>
 		</div>
