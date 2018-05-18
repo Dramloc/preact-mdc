@@ -1,7 +1,10 @@
 import { h } from 'preact';
 import cx from 'classnames';
 
-import { withRippleSurface } from '../../components/mdc-ripple';
+import {
+	withSurfaceRipple,
+	withUnboundedSurfaceRipple
+} from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -18,8 +21,8 @@ function Icon({ className, children, ...props }) {
 	);
 }
 
-const RippledBox = withRippleSurface(Box);
-const RippledIcon = withRippleSurface(Icon);
+const RippledBox = withSurfaceRipple(Box);
+const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
 export default function RippleShowcase() {
 	return (
@@ -43,10 +46,7 @@ export default function RippleShowcase() {
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Unbounded Ripple</Showcase.Section.Title>
-				<RippledIcon
-					data-mdc-ripple-is-unbounded
-					className={style['ripple-demo-icon']}
-				>
+				<RippledIcon className={style['ripple-demo-icon']}>
 					favorite
 				</RippledIcon>
 			</Showcase.Section>

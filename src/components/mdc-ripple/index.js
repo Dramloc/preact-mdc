@@ -22,15 +22,23 @@ export function withRipple(Element) {
 /**
  * Higher order component, initializes MDCRipple on element and add mdc-ripple-surface classes to element
  */
-export function withRippleSurface(Element) {
-	return function WithRippleSurface({ className, ...props }) {
+export function withSurfaceRipple(Element) {
+	return function WithSurfaceRipple({ className, ...props }) {
+		const modifiers = ['primary', 'accent'];
 		const classes = {
 			name: 'mdc-ripple-surface',
-			modifiers: ['primary', 'accent']
+			modifiers
 		};
+		const combinedClassName = cx(classes, props, className);
+		modifiers.forEach(modifier => delete props[modifier]);
 		const RippledElement = withRipple(Element);
-		return (
-			<RippledElement className={cx(classes, props, className)} {...props} />
-		);
+		return <RippledElement className={combinedClassName} {...props} />;
+	};
+}
+
+export function withUnboundedSurfaceRipple(Element) {
+	return function WithUnboundedSurfaceRipple(props) {
+		const RippledElement = withSurfaceRipple(Element);
+		return <RippledElement data-mdc-ripple-is-unbounded {...props} />;
 	};
 }
