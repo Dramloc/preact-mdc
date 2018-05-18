@@ -1,9 +1,9 @@
 import { h } from 'preact';
 import cx from 'classnames';
 
-import Page from '../../components/page';
-import Hero from '../../components/hero';
 import { withRippleSurface } from '../../components/mdc-ripple';
+import Hero from '../../components/hero';
+import Page from '../../components/page';
 
 import style from './style.scss';
 
