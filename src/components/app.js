@@ -1,9 +1,9 @@
 import { h } from 'preact';
 import { Router } from 'preact-router';
 
-import ButtonRoute from '../routes/button';
-import FabRoute from '../routes/fab';
-import RippleRoute from '../routes/ripple';
+import ButtonShowcase from '../routes/button';
+import FabShowcase from '../routes/fab';
+import RippleShowcase from '../routes/ripple';
 
 if (module.hot) {
 	require('preact/debug');
@@ -21,9 +21,9 @@ export default function App() {
 				rel="stylesheet"
 			/>
 			<Router>
-				<ButtonRoute path="/button" />
-				<FabRoute path="/fab" />
-				<RippleRoute path="/ripple" />
+				<ButtonShowcase path="/button" />
+				<FabShowcase path="/fab" />
+				<RippleShowcase path="/ripple" />
 			</Router>
 		</div>
 	);

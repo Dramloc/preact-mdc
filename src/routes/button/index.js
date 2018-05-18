@@ -8,7 +8,7 @@ import style from './style.scss';
 
 const RippledButton = withRipple(Button);
 
-export default function ButtonRoute() {
+export default function ButtonShowcase() {
 	return (
 		<Showcase>
 			<Showcase.Title>Button</Showcase.Title>

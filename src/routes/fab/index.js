@@ -6,7 +6,7 @@ import Showcase from '../../components/showcase';
 
 const RippledFab = withRipple(Fab);
 
-export default function FabRoute() {
+export default function FabShowcase() {
 	return (
 		<Showcase>
 			<Showcase.Title>Floating Action Button</Showcase.Title>

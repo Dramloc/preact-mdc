@@ -21,7 +21,7 @@ function Icon({ className, children, ...props }) {
 const RippledBox = withRippleSurface(Box);
 const RippledIcon = withRippleSurface(Icon);
 
-export default function RippleRoute() {
+export default function RippleShowcase() {
 	return (
 		<Showcase>
 			<Showcase.Title>Ripple</Showcase.Title>
