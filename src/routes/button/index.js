@@ -2,9 +2,9 @@ import { h } from 'preact';
 
 import { withRipple } from '../../components/mdc-ripple';
 import Button from '../../components/mdc-button';
+import Showcase from '../../components/showcase';
 
 import style from './style.scss';
-import Showcase from '../../components/showcase';
 
 const RippledButton = withRipple(Button);
 
