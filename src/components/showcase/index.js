@@ -42,11 +42,28 @@ function ShowcaseSection({ children }) {
 }
 
 function ShowcaseSectionTitle({ children }) {
-	return <h3 className="mdc-typography--subtitle1">{children}</h3>;
+	return (
+		<h3
+			className={cx(
+				style['showcase__section-title'],
+				'mdc-typography--subtitle1'
+			)}
+		>
+			{children}
+		</h3>
+	);
 }
 
 function ShowcaseSectionSubtitle({ children }) {
 	return <h4 className="mdc-typography--body2">{children}</h4>;
+}
+
+function ShowcaseFrame({ children }) {
+	return (
+		<main className={cx(style['showcase-frame'], 'mdc-typography')}>
+			{children}
+		</main>
+	);
 }
 
 Showcase.Hero = ShowcaseHero;
@@ -56,5 +73,6 @@ Showcase.Subtitle = ShowcaseSubtitle;
 Showcase.Section = ShowcaseSection;
 Showcase.Section.Title = ShowcaseSectionTitle;
 Showcase.Section.Subtitle = ShowcaseSectionSubtitle;
+Showcase.Frame = ShowcaseFrame;
 
 export default Showcase;

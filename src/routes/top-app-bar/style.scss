@@ -1,0 +1,25 @@
+.hero-top-app-bar {
+  height: 64px;
+  width: 80%;
+  min-width: 300px;
+}
+
+.hero-top-app-bar > header {
+  position: relative;
+}
+
+.top-app-bar-frame {
+  width: 100%;
+  height: 200px;
+}
+
+.top-app-bar-frame-link {
+  color: inherit;
+  font-size: inherit;
+
+  & > i {
+    width: 24px;
+    height: 24px;
+    padding: 12px;
+  }
+}

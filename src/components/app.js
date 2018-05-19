@@ -10,6 +10,8 @@ import FabShowcase from '../routes/fab';
 import IconToggleShowcase from '../routes/icon-toggle';
 import ListShowcase from '../routes/list';
 import RippleShowcase from '../routes/ripple';
+import TopAppBarFrame from '../routes/top-app-bar-frame';
+import TopAppBarShowcase from '../routes/top-app-bar';
 
 if (module.hot) {
 	require('preact/debug');
@@ -41,6 +43,8 @@ export default function App() {
 				<IconToggleShowcase path="/icon-toggle" />
 				<ListShowcase path="/list" />
 				<RippleShowcase path="/ripple" />
+				<TopAppBarShowcase path="/top-app-bar" />
+				<TopAppBarFrame path="/top-app-bar/frame" />
 			</Router>
 		</div>
 	);
