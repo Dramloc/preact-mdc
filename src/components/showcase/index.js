@@ -8,7 +8,9 @@ import style from './style.scss';
 
 function Showcase({ children }) {
 	return (
-		<main className={cx(style.showcase, 'mdc-typography')}>{children}</main>
+		<article className={cx(style.showcase, 'mdc-typography')}>
+			{children}
+		</article>
 	);
 }
 
