@@ -2,6 +2,8 @@ import { h, Component } from 'preact';
 import { MDCIconToggle } from '@material/icon-toggle';
 import { strings } from '@material/icon-toggle/constants';
 
+import '@material/icon-toggle/mdc-icon-toggle.scss';
+
 import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 
