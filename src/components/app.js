@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import ButtonShowcase from '../routes/button';
 import CardShowcase from '../routes/card';
 import ChipsShowcase from '../routes/chips';
+import DialogShowcase from '../routes/dialog';
 import FabShowcase from '../routes/fab';
 import IconToggleShowcase from '../routes/icon-toggle';
 import RippleShowcase from '../routes/ripple';
@@ -27,6 +28,7 @@ export default function App() {
 				<ButtonShowcase path="/button" />
 				<CardShowcase path="/card" />
 				<ChipsShowcase path="/chips" />
+				<DialogShowcase path="/dialog" />
 				<FabShowcase path="/fab" />
 				<IconToggleShowcase path="/icon-toggle" />
 				<RippleShowcase path="/ripple" />
