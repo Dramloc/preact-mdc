@@ -17,25 +17,27 @@ export default function ButtonShowcase() {
 				throughout your UI, in places like dialogs, forms, cards, and toolbars.
 			</Showcase.Description>
 			<Showcase.Hero>
-				<RippledButton className={style['hero-button']}>Text</RippledButton>
-				<RippledButton
-					className={style['hero-button']}
-					modifiers={{ raised: true }}
-				>
-					Raised
-				</RippledButton>
-				<RippledButton
-					className={style['hero-button']}
-					modifiers={{ unelevated: true }}
-				>
-					Unelevated
-				</RippledButton>
-				<RippledButton
-					className={style['hero-button']}
-					modifiers={{ outlined: true }}
-				>
-					Outlined
-				</RippledButton>
+				<div>
+					<RippledButton className={style['hero-button']}>Text</RippledButton>
+					<RippledButton
+						className={style['hero-button']}
+						modifiers={{ raised: true }}
+					>
+						Raised
+					</RippledButton>
+					<RippledButton
+						className={style['hero-button']}
+						modifiers={{ unelevated: true }}
+					>
+						Unelevated
+					</RippledButton>
+					<RippledButton
+						className={style['hero-button']}
+						modifiers={{ outlined: true }}
+					>
+						Outlined
+					</RippledButton>
+				</div>
 			</Showcase.Hero>
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>

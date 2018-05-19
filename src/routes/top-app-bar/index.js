@@ -23,7 +23,7 @@ export default function TopAppBarShowcase() {
 			</Showcase.Description>
 			<Showcase.Hero>
 				<div className={style['hero-top-app-bar']}>
-					<TopAppBar>
+					<TopAppBar modifiers={{ fixed: true }}>
 						<TopAppBar.Row>
 							<TopAppBar.Section modifiers={{ 'align-start': true }}>
 								<RippledNavigationIcon>menu</RippledNavigationIcon>
