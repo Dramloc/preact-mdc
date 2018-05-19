@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { Router } from 'preact-router';
+import Helmet from 'preact-helmet';
 
 import ButtonShowcase from '../routes/button';
 import CardShowcase from '../routes/card';
@@ -16,13 +17,19 @@ if (module.hot) {
 export default function App() {
 	return (
 		<div id="app">
-			<link
-				href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-				rel="stylesheet"
-			/>
-			<link
-				href="https://fonts.googleapis.com/icon?family=Material+Icons"
-				rel="stylesheet"
+			<Helmet
+				defaultTitle="Preact Material Components for the Web"
+				titleTemplate="%s - Preact Material Components for the Web"
+				link={[
+					{
+						href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500',
+						rel: 'stylesheet'
+					},
+					{
+						href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+						rel: 'stylesheet'
+					}
+				]}
 			/>
 			<Router>
 				<ButtonShowcase path="/button" />

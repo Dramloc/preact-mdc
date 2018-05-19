@@ -1,5 +1,8 @@
 import { h } from 'preact';
 import cx from 'classnames';
+import Helmet from 'preact-helmet';
+
+import '@material/typography/mdc-typography.scss';
 
 import style from './style.scss';
 
@@ -10,7 +13,12 @@ function Showcase({ children }) {
 }
 
 function ShowcaseTitle({ children }) {
-	return <h1 className="mdc-typography--headline5">{children}</h1>;
+	return (
+		<h1 className="mdc-typography--headline5">
+			<Helmet title={children} />
+			{children}
+		</h1>
+	);
 }
 
 function ShowcaseDescription({ children }) {
