@@ -3,7 +3,7 @@ import { MDCRipple } from '@material/ripple';
 import cx from 'bem-classnames';
 
 /**
- * Higher order component, initializes MDCRipple on element
+ * Initializes MDCRipple on element
  */
 export function withRipple(Element) {
 	return class WithRipple extends Component {
@@ -13,29 +13,36 @@ export function withRipple(Element) {
 		componentWillUnmount() {
 			this.MDCComponent.destroy();
 		}
-		render({ ...props }) {
+		render(props) {
 			return <Element ref={ref => (this.__root = ref)} {...props} />;
 		}
 	};
 }
 
 /**
- * Higher order component, initializes MDCRipple on element and add mdc-ripple-surface classes to element
+ * Initializes MDCRipple on element and add mdc-ripple-surface classes
  */
 export function withSurfaceRipple(Element) {
 	return function WithSurfaceRipple({ className, ...props }) {
-		const modifiers = ['primary', 'accent'];
 		const classes = {
 			name: 'mdc-ripple-surface',
-			modifiers
+			modifiers: ['primary', 'accent']
 		};
-		const combinedClassName = cx(classes, props, className);
-		modifiers.forEach(modifier => delete props[modifier]);
 		const RippledElement = withRipple(Element);
-		return <RippledElement className={combinedClassName} {...props} />;
+		return (
+			<RippledElement
+				className={cx(classes, props.modifiers, className)}
+				{...props}
+			/>
+		);
 	};
 }
 
+/**
+ * Initializes MDCRipple on element,
+ * add mdc-ripple-surface classes
+ * and data-mdc-ripple-is-unbounded attribute
+ */
 export function withUnboundedSurfaceRipple(Element) {
 	return function WithUnboundedSurfaceRipple(props) {
 		const RippledElement = withSurfaceRipple(Element);

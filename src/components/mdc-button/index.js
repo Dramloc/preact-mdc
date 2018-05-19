@@ -1,31 +1,30 @@
 import { h } from 'preact';
-import cx from 'bem-classnames';
 
+import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 
-function Button({ className, children, ...props }) {
-	const modifiers = ['raised', 'unelevated', 'outlined', 'dense'];
-	const classes = {
-		name: 'mdc-button',
-		modifiers
-	};
-	const combinedClassName = cx(classes, props, className);
-	modifiers.forEach(modifier => delete props[modifier]);
+function Button(props) {
 	return (
-		<button className={combinedClassName} {...props}>
-			{children}
-		</button>
+		<Base
+			element="button"
+			classes={{
+				name: 'mdc-button',
+				modifiers: ['raised', 'unelevated', 'outlined', 'dense']
+			}}
+			{...props}
+		/>
 	);
 }
 
-function ButtonIcon({ className, children, ...props }) {
-	const classes = {
-		name: 'mdc-button__icon'
-	};
+function ButtonIcon(props) {
 	return (
-		<Icon className={cx(classes, props, className)} {...props}>
-			{children}
-		</Icon>
+		<Base
+			element={Icon}
+			classes={{
+				name: 'mdc-button__icon'
+			}}
+			{...props}
+		/>
 	);
 }
 

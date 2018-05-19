@@ -33,7 +33,7 @@ export default function FabShowcase() {
 				<Showcase.Section.Title>
 					Mini Floating Action Button
 				</Showcase.Section.Title>
-				<RippledFab mini aria-label="Favorite">
+				<RippledFab modifiers={{ mini: true }} aria-label="Favorite">
 					<Fab.Icon>favorite_outline</Fab.Icon>
 				</RippledFab>
 			</Showcase.Section>

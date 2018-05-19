@@ -1,108 +1,109 @@
 import { h } from 'preact';
 import cx from 'bem-classnames';
 
-function Card({ className, children, ...props }) {
-	const modifiers = ['outlined'];
-	const classes = {
-		name: 'mdc-card',
-		modifiers
-	};
-	const combinedClassName = cx(classes, props, className);
-	modifiers.forEach(modifier => delete props[modifier]);
+import Base from '../mdc-base';
+
+function Card(props) {
 	return (
-		<div className={combinedClassName} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card',
+				modifiers: ['outlined']
+			}}
+			{...props}
+		/>
 	);
 }
 
-function CardPrimaryAction({ className, children, ...props }) {
-	const classes = {
-		name: 'mdc-card__primary-action'
-	};
+function CardPrimaryAction(props) {
 	return (
-		<div className={cx(classes, props, className)} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__primary-action'
+			}}
+			tabindex="0"
+			{...props}
+		/>
 	);
 }
 
-function CardMedia({ className, children, ...props }) {
-	const modifiers = ['square', '16-9'];
-	const classes = {
-		name: 'mdc-card__media',
-		modifiers
-	};
-	const combinedClassName = cx(classes, props, className);
-	modifiers.forEach(modifier => delete props[modifier]);
+function CardMedia(props) {
 	return (
-		<div className={combinedClassName} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__media',
+				modifiers: ['square', '16-9']
+			}}
+			{...props}
+		/>
 	);
 }
 
-function CardMediaContent({ className, children, ...props }) {
-	const classes = {
-		name: 'mdc-card__media-content'
-	};
+function CardMediaContent(props) {
 	return (
-		<div className={cx(classes, props, className)} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__media-content'
+			}}
+			{...props}
+		/>
 	);
 }
 
-function CardActions({ className, children, ...props }) {
-	const modifiers = ['full-bleed'];
-	const classes = {
-		name: 'mdc-card__actions',
-		modifiers
-	};
-	const combinedClassName = cx(classes, props, className);
-	modifiers.forEach(modifier => delete props[modifier]);
+function CardActions(props) {
 	return (
-		<div className={combinedClassName} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__actions',
+				modifiers: ['full-bleed']
+			}}
+			{...props}
+		/>
 	);
 }
 
-function CardActionButtons({ className, children, ...props }) {
-	const classes = {
-		name: 'mdc-card__action-buttons'
-	};
+function CardActionButtons(props) {
 	return (
-		<div className={cx(classes, props, className)} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__action-buttons'
+			}}
+			{...props}
+		/>
 	);
 }
 
-function CardActionIcons({ className, children, ...props }) {
-	const classes = {
-		name: 'mdc-card__action-icons'
-	};
+function CardActionIcons(props) {
 	return (
-		<div className={cx(classes, props, className)} {...props}>
-			{children}
-		</div>
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-card__action-icons'
+			}}
+			{...props}
+		/>
 	);
 }
 
 function withAction(Element) {
-	return function WithAction({ className, children, ...props }) {
-		const modifiers = ['button', 'icon'];
+	return function WithAction({ className, ...props }) {
 		const classes = {
 			name: 'mdc-card__action',
-			modifiers
+			modifiers: ['button', 'icon']
 		};
-		const combinedClassName = cx(classes, props, className);
-		modifiers.forEach(modifier => delete props[modifier]);
 		return (
-			<Element className={combinedClassName} {...props}>
-				{children}
-			</Element>
+			<Element
+				className={cx(classes, props.modifiers, className)}
+				role="button"
+				tabindex="0"
+				{...props}
+			/>
 		);
 	};
 }

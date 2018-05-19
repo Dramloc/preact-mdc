@@ -28,10 +28,10 @@ export default function CardShowcase() {
 			</Showcase.Description>
 			<Showcase.Hero>
 				<Card className={cx(style['demo-card'], style['demo-card--hero'])}>
-					<RippledPrimaryAction tabindex="0">
+					<RippledPrimaryAction>
 						<Card.Media
 							className={style['demo-card__media']}
-							{...{ '16-9': true }}
+							modifiers={{ '16-9': true }}
 						/>
 						<div className={style['demo-card__primary']}>
 							<h2
@@ -63,13 +63,12 @@ export default function CardShowcase() {
 					</RippledPrimaryAction>
 					<Card.Actions>
 						<Card.ActionButtons>
-							<ActionButton button>Read</ActionButton>
-							<ActionButton button>Bookmark</ActionButton>
+							<ActionButton modifiers={{ button: true }}>Read</ActionButton>
+							<ActionButton modifiers={{ button: true }}>Bookmark</ActionButton>
 						</Card.ActionButtons>
 						<Card.ActionIcons>
 							<ActionIconToggle
-								icon
-								tabindex="0"
+								modifiers={{ icon: true }}
 								data-toggle-on={{
 									content: 'favorite',
 									label: 'Remove from favorites'
@@ -79,10 +78,10 @@ export default function CardShowcase() {
 									label: 'Add to favorites'
 								}}
 							/>
-							<ActionIcon icon title="Share" tabindex="0" role="button">
+							<ActionIcon modifiers={{ icon: true }} title="Share">
 								share
 							</ActionIcon>
-							<ActionIcon icon title="More options" tabindex="0" role="button">
+							<ActionIcon modifiers={{ icon: true }} title="More options">
 								more_vert
 							</ActionIcon>
 						</Card.ActionIcons>
@@ -92,10 +91,10 @@ export default function CardShowcase() {
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Card className={style['demo-card']}>
-					<RippledPrimaryAction tabindex="0">
+					<RippledPrimaryAction>
 						<Card.Media
 							className={style['demo-card__media']}
-							{...{ '16-9': true }}
+							modifiers={{ '16-9': true }}
 						/>
 						<div className={style['demo-card__primary']}>
 							<h2
@@ -129,7 +128,7 @@ export default function CardShowcase() {
 			</Showcase.Section>
 			<Showcase.Section>
 				<Card className={style['demo-card']}>
-					<RippledPrimaryAction tabindex="0">
+					<RippledPrimaryAction>
 						<div className={style['demo-card__primary']}>
 							<h2
 								className={cx(
@@ -160,13 +159,12 @@ export default function CardShowcase() {
 					</RippledPrimaryAction>
 					<Card.Actions>
 						<Card.ActionButtons>
-							<ActionButton button>Read</ActionButton>
-							<ActionButton button>Bookmark</ActionButton>
+							<ActionButton modifiers={{ button: true }}>Read</ActionButton>
+							<ActionButton modifiers={{ button: true }}>Bookmark</ActionButton>
 						</Card.ActionButtons>
 						<Card.ActionIcons>
 							<ActionIconToggle
-								icon
-								tabindex="0"
+								modifiers={{ icon: true }}
 								data-toggle-on={{
 									content: 'favorite',
 									label: 'Remove from favorites'
@@ -176,22 +174,10 @@ export default function CardShowcase() {
 									label: 'Add to favorites'
 								}}
 							/>
-							<ActionIcon
-								icon
-								title="Share"
-								tabindex="0"
-								role="button"
-								data-mdc-ripple-is-unbounded
-							>
+							<ActionIcon modifiers={{ icon: true }} title="Share">
 								share
 							</ActionIcon>
-							<ActionIcon
-								icon
-								title="More options"
-								tabindex="0"
-								role="button"
-								data-mdc-ripple-is-unbounded
-							>
+							<ActionIcon modifiers={{ icon: true }} title="More options">
 								more_vert
 							</ActionIcon>
 						</Card.ActionIcons>

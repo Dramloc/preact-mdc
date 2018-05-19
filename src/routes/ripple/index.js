@@ -10,8 +10,8 @@ import Showcase from '../../components/showcase';
 import style from './style.scss';
 import Icon from '../../components/mdc-icon';
 
-function Box({ children, ...props }) {
-	return <div {...props}>{children}</div>;
+function Box(props) {
+	return <div {...props} />;
 }
 
 const RippledBox = withSurfaceRipple(Box);
@@ -50,7 +50,7 @@ export default function RippleShowcase() {
 						style['ripple-demo-box'],
 						style['ripple-demo-box--primary']
 					)}
-					primary
+					modifiers={{ primary: true }}
 				>
 					Primary
 				</RippledBox>
@@ -62,7 +62,7 @@ export default function RippleShowcase() {
 						style['ripple-demo-box'],
 						style['ripple-demo-box--secondary']
 					)}
-					accent
+					modifiers={{ accent: true }}
 				>
 					Secondary
 				</RippledBox>

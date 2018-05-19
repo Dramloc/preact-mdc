@@ -17,7 +17,6 @@ export default function IconToggleShowcase() {
 			</Showcase.Description>
 			<Showcase.Hero>
 				<IconToggle
-					tabindex="0"
 					data-toggle-on={{
 						label: 'Remove from favorites',
 						content: 'favorite'
@@ -32,7 +31,6 @@ export default function IconToggleShowcase() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Pressed</Showcase.Section.Title>
 				<IconToggle
-					tabindex="0"
 					aria-pressed="true"
 					data-toggle-on={{
 						label: 'Remove from favorites',
@@ -47,7 +45,6 @@ export default function IconToggleShowcase() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Disabled</Showcase.Section.Title>
 				<IconToggle
-					tabindex="0"
 					aria-disabled="true"
 					data-toggle-on={{
 						label: 'Remove from favorites',
@@ -64,7 +61,6 @@ export default function IconToggleShowcase() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Change Detection</Showcase.Section.Title>
 				<IconToggle
-					tabindex="0"
 					data-toggle-on={{
 						label: 'Remove from favorites',
 						content: 'favorite'

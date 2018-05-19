@@ -10,13 +10,11 @@
   width: 200px;
   padding: 16px;
 
-  // FIXME: should use theming
   &--primary {
     color: #6200ee;
     color: var(--mdc-theme-primary, #6200ee);
   }
 
-  // FIXME: should use theming
   &--secondary {
     color: #018786;
     color: var(--mdc-theme-secondary, #018786);
