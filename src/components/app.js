@@ -8,6 +8,8 @@ import ButtonShowcase from '../routes/button';
 import CardShowcase from '../routes/card';
 import ChipsShowcase from '../routes/chips';
 import DialogShowcase from '../routes/dialog';
+import DrawerFrame from '../routes/drawer-frame';
+import DrawerShowcase from '../routes/drawer';
 import FabShowcase from '../routes/fab';
 import IconToggleShowcase from '../routes/icon-toggle';
 import ListShowcase from '../routes/list';
@@ -26,7 +28,7 @@ const RippleNavigationIcon = withUnboundedSurfaceRipple(
 	TopAppBar.NavigationIcon
 );
 
-const pathsWithoutTopAppBar = ['/top-app-bar/frame'];
+const pathsWithoutTopAppBar = ['/top-app-bar/frame', '/drawer/frame'];
 
 function shouldRenderTopAppBar(path) {
 	return !pathsWithoutTopAppBar.includes(path);
@@ -72,6 +74,8 @@ export default function App() {
 							<CardShowcase path="/card" />
 							<ChipsShowcase path="/chips" />
 							<DialogShowcase path="/dialog" />
+							<DrawerShowcase path="/drawer" />
+							<DrawerFrame path="/drawer/frame" />
 							<FabShowcase path="/fab" />
 							<IconToggleShowcase path="/icon-toggle" />
 							<ListShowcase path="/list" />
