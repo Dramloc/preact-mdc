@@ -92,7 +92,7 @@ function CardActionIcons(props) {
 }
 
 function withAction(Element) {
-	return function WithAction({ className, ...props }) {
+	return function CardAction({ className, ...props }) {
 		const classes = {
 			name: 'mdc-card__action',
 			modifiers: ['button', 'icon']

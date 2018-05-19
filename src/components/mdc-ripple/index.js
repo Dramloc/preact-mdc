@@ -6,7 +6,7 @@ import cx from 'bem-classnames';
  * Initializes MDCRipple on element
  */
 export function withRipple(Element) {
-	return class WithRipple extends Component {
+	return class Ripple extends Component {
 		componentDidMount() {
 			this.MDCComponent = new MDCRipple(this.__root.base);
 		}
@@ -23,7 +23,7 @@ export function withRipple(Element) {
  * Initializes MDCRipple on element and add mdc-ripple-surface classes
  */
 export function withSurfaceRipple(Element) {
-	return function WithSurfaceRipple({ className, ...props }) {
+	return function SurfaceRipple({ className, ...props }) {
 		const classes = {
 			name: 'mdc-ripple-surface',
 			modifiers: ['primary', 'accent']
@@ -44,7 +44,7 @@ export function withSurfaceRipple(Element) {
  * and data-mdc-ripple-is-unbounded attribute
  */
 export function withUnboundedSurfaceRipple(Element) {
-	return function WithUnboundedSurfaceRipple(props) {
+	return function UnboundedSurfaceRipple(props) {
 		const RippledElement = withSurfaceRipple(Element);
 		return <RippledElement data-mdc-ripple-is-unbounded {...props} />;
 	};
