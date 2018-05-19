@@ -53,10 +53,7 @@ export default function App() {
 						]}
 					/>
 					{shouldRenderTopAppBar(path) && (
-						<TopAppBar
-							className={style['top-app-bar']}
-							modifiers={{ fixed: true }}
-						>
+						<TopAppBar className={style['top-app-bar']}>
 							<TopAppBar.Row>
 								<TopAppBar.Section>
 									<RippleNavigationIcon>menu</RippleNavigationIcon>
