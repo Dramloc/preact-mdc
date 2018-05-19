@@ -37,11 +37,16 @@ function ShowcaseSectionTitle({ children }) {
 	return <h3 className="mdc-typography--subtitle1">{children}</h3>;
 }
 
+function ShowcaseSectionSubtitle({ children }) {
+	return <h4 className="mdc-typography--body2">{children}</h4>;
+}
+
 Showcase.Hero = ShowcaseHero;
 Showcase.Title = ShowcaseTitle;
 Showcase.Description = ShowcaseDescription;
 Showcase.Subtitle = ShowcaseSubtitle;
 Showcase.Section = ShowcaseSection;
 Showcase.Section.Title = ShowcaseSectionTitle;
+Showcase.Section.Subtitle = ShowcaseSectionSubtitle;
 
 export default Showcase;
