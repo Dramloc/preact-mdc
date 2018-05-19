@@ -8,6 +8,7 @@ import ChipsShowcase from '../routes/chips';
 import DialogShowcase from '../routes/dialog';
 import FabShowcase from '../routes/fab';
 import IconToggleShowcase from '../routes/icon-toggle';
+import ListShowcase from '../routes/list';
 import RippleShowcase from '../routes/ripple';
 
 if (module.hot) {
@@ -38,6 +39,7 @@ export default function App() {
 				<DialogShowcase path="/dialog" />
 				<FabShowcase path="/fab" />
 				<IconToggleShowcase path="/icon-toggle" />
+				<ListShowcase path="/list" />
 				<RippleShowcase path="/ripple" />
 			</Router>
 		</div>
