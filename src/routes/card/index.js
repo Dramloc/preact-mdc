@@ -15,8 +15,8 @@ import Showcase from '../../components/showcase';
 import style from './style.scss';
 
 const RippledPrimaryAction = withSurfaceRipple(Card.PrimaryAction);
-const ActionButton = withRipple(withAction(Button));
-const ActionIcon = withUnboundedSurfaceRipple(withAction(Icon));
+const ActionButton = withAction(withRipple(Button));
+const ActionIcon = withAction(withUnboundedSurfaceRipple(Icon));
 const ActionIconToggle = withAction(IconToggle);
 
 export default function CardShowcase() {
