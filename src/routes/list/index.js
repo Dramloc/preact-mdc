@@ -154,6 +154,87 @@ export default function ListShowcase() {
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Dense</Showcase.Section.Title>
+				<List className={style['demo-list']} modifiers={{ dense: true }}>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+				</List>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Groups</Showcase.Section.Title>
+				<div className={style['demo-list']}>
+					<List.Group>
+						<List.Group.Subheader>Group 1</List.Group.Subheader>
+						<List>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+							<List.Divider />
+						</List>
+					</List.Group>
+					<List.Group>
+						<List.Group.Subheader>Group 2</List.Group.Subheader>
+						<List>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+							<RippledListItem>
+								<List.Item.Text>Line item</List.Item.Text>
+							</RippledListItem>
+						</List>
+					</List.Group>
+				</div>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Padded Divider</Showcase.Section.Title>
+				<List className={style['demo-list']}>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<List.Divider modifiers={{ padded: true }} />
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+				</List>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Inset Divider</Showcase.Section.Title>
+				<List className={style['demo-list']}>
+					<RippledListItem>
+						<List.Item.Graphic>wifi</List.Item.Graphic>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Graphic>bluetooth</List.Item.Graphic>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<List.Divider modifiers={{ inset: true }} />
+					<RippledListItem>
+						<List.Item.Graphic>data_usage</List.Item.Graphic>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+				</List>
+			</Showcase.Section>
 		</Showcase>
 	);
 }
