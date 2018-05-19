@@ -90,6 +90,7 @@ export default function CardShowcase() {
 			</Showcase.Hero>
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
+				<Showcase.Section.Title>Card Media</Showcase.Section.Title>
 				<Card className={style['demo-card']}>
 					<RippledPrimaryAction>
 						<Card.Media
@@ -127,7 +128,67 @@ export default function CardShowcase() {
 				</Card>
 			</Showcase.Section>
 			<Showcase.Section>
+				<Showcase.Section.Title>Card Actions</Showcase.Section.Title>
 				<Card className={style['demo-card']}>
+					<RippledPrimaryAction>
+						<div className={style['demo-card__primary']}>
+							<h2
+								className={cx(
+									style['demo-card__title'],
+									'mdc-typography--headline6'
+								)}
+							>
+								Our Changing Planet
+							</h2>
+							<h3
+								className={cx(
+									style['demo-card__subtitle'],
+									'mdc-typography--subtitle2'
+								)}
+							>
+								by Kurt Wagner
+							</h3>
+						</div>
+						<div
+							className={cx(
+								style['demo-card__secondary'],
+								'mdc-typography--body2'
+							)}
+						>
+							Visit ten places on our planet that are undergoing the biggest
+							changes today.
+						</div>
+					</RippledPrimaryAction>
+					<Card.Actions>
+						<Card.ActionButtons>
+							<ActionButton modifiers={{ button: true }}>Read</ActionButton>
+							<ActionButton modifiers={{ button: true }}>Bookmark</ActionButton>
+						</Card.ActionButtons>
+						<Card.ActionIcons>
+							<ActionIconToggle
+								modifiers={{ icon: true }}
+								data-toggle-on={{
+									content: 'favorite',
+									label: 'Remove from favorites'
+								}}
+								data-toggle-off={{
+									content: 'favorite_border',
+									label: 'Add to favorites'
+								}}
+							/>
+							<ActionIcon modifiers={{ icon: true }} title="Share">
+								share
+							</ActionIcon>
+							<ActionIcon modifiers={{ icon: true }} title="More options">
+								more_vert
+							</ActionIcon>
+						</Card.ActionIcons>
+					</Card.Actions>
+				</Card>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined</Showcase.Section.Title>
+				<Card className={style['demo-card']} modifiers={{ outlined: true }}>
 					<RippledPrimaryAction>
 						<div className={style['demo-card__primary']}>
 							<h2
