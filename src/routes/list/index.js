@@ -235,6 +235,20 @@ export default function ListShowcase() {
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Activated Item</Showcase.Section.Title>
+				<List className={style['demo-list']}>
+					<RippledListItem modifiers={{ activated: true }}>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+					<RippledListItem>
+						<List.Item.Text>Line item</List.Item.Text>
+					</RippledListItem>
+				</List>
+			</Showcase.Section>
 		</Showcase>
 	);
 }
