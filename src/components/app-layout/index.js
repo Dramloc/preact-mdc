@@ -36,10 +36,7 @@ export default class AppLayout extends Component {
 
 	animate(drawerWidth, stateName) {
 		if (!this.content) return;
-		this.content.style.setProperty(
-			'transform',
-			`translateX(${drawerWidth / 2}px)`
-		);
+		this.content.style.setProperty('transform', `translateX(${drawerWidth / 2}px)`);
 
 		const className = style[`app-layout__content--animating-${stateName}`];
 		this.content.getBoundingClientRect();
@@ -55,12 +52,7 @@ export default class AppLayout extends Component {
 		return (
 			<div>
 				<AppHeader toggleDrawer={this.toggleDrawer} />
-				<div
-					className={cx(
-						style['app-layout__main'],
-						'mdc-top-app-bar--fixed-adjust'
-					)}
-				>
+				<div className={cx(style['app-layout__main'], 'mdc-top-app-bar--fixed-adjust')}>
 					<AppDrawer
 						isDrawerOpen={isDrawerOpen}
 						handleOpen={this.handleOpen}

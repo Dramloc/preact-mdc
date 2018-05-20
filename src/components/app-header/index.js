@@ -7,18 +7,14 @@ import TopAppBar from '../mdc-top-app-bar';
 
 import style from './style.scss';
 
-const RippleNavigationIcon = withUnboundedSurfaceRipple(
-	TopAppBar.NavigationIcon
-);
+const RippleNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIcon);
 
 class AppHeaderIcon extends Component {
 	shouldComponentUpdate() {
 		return false;
 	}
 	render({ toggleDrawer }) {
-		return (
-			<RippleNavigationIcon onClick={toggleDrawer}>menu</RippleNavigationIcon>
-		);
+		return <RippleNavigationIcon onClick={toggleDrawer}>menu</RippleNavigationIcon>;
 	}
 }
 

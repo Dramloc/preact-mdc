@@ -14,9 +14,8 @@ export default function FabShowcase() {
 		<Showcase>
 			<Showcase.Title>Floating Action Button</Showcase.Title>
 			<Showcase.Description>
-				Floating action buttons represents the primary action in an application.
-				Only one floating action button is recommended per screen to represent
-				the most common action.
+				Floating action buttons represents the primary action in an application. Only one floating
+				action button is recommended per screen to represent the most common action.
 			</Showcase.Description>
 			<Showcase.Hero>
 				<RippledFab aria-label="Favorite">
@@ -30,17 +29,13 @@ export default function FabShowcase() {
 			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/fab" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
-				<Showcase.Section.Title>
-					Standard Floating Action Button
-				</Showcase.Section.Title>
+				<Showcase.Section.Title>Standard Floating Action Button</Showcase.Section.Title>
 				<RippledFab aria-label="Favorite">
 					<Fab.Icon>favorite_outline</Fab.Icon>
 				</RippledFab>
 			</Showcase.Section>
 			<Showcase.Section>
-				<Showcase.Section.Title>
-					Mini Floating Action Button
-				</Showcase.Section.Title>
+				<Showcase.Section.Title>Mini Floating Action Button</Showcase.Section.Title>
 				<RippledFab modifiers={{ mini: true }} aria-label="Favorite">
 					<Fab.Icon>favorite_outline</Fab.Icon>
 				</RippledFab>

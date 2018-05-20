@@ -40,35 +40,19 @@ class Dialog extends Component {
 }
 
 function DialogSurface(props) {
-	return (
-		<Base element="div" classes={{ name: 'mdc-dialog__surface' }} {...props} />
-	);
+	return <Base element="div" classes={{ name: 'mdc-dialog__surface' }} {...props} />;
 }
 
 function DialogBackdrop(props) {
-	return (
-		<Base element="div" classes={{ name: 'mdc-dialog__backdrop' }} {...props} />
-	);
+	return <Base element="div" classes={{ name: 'mdc-dialog__backdrop' }} {...props} />;
 }
 
 function DialogHeader(props) {
-	return (
-		<Base
-			element="header"
-			classes={{ name: 'mdc-dialog__header' }}
-			{...props}
-		/>
-	);
+	return <Base element="header" classes={{ name: 'mdc-dialog__header' }} {...props} />;
 }
 
 function DialogHeaderTitle(props) {
-	return (
-		<Base
-			element="h2"
-			classes={{ name: 'mdc-dialog__header__title' }}
-			{...props}
-		/>
-	);
+	return <Base element="h2" classes={{ name: 'mdc-dialog__header__title' }} {...props} />;
 }
 
 function DialogBody(props) {
@@ -82,13 +66,7 @@ function DialogBody(props) {
 }
 
 function DialogFooter(props) {
-	return (
-		<Base
-			element="footer"
-			classes={{ name: 'mdc-dialog__footer' }}
-			{...props}
-		/>
-	);
+	return <Base element="footer" classes={{ name: 'mdc-dialog__footer' }} {...props} />;
 }
 
 function DialogFooterButton(props) {

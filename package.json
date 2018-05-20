@@ -8,10 +8,25 @@
 		"build": "preact build --template src/template.html",
 		"serve": "npm run -s build && preact serve",
 		"dev": "preact watch --template src/template.html",
+		"prettier": "prettier src/**/{*.scss,*.js} --write",
 		"lint": "eslint src"
 	},
 	"eslintConfig": {
-		"extends": "eslint-config-synacor"
+		"extends": "eslint-config-synacor",
+		"rules": {
+			"max-len": [
+				"error",
+				{
+					"code": 100,
+					"tabWidth": 2,
+					"ignoreUrls": true,
+					"ignoreComments": false,
+					"ignoreRegExpLiterals": true,
+					"ignoreStrings": true,
+					"ignoreTemplateLiterals": true
+				}
+			]
+		}
 	},
 	"eslintIgnore": [
 		"build/*"

@@ -17,45 +17,23 @@ function Drawer(props) {
 }
 
 function DrawerDrawer(props) {
-	return (
-		<Base element="nav" classes={{ name: 'mdc-drawer__drawer' }} {...props} />
-	);
+	return <Base element="nav" classes={{ name: 'mdc-drawer__drawer' }} {...props} />;
 }
 
 function DrawerHeader(props) {
-	return (
-		<Base
-			element="header"
-			classes={{ name: 'mdc-drawer__header' }}
-			{...props}
-		/>
-	);
+	return <Base element="header" classes={{ name: 'mdc-drawer__header' }} {...props} />;
 }
 
 function DrawerHeaderContent(props) {
-	return (
-		<Base
-			element="div"
-			classes={{ name: 'mdc-drawer__header-content' }}
-			{...props}
-		/>
-	);
+	return <Base element="div" classes={{ name: 'mdc-drawer__header-content' }} {...props} />;
 }
 
 function DrawerContent(props) {
-	return (
-		<Base element="nav" classes={{ name: 'mdc-drawer__content' }} {...props} />
-	);
+	return <Base element="nav" classes={{ name: 'mdc-drawer__content' }} {...props} />;
 }
 
 function DrawerToolbarSpacer(props) {
-	return (
-		<Base
-			element="div"
-			classes={{ name: 'mdc-drawer__toolbar-spacer' }}
-			{...props}
-		/>
-	);
+	return <Base element="div" classes={{ name: 'mdc-drawer__toolbar-spacer' }} {...props} />;
 }
 
 export function withPersistentDrawer(Element) {

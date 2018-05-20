@@ -75,9 +75,7 @@ function renderHTMLPlugin(config) {
 		});
 	};
 
-	const pages = readJson(resolve(cwd, config.prerenderUrls || '')) || [
-		{ url: '/' }
-	];
+	const pages = readJson(resolve(cwd, config.prerenderUrls || '')) || [{ url: '/' }];
 
 	return pages.map(htmlWebpackConfig).map(conf => new HtmlWebpackPlugin(conf));
 }
@@ -94,7 +92,5 @@ function replacePlugins(name, replacements) {
 
 export default (config, env, helpers) => {
 	const plugins = renderHTMLPlugin(env);
-	config.plugins = config.plugins.map(
-		replacePlugins('HtmlWebpackPlugin', plugins)
-	);
+	config.plugins = config.plugins.map(replacePlugins('HtmlWebpackPlugin', plugins));
 };

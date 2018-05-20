@@ -4,10 +4,7 @@ import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
-import {
-	withRipple,
-	withUnboundedSurfaceRipple
-} from '../../components/mdc-ripple';
+import { withRipple, withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Drawer from '../../components/mdc-drawer';
 import Icon from '../../components/mdc-icon';
 import List from '../../components/mdc-list';
@@ -23,14 +20,11 @@ export default function DrawerShowcase() {
 		<Showcase>
 			<Showcase.Title>Drawer</Showcase.Title>
 			<Showcase.Description>
-				The navigation drawer slides in from the left and contains the
-				navigation destinations for your app.
+				The navigation drawer slides in from the left and contains the navigation destinations for
+				your app.
 			</Showcase.Description>
 			<Showcase.Hero>
-				<Drawer
-					className={style['hero-drawer']}
-					modifiers={{ permanent: true }}
-				>
+				<Drawer className={style['hero-drawer']} modifiers={{ permanent: true }}>
 					<Drawer.Drawer>
 						<Drawer.Header className={style['hero-drawer__header']}>
 							<Drawer.Header.Content>Header here</Drawer.Header.Content>
@@ -76,10 +70,7 @@ export default function DrawerShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['drawer-frame']}
-					src="/drawer/frame/temporary"
-				/>
+				<iframe className={style['drawer-frame']} src="/drawer/frame/temporary" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -93,10 +84,7 @@ export default function DrawerShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['drawer-frame']}
-					src="/drawer/frame/persistent"
-				/>
+				<iframe className={style['drawer-frame']} src="/drawer/frame/persistent" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -110,10 +98,7 @@ export default function DrawerShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['drawer-frame']}
-					src="/drawer/frame/permanent"
-				/>
+				<iframe className={style['drawer-frame']} src="/drawer/frame/permanent" />
 			</Showcase.Section>
 		</Showcase>
 	);

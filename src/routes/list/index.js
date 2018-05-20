@@ -16,8 +16,7 @@ export default function ListShowcase() {
 		<Showcase>
 			<Showcase.Title>List</Showcase.Title>
 			<Showcase.Description>
-				Lists present multiple line items vertically as a single continuous
-				element.
+				Lists present multiple line items vertically as a single continuous element.
 			</Showcase.Description>
 			<Showcase.Hero>
 				<div className={style['hero-list']}>
@@ -115,10 +114,7 @@ export default function ListShowcase() {
 				<Showcase.Section.Title>
 					Two-Line with Leading and Trailing Icon and Divider
 				</Showcase.Section.Title>
-				<List
-					className={style['demo-list']}
-					modifiers={{ 'two-line': true, 'avatar-list': true }}
-				>
+				<List className={style['demo-list']} modifiers={{ 'two-line': true, 'avatar-list': true }}>
 					<RippledListItem>
 						<List.Item.Graphic className={style['demo-list-item__graphic']}>
 							folder

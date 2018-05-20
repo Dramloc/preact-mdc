@@ -10,9 +10,7 @@ import TopAppBar from '../../components/mdc-top-app-bar';
 
 import style from './style.scss';
 
-const RippledNavigationIcon = withUnboundedSurfaceRipple(
-	TopAppBar.NavigationIcon
-);
+const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIcon);
 const RippledActionItem = withUnboundedSurfaceRipple(TopAppBar.ActionItem);
 const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
@@ -21,8 +19,8 @@ export default function TopAppBarShowcase() {
 		<Showcase>
 			<Showcase.Title>Top App Bar</Showcase.Title>
 			<Showcase.Description>
-				Top App Bars are a container for items such as application title,
-				navigation icon, and action items.
+				Top App Bars are a container for items such as application title, navigation icon, and
+				action items.
 			</Showcase.Description>
 			<Showcase.Hero>
 				<div className={style['hero-top-app-bar']}>
@@ -59,10 +57,7 @@ export default function TopAppBarShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -77,10 +72,7 @@ export default function TopAppBarShowcase() {
 					</a>
 				</Showcase.Section.Title>
 
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame/fixed"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/fixed" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -94,10 +86,7 @@ export default function TopAppBarShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame/dense"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/dense" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -111,10 +100,7 @@ export default function TopAppBarShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame/prominent"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/prominent" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -128,10 +114,7 @@ export default function TopAppBarShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame/short"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/short" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>
@@ -145,10 +128,7 @@ export default function TopAppBarShowcase() {
 						<RippledIcon>open_in_new</RippledIcon>
 					</a>
 				</Showcase.Section.Title>
-				<iframe
-					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame/short-collapsed"
-				/>
+				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/short-collapsed" />
 			</Showcase.Section>
 		</Showcase>
 	);

@@ -11,8 +11,8 @@ export default function ChipShowcase() {
 		<Showcase>
 			<Showcase.Title>Chips</Showcase.Title>
 			<Showcase.Description>
-				Chips are compact elements that allow users to enter information, select
-				a choice, filter content, or trigger an action.
+				Chips are compact elements that allow users to enter information, select a choice, filter
+				content, or trigger an action.
 			</Showcase.Description>
 			<Showcase.Hero>
 				<ChipSet>
@@ -80,9 +80,7 @@ export default function ChipShowcase() {
 				<Showcase.Section.Subtitle>With leading icon</Showcase.Section.Subtitle>
 				<ChipSet modifiers={{ filter: true }}>
 					<Chip modifiers={{ selected: true }}>
-						<Chip.Icon modifiers={{ leading: true, 'leading-hidden': true }}>
-							face
-						</Chip.Icon>
+						<Chip.Icon modifiers={{ leading: true, 'leading-hidden': true }}>face</Chip.Icon>
 						<Chip.Checkmark />
 						<Chip.Text>Alice</Chip.Text>
 					</Chip>

@@ -29,12 +29,7 @@ export function withSurfaceRipple(Element) {
 			modifiers: ['primary', 'accent']
 		};
 		const RippledElement = withRipple(Element);
-		return (
-			<RippledElement
-				className={cx(classes, props.modifiers, className)}
-				{...props}
-			/>
-		);
+		return <RippledElement className={cx(classes, props.modifiers, className)} {...props} />;
 	};
 }
 

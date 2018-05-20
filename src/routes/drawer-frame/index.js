@@ -5,23 +5,15 @@ import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
-import {
-	withUnboundedSurfaceRipple,
-	withRipple
-} from '../../components/mdc-ripple';
-import Drawer, {
-	withTemporaryDrawer,
-	withPersistentDrawer
-} from '../../components/mdc-drawer';
+import { withUnboundedSurfaceRipple, withRipple } from '../../components/mdc-ripple';
+import Drawer, { withTemporaryDrawer, withPersistentDrawer } from '../../components/mdc-drawer';
 import List from '../../components/mdc-list';
 import Showcase from '../../components/showcase';
 import TopAppBar from '../../components/mdc-top-app-bar';
 
 import style from '../drawer/style.scss';
 
-const RippledNavigationIcon = withUnboundedSurfaceRipple(
-	TopAppBar.NavigationIcon
-);
+const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIcon);
 const RippledActionItem = withUnboundedSurfaceRipple(TopAppBar.ActionItem);
 
 const TemporaryDrawer = withTemporaryDrawer(Drawer);
@@ -102,52 +94,44 @@ export default class DrawerFrame extends Component {
 								</TopAppBar.Section>
 								<TopAppBar.Section modifiers={{ 'align-end': true }}>
 									<RippledActionItem>file_download</RippledActionItem>
-									{modifiers.short !== true && (
-										<RippledActionItem>print</RippledActionItem>
-									)}
-									{modifiers.short !== true && (
-										<RippledActionItem>bookmark</RippledActionItem>
-									)}
+									{modifiers.short !== true && <RippledActionItem>print</RippledActionItem>}
+									{modifiers.short !== true && <RippledActionItem>bookmark</RippledActionItem>}
 								</TopAppBar.Section>
 							</TopAppBar.Row>
 						</TopAppBar>
 					</div>
 					<main className="mdc-top-app-bar--fixed-adjust">
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
 						</p>
 					</main>
 				</div>

@@ -74,11 +74,7 @@ function ShowcaseHero({ children }) {
 }
 
 function ShowcaseSubtitle({ children }) {
-	return (
-		<h2 className={cx(style.showcase__subtitle, 'mdc-typography--headline6')}>
-			{children}
-		</h2>
-	);
+	return <h2 className={cx(style.showcase__subtitle, 'mdc-typography--headline6')}>{children}</h2>;
 }
 
 function ShowcaseSection({ children }) {
@@ -87,12 +83,7 @@ function ShowcaseSection({ children }) {
 
 function ShowcaseSectionTitle({ children }) {
 	return (
-		<h3
-			className={cx(
-				style['showcase__section-title'],
-				'mdc-typography--subtitle1'
-			)}
-		>
+		<h3 className={cx(style['showcase__section-title'], 'mdc-typography--subtitle1')}>
 			{children}
 		</h3>
 	);
@@ -110,11 +101,7 @@ function ShowcaseResource({ href, src, alt, children }) {
 	return (
 		<RippledListItem element="a" target="_blank" rel="noopener" href={href}>
 			<List.Item.Graphic element="span">
-				<img
-					className={style['resources-icon']}
-					src={src}
-					alt="Material Design Guidelines icon"
-				/>
+				<img className={style['resources-icon']} src={src} alt="Material Design Guidelines icon" />
 			</List.Item.Graphic>
 			<List.Item.Text>{children}</List.Item.Text>
 		</RippledListItem>

@@ -50,10 +50,7 @@ export default class AppDrawer extends Component {
 
 	render() {
 		return (
-			<PersistentDrawer
-				ref={ref => (this.drawer = ref)}
-				modifiers={{ persistent: true }}
-			>
+			<PersistentDrawer ref={ref => (this.drawer = ref)} modifiers={{ persistent: true }}>
 				<Drawer.Drawer>
 					<Drawer.Content>
 						<List>

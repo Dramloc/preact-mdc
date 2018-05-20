@@ -14,8 +14,8 @@ export default function IconToggleShowcase() {
 		<Showcase>
 			<Showcase.Title>Icon Toggle</Showcase.Title>
 			<Showcase.Description>
-				Icons are appropriate for toggle buttons that allow a single choice to
-				be selected or deselected, such as adding or removing a star to an item.
+				Icons are appropriate for toggle buttons that allow a single choice to be selected or
+				deselected, such as adding or removing a star to an item.
 			</Showcase.Description>
 			<Showcase.Hero>
 				<IconToggle

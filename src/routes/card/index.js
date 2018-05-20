@@ -35,44 +35,23 @@ export default function CardShowcase() {
 				<div>
 					<Card className={cx(style['demo-card'], style['demo-card--hero'])}>
 						<RippledPrimaryAction>
-							<Card.Media
-								className={style['demo-card__media']}
-								modifiers={{ '16-9': true }}
-							/>
+							<Card.Media className={style['demo-card__media']} modifiers={{ '16-9': true }} />
 							<div className={style['demo-card__primary']}>
-								<h2
-									className={cx(
-										style['demo-card__title'],
-										'mdc-typography--headline6'
-									)}
-								>
+								<h2 className={cx(style['demo-card__title'], 'mdc-typography--headline6')}>
 									Our Changing Planet
 								</h2>
-								<h3
-									className={cx(
-										style['demo-card__subtitle'],
-										'mdc-typography--subtitle2'
-									)}
-								>
+								<h3 className={cx(style['demo-card__subtitle'], 'mdc-typography--subtitle2')}>
 									by Kurt Wagner
 								</h3>
 							</div>
-							<div
-								className={cx(
-									style['demo-card__secondary'],
-									'mdc-typography--body2'
-								)}
-							>
-								Visit ten places on our planet that are undergoing the biggest
-								changes today.
+							<div className={cx(style['demo-card__secondary'], 'mdc-typography--body2')}>
+								Visit ten places on our planet that are undergoing the biggest changes today.
 							</div>
 						</RippledPrimaryAction>
 						<Card.Actions>
 							<Card.ActionButtons>
 								<ActionButton modifiers={{ button: true }}>Read</ActionButton>
-								<ActionButton modifiers={{ button: true }}>
-									Bookmark
-								</ActionButton>
+								<ActionButton modifiers={{ button: true }}>Bookmark</ActionButton>
 							</Card.ActionButtons>
 							<Card.ActionIcons>
 								<ActionIconToggle
@@ -111,36 +90,17 @@ export default function CardShowcase() {
 				<Showcase.Section.Title>Card Media</Showcase.Section.Title>
 				<Card className={style['demo-card']}>
 					<RippledPrimaryAction>
-						<Card.Media
-							className={style['demo-card__media']}
-							modifiers={{ '16-9': true }}
-						/>
+						<Card.Media className={style['demo-card__media']} modifiers={{ '16-9': true }} />
 						<div className={style['demo-card__primary']}>
-							<h2
-								className={cx(
-									style['demo-card__title'],
-									'mdc-typography--headline6'
-								)}
-							>
+							<h2 className={cx(style['demo-card__title'], 'mdc-typography--headline6')}>
 								Our Changing Planet
 							</h2>
-							<h3
-								className={cx(
-									style['demo-card__subtitle'],
-									'mdc-typography--subtitle2'
-								)}
-							>
+							<h3 className={cx(style['demo-card__subtitle'], 'mdc-typography--subtitle2')}>
 								by Kurt Wagner
 							</h3>
 						</div>
-						<div
-							className={cx(
-								style['demo-card__secondary'],
-								'mdc-typography--body2'
-							)}
-						>
-							Visit ten places on our planet that are undergoing the biggest
-							changes today.
+						<div className={cx(style['demo-card__secondary'], 'mdc-typography--body2')}>
+							Visit ten places on our planet that are undergoing the biggest changes today.
 						</div>
 					</RippledPrimaryAction>
 				</Card>
@@ -150,31 +110,15 @@ export default function CardShowcase() {
 				<Card className={style['demo-card']}>
 					<RippledPrimaryAction>
 						<div className={style['demo-card__primary']}>
-							<h2
-								className={cx(
-									style['demo-card__title'],
-									'mdc-typography--headline6'
-								)}
-							>
+							<h2 className={cx(style['demo-card__title'], 'mdc-typography--headline6')}>
 								Our Changing Planet
 							</h2>
-							<h3
-								className={cx(
-									style['demo-card__subtitle'],
-									'mdc-typography--subtitle2'
-								)}
-							>
+							<h3 className={cx(style['demo-card__subtitle'], 'mdc-typography--subtitle2')}>
 								by Kurt Wagner
 							</h3>
 						</div>
-						<div
-							className={cx(
-								style['demo-card__secondary'],
-								'mdc-typography--body2'
-							)}
-						>
-							Visit ten places on our planet that are undergoing the biggest
-							changes today.
+						<div className={cx(style['demo-card__secondary'], 'mdc-typography--body2')}>
+							Visit ten places on our planet that are undergoing the biggest changes today.
 						</div>
 					</RippledPrimaryAction>
 					<Card.Actions>
@@ -213,31 +157,15 @@ export default function CardShowcase() {
 				<Card className={style['demo-card']} modifiers={{ outlined: true }}>
 					<RippledPrimaryAction>
 						<div className={style['demo-card__primary']}>
-							<h2
-								className={cx(
-									style['demo-card__title'],
-									'mdc-typography--headline6'
-								)}
-							>
+							<h2 className={cx(style['demo-card__title'], 'mdc-typography--headline6')}>
 								Our Changing Planet
 							</h2>
-							<h3
-								className={cx(
-									style['demo-card__subtitle'],
-									'mdc-typography--subtitle2'
-								)}
-							>
+							<h3 className={cx(style['demo-card__subtitle'], 'mdc-typography--subtitle2')}>
 								by Kurt Wagner
 							</h3>
 						</div>
-						<div
-							className={cx(
-								style['demo-card__secondary'],
-								'mdc-typography--body2'
-							)}
-						>
-							Visit ten places on our planet that are undergoing the biggest
-							changes today.
+						<div className={cx(style['demo-card__secondary'], 'mdc-typography--body2')}>
+							Visit ten places on our planet that are undergoing the biggest changes today.
 						</div>
 					</RippledPrimaryAction>
 					<Card.Actions>
