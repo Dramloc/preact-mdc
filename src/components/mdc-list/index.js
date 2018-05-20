@@ -13,6 +13,7 @@ function List(props) {
 				name: 'mdc-list',
 				modifiers: ['two-line', 'dense', 'avatar-list']
 			}}
+			role="list"
 			{...props}
 		/>
 	);
@@ -26,6 +27,7 @@ function ListItem(props) {
 				name: 'mdc-list-item',
 				modifiers: ['selected', 'activated']
 			}}
+			role="listitem"
 			{...props}
 		/>
 	);
