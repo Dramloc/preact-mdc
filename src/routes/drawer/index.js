@@ -69,7 +69,7 @@ export default function DrawerShowcase() {
 					Temporary
 					<a
 						className={style['drawer-frame-link']}
-						href="/drawer/frame?temporary"
+						href="/drawer/frame/temporary"
 						target="_blank"
 						rel="noopener"
 					>
@@ -78,7 +78,7 @@ export default function DrawerShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['drawer-frame']}
-					src="/drawer/frame?temporary"
+					src="/drawer/frame/temporary"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -86,7 +86,7 @@ export default function DrawerShowcase() {
 					Persistent
 					<a
 						className={style['drawer-frame-link']}
-						href="/drawer/frame?persistent"
+						href="/drawer/frame/persistent"
 						target="_blank"
 						rel="noopener"
 					>
@@ -95,7 +95,7 @@ export default function DrawerShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['drawer-frame']}
-					src="/drawer/frame?persistent"
+					src="/drawer/frame/persistent"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -103,7 +103,7 @@ export default function DrawerShowcase() {
 					Permanent
 					<a
 						className={style['drawer-frame-link']}
-						href="/drawer/frame?permanent"
+						href="/drawer/frame/permanent"
 						target="_blank"
 						rel="noopener"
 					>
@@ -112,7 +112,7 @@ export default function DrawerShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['drawer-frame']}
-					src="/drawer/frame?permanent"
+					src="/drawer/frame/permanent"
 				/>
 			</Showcase.Section>
 		</Showcase>

@@ -32,15 +32,9 @@ export default class DrawerFrame extends Component {
 	toggle = () => {
 		this.drawer.MDCComponent.open = !this.drawer.MDCComponent.open;
 	};
-	render() {
-		const search = location.search === '' ? '?permanent' : location.search;
-		const modifiers = search
-			.substr(1)
-			.split('&')
-			.reduce((acc, param) => {
-				acc[param] = true;
-				return acc;
-			}, {});
+	render({ variant }) {
+		variant = variant || 'permanent';
+		const modifiers = { [variant]: true };
 		let DemoDrawer = Drawer;
 		let title = 'Permanent Drawer';
 		if (modifiers.temporary) {

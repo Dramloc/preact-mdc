@@ -12,14 +12,11 @@ const RippledNavigationIcon = withUnboundedSurfaceRipple(
 );
 const RippledActionItem = withUnboundedSurfaceRipple(TopAppBar.ActionItem);
 
-export default function TopAppBarFrame() {
-	const modifiers = location.search
-		.substr(1)
-		.split('&')
-		.reduce((acc, param) => {
-			acc[param] = true;
-			return acc;
-		}, {});
+export default function TopAppBarFrame({ variant }) {
+	const modifiers = { [variant]: true };
+	if (variant === 'short-collapsed') {
+		modifiers.short = true;
+	}
 	return (
 		<Showcase.Frame>
 			<TopAppBar modifiers={modifiers}>

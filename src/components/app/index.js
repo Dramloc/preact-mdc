@@ -49,9 +49,9 @@ export default class App extends Component {
 					]}
 				/>
 				<Router onChange={this.handleChange}>
-					<TopAppBarFrame path="/top-app-bar/frame" />
-					<DrawerFrame path="/drawer/frame" />
-					<AppLayout path="/:component" />
+					<TopAppBarFrame path="/top-app-bar/frame/:variant?" />
+					<DrawerFrame path="/drawer/frame/:variant" />
+					<AppLayout path="/:component?" />
 				</Router>
 			</div>
 		);

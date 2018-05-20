@@ -69,7 +69,7 @@ export default function TopAppBarShowcase() {
 					Fixed
 					<a
 						className={style['top-app-bar-frame-link']}
-						href="/top-app-bar/frame?fixed"
+						href="/top-app-bar/frame/fixed"
 						target="_blank"
 						rel="noopener"
 					>
@@ -79,7 +79,7 @@ export default function TopAppBarShowcase() {
 
 				<iframe
 					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame?fixed"
+					src="/top-app-bar/frame/fixed"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -87,7 +87,7 @@ export default function TopAppBarShowcase() {
 					Dense
 					<a
 						className={style['top-app-bar-frame-link']}
-						href="/top-app-bar/frame?dense"
+						href="/top-app-bar/frame/dense"
 						target="_blank"
 						rel="noopener"
 					>
@@ -96,7 +96,7 @@ export default function TopAppBarShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame?dense"
+					src="/top-app-bar/frame/dense"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -104,7 +104,7 @@ export default function TopAppBarShowcase() {
 					Prominent
 					<a
 						className={style['top-app-bar-frame-link']}
-						href="/top-app-bar/frame?prominent"
+						href="/top-app-bar/frame/prominent"
 						target="_blank"
 						rel="noopener"
 					>
@@ -113,7 +113,7 @@ export default function TopAppBarShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame?prominent"
+					src="/top-app-bar/frame/prominent"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -121,7 +121,7 @@ export default function TopAppBarShowcase() {
 					Short
 					<a
 						className={style['top-app-bar-frame-link']}
-						href="/top-app-bar/frame?short"
+						href="/top-app-bar/frame/short"
 						target="_blank"
 						rel="noopener"
 					>
@@ -130,7 +130,7 @@ export default function TopAppBarShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame?short"
+					src="/top-app-bar/frame/short"
 				/>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -138,7 +138,7 @@ export default function TopAppBarShowcase() {
 					Short - Always Collapsed
 					<a
 						className={style['top-app-bar-frame-link']}
-						href="/top-app-bar/frame?short&short-collapsed"
+						href="/top-app-bar/frame/short-collapsed"
 						target="_blank"
 						rel="noopener"
 					>
@@ -147,7 +147,7 @@ export default function TopAppBarShowcase() {
 				</Showcase.Section.Title>
 				<iframe
 					className={style['top-app-bar-frame']}
-					src="/top-app-bar/frame?short&short-collapsed"
+					src="/top-app-bar/frame/short-collapsed"
 				/>
 			</Showcase.Section>
 		</Showcase>
