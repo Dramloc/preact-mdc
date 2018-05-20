@@ -1,4 +1,15 @@
-.top-app-bar {
+.app__top-app-bar {
   z-index: 2;
   background-color: #202124;
+}
+
+.app {
+  min-height: 100%;
+  width: 100%;
+  display: inline-flex;
+}
+
+.app__main {
+  display: flex;
+  flex: 1;
 }
