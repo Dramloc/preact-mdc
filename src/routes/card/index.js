@@ -69,6 +69,8 @@ export default function CardShowcase() {
 						<Card.ActionIcons>
 							<ActionIconToggle
 								modifiers={{ icon: true }}
+								aria-pressed="false"
+								aria-label="Add to favorites"
 								data-toggle-on={{
 									content: 'favorite',
 									label: 'Remove from favorites'
@@ -77,7 +79,9 @@ export default function CardShowcase() {
 									content: 'favorite_border',
 									label: 'Add to favorites'
 								}}
-							/>
+							>
+								favorite_border
+							</ActionIconToggle>
 							<ActionIcon modifiers={{ icon: true }} title="Share">
 								share
 							</ActionIcon>
@@ -167,6 +171,8 @@ export default function CardShowcase() {
 						<Card.ActionIcons>
 							<ActionIconToggle
 								modifiers={{ icon: true }}
+								aria-pressed="false"
+								aria-label="Add to favorites"
 								data-toggle-on={{
 									content: 'favorite',
 									label: 'Remove from favorites'
@@ -175,7 +181,9 @@ export default function CardShowcase() {
 									content: 'favorite_border',
 									label: 'Add to favorites'
 								}}
-							/>
+							>
+								favorite_border
+							</ActionIconToggle>
 							<ActionIcon modifiers={{ icon: true }} title="Share">
 								share
 							</ActionIcon>
@@ -226,6 +234,8 @@ export default function CardShowcase() {
 						<Card.ActionIcons>
 							<ActionIconToggle
 								modifiers={{ icon: true }}
+								aria-pressed="false"
+								aria-label="Add to favorites"
 								data-toggle-on={{
 									content: 'favorite',
 									label: 'Remove from favorites'
@@ -234,7 +244,9 @@ export default function CardShowcase() {
 									content: 'favorite_border',
 									label: 'Add to favorites'
 								}}
-							/>
+							>
+								favorite_border
+							</ActionIconToggle>
 							<ActionIcon modifiers={{ icon: true }} title="Share">
 								share
 							</ActionIcon>
