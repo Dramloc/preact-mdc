@@ -10,11 +10,17 @@ if (module.hot) {
 	require('preact/debug');
 }
 
+function scrollTop() {
+	if (typeof window !== 'undefined') {
+		document.documentElement.scrollTop = 0;
+	}
+}
+
 export default class App extends Component {
 	handleChange = e => {
 		if (this.currentUrl !== e.url) {
 			this.currentUrl = e.url;
-			document.documentElement.scrollTop = 0;
+			scrollTop();
 		}
 	};
 
