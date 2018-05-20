@@ -1,3 +1,17 @@
+@import "@material/animation/functions";
+
+@keyframes fade-in {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .showcase {
   width: 900px;
   max-width: 100%;
@@ -5,6 +19,8 @@
   margin: 0 auto;
   padding: 40px 16px 100px;
   box-sizing: border-box;
+  will-change: opacity, transform;
+  animation: mdc-animation-enter(fade-in, 350ms);
 }
 
 .showcase__hero {
