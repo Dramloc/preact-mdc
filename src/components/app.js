@@ -103,6 +103,18 @@ export default class App extends Component {
 												<ListItem onClick={this.toggleDrawer} path="/button">
 													Button
 												</ListItem>
+												<ListItem onClick={this.toggleDrawer} path="/card">
+													Card
+												</ListItem>
+												<ListItem onClick={this.toggleDrawer} path="/chips">
+													Chips
+												</ListItem>
+												<ListItem onClick={this.toggleDrawer} path="/dialog">
+													Dialog
+												</ListItem>
+												<ListItem onClick={this.toggleDrawer} path="/drawer">
+													Drawer
+												</ListItem>
 												<ListItem onClick={this.toggleDrawer} path="/fab">
 													Floating Action Button
 												</ListItem>
@@ -110,25 +122,13 @@ export default class App extends Component {
 													onClick={this.toggleDrawer}
 													path="/icon-toggle"
 												>
-													Icon Toggle Buttons
-												</ListItem>
-												<ListItem onClick={this.toggleDrawer} path="/card">
-													Cards
-												</ListItem>
-												<ListItem onClick={this.toggleDrawer} path="/chips">
-													Chips
-												</ListItem>
-												<ListItem onClick={this.toggleDrawer} path="/dialog">
-													Dialogs
-												</ListItem>
-												<ListItem onClick={this.toggleDrawer} path="/drawer">
-													Drawers
+													Icon Toggle Button
 												</ListItem>
 												<ListItem onClick={this.toggleDrawer} path="/list">
-													Lists
+													List
 												</ListItem>
 												<ListItem onClick={this.toggleDrawer} path="/ripple">
-													Ripples
+													Ripple
 												</ListItem>
 												<ListItem
 													onClick={this.toggleDrawer}
