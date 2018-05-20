@@ -17,6 +17,19 @@ export default function TopAppBarFrame({ variant }) {
 	if (variant === 'short-collapsed') {
 		modifiers.short = true;
 	}
+	let adjustClassName = 'mdc-top-app-bar--fixed-adjust';
+	switch (variant) {
+		case 'dense':
+			adjustClassName = 'mdc-top-app-bar--dense-fixed-adjust';
+			break;
+		case 'prominent':
+			adjustClassName = 'mdc-top-app-bar--prominent-fixed-adjust';
+			break;
+		case 'short':
+		case 'short-collapsed':
+			adjustClassName = 'mdc-top-app-bar--short-fixed-adjust';
+			break;
+	}
 	return (
 		<Showcase.Frame>
 			<TopAppBar modifiers={modifiers}>
@@ -36,7 +49,7 @@ export default function TopAppBarFrame({ variant }) {
 					</TopAppBar.Section>
 				</TopAppBar.Row>
 			</TopAppBar>
-			<main className="mdc-top-app-bar--fixed-adjust">
+			<main className={adjustClassName}>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
