@@ -1,7 +1,5 @@
 import { h } from 'preact';
 
-import '@material/fab/mdc-fab.scss';
-
 import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 

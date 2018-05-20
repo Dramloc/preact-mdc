@@ -1,7 +1,5 @@
 import { h } from 'preact';
 
-import '@material/list/mdc-list.scss';
-
 import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 

@@ -2,7 +2,8 @@ import { h } from 'preact';
 import cx from 'classnames';
 import Helmet from 'preact-helmet';
 
-import '@material/typography/mdc-typography.scss';
+import '@material/list/mdc-list.scss';
+import '@material/ripple/mdc-ripple.scss';
 
 import { withRipple } from '../mdc-ripple';
 import List from '../mdc-list';
@@ -13,7 +14,7 @@ const RippledListItem = withRipple(List.Item);
 
 function Showcase({ children }) {
 	return (
-		<article className={cx(style.showcase, 'mdc-typography')}>
+		<article className={style.showcase}>
 			<Helmet
 				meta={[
 					{
@@ -102,11 +103,7 @@ function ShowcaseSectionSubtitle({ children }) {
 }
 
 function ShowcaseFrame({ children }) {
-	return (
-		<main className={cx(style['showcase-frame'], 'mdc-typography')}>
-			{children}
-		</main>
-	);
+	return <main className={cx(style['showcase-frame'])}>{children}</main>;
 }
 
 function ShowcaseResource({ href, src, alt, children }) {

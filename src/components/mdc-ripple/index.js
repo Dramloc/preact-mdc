@@ -2,8 +2,6 @@ import { h, Component } from 'preact';
 import { MDCRipple } from '@material/ripple';
 import cx from 'bem-classnames';
 
-import '@material/ripple/mdc-ripple.scss';
-
 /**
  * Initializes MDCRipple on element
  */

@@ -1,5 +1,10 @@
 import { h, Component } from 'preact';
 
+import '@material/drawer/mdc-drawer.scss';
+import '@material/list/mdc-list.scss';
+import '@material/ripple/mdc-ripple.scss';
+import '@material/top-app-bar/mdc-top-app-bar.scss';
+
 import {
 	withUnboundedSurfaceRipple,
 	withRipple

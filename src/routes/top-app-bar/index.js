@@ -1,5 +1,8 @@
 import { h } from 'preact';
 
+import '@material/ripple/mdc-ripple.scss';
+import '@material/top-app-bar/mdc-top-app-bar.scss';
+
 import { withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Icon from '../../components/mdc-icon';
 import Showcase from '../../components/showcase';

@@ -1,5 +1,8 @@
 import { h } from 'preact';
 
+import '@material/button/mdc-button.scss';
+import '@material/ripple/mdc-ripple.scss';
+
 import { withRipple } from '../../components/mdc-ripple';
 import Button from '../../components/mdc-button';
 import Showcase from '../../components/showcase';

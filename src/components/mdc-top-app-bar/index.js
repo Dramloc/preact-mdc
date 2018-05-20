@@ -2,8 +2,6 @@ import { h, Component } from 'preact';
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { strings } from '@material/top-app-bar/constants';
 
-import '@material/top-app-bar/mdc-top-app-bar.scss';
-
 import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 

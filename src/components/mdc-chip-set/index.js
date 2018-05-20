@@ -1,8 +1,6 @@
 import { h, Component } from 'preact';
 import { MDCChipSet } from '@material/chips';
 
-import '@material/chips/chip-set/mdc-chip-set.scss';
-
 import Base from '../mdc-base';
 
 class ChipSet extends Component {

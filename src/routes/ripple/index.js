@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import cx from 'classnames';
 
+import '@material/ripple/mdc-ripple.scss';
+
 import {
 	withSurfaceRipple,
 	withUnboundedSurfaceRipple

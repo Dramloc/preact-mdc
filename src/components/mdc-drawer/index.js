@@ -1,8 +1,6 @@
 import { h, Component } from 'preact';
 import { MDCPersistentDrawer, MDCTemporaryDrawer } from '@material/drawer';
 
-import '@material/drawer/mdc-drawer.scss';
-
 import Base from '../mdc-base';
 
 function Drawer(props) {

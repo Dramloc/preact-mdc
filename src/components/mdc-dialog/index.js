@@ -2,8 +2,6 @@ import { h, Component } from 'preact';
 import { MDCDialog } from '@material/dialog';
 import { strings } from '@material/dialog/constants';
 
-import '@material/dialog/mdc-dialog.scss';
-
 import Base from '../mdc-base';
 import Button from '../mdc-button';
 

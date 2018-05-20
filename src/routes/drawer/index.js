@@ -1,15 +1,19 @@
 import { h } from 'preact';
 
+import '@material/drawer/mdc-drawer.scss';
+import '@material/list/mdc-list.scss';
+import '@material/ripple/mdc-ripple.scss';
+
 import {
 	withRipple,
 	withUnboundedSurfaceRipple
 } from '../../components/mdc-ripple';
 import Drawer from '../../components/mdc-drawer';
+import Icon from '../../components/mdc-icon';
 import List from '../../components/mdc-list';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
-import Icon from '../../components/mdc-icon';
 
 const RippledListItem = withRipple(List.Item);
 const RippledIcon = withUnboundedSurfaceRipple(Icon);

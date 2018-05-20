@@ -1,5 +1,7 @@
 import { h } from 'preact';
 
+import '@material/chips/mdc-chips.scss';
+
 import Chip from '../../components/mdc-chip';
 import ChipSet from '../../components/mdc-chip-set';
 import Showcase from '../../components/showcase';

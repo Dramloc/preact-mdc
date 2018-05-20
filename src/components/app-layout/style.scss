@@ -1,0 +1,16 @@
+.app-layout {
+  &__main {
+    display: flex;
+  }
+  &__content {
+    width: 900px;
+    margin: 0 auto;
+    padding: 40px 16px 100px;
+    &--animating-open {
+      transition: 200ms transform cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+    }
+    &--animating-close {
+      transition: 125ms transform cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

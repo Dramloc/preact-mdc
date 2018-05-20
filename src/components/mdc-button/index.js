@@ -1,7 +1,5 @@
 import { h } from 'preact';
 
-import '@material/button/mdc-button.scss';
-
 import Base from '../mdc-base';
 import Icon from '../mdc-icon';
 
