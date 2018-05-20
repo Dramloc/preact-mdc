@@ -1,18 +1,31 @@
 import { h } from 'preact';
 import cx from 'classnames';
 import Helmet from 'preact-helmet';
-import List from '../mdc-list';
 
 import '@material/typography/mdc-typography.scss';
 
-import style from './style.scss';
 import { withRipple } from '../mdc-ripple';
+import List from '../mdc-list';
+
+import style from './style.scss';
 
 const RippledListItem = withRipple(List.Item);
 
 function Showcase({ children }) {
 	return (
 		<article className={cx(style.showcase, 'mdc-typography')}>
+			<Helmet
+				meta={[
+					{
+						property: 'og:type',
+						content: 'article'
+					},
+					{
+						name: 'twitter:card',
+						content: 'summary'
+					}
+				]}
+			/>
 			{children}
 		</article>
 	);
@@ -21,14 +34,38 @@ function Showcase({ children }) {
 function ShowcaseTitle({ children }) {
 	return (
 		<h1 className="mdc-typography--headline5">
-			<Helmet title={children} />
+			<Helmet
+				title={children}
+				meta={[
+					{
+						itemprop: 'name',
+						property: 'og:title',
+						name: 'twitter:title',
+						content: children
+					}
+				]}
+			/>
 			{children}
 		</h1>
 	);
 }
 
 function ShowcaseDescription({ children }) {
-	return <h1 className="mdc-typography--body1">{children}</h1>;
+	return (
+		<p className="mdc-typography--body1">
+			<Helmet
+				meta={[
+					{
+						itemprop: 'description',
+						property: 'og:description',
+						name: 'twitter:description',
+						content: children
+					}
+				]}
+			/>
+			{children}
+		</p>
+	);
 }
 
 function ShowcaseHero({ children }) {

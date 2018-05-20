@@ -60,10 +60,16 @@ export default class App extends Component {
 						<Helmet
 							defaultTitle="Preact Material Components for the Web"
 							titleTemplate="%s - Preact Material Components for the Web"
+							meta={[
+								{
+									property: 'og:site_name',
+									content: 'Preact Material Components'
+								}
+							]}
 							link={[
 								{
 									href:
-										'https://fonts.googleapis.com/css?family=Roboto:300,400,500',
+										'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,500',
 									rel: 'stylesheet'
 								},
 								{
@@ -74,21 +80,23 @@ export default class App extends Component {
 							]}
 						/>
 						{shouldRenderLayout(path) && (
-							<TopAppBar className={style['app__top-app-bar']}>
+							<TopAppBar className={style['app-top-app-bar']}>
 								<TopAppBar.Row>
 									<TopAppBar.Section>
 										<RippleNavigationIcon onClick={this.toggleDrawer}>
 											menu
 										</RippleNavigationIcon>
-										<TopAppBar.Title>
+										<TopAppBar.Title
+											className={style['app-top-app-bar__title']}
+										>
 											Preact Material Components
 										</TopAppBar.Title>
 									</TopAppBar.Section>
 								</TopAppBar.Row>
 							</TopAppBar>
 						)}
-						<main
-							className={cx(style.app__main, {
+						<div
+							className={cx({
 								'mdc-top-app-bar--fixed-adjust': shouldRenderLayout(path)
 							})}
 						>
@@ -141,21 +149,23 @@ export default class App extends Component {
 									</Drawer.Drawer>
 								</TemporaryDrawer>
 							)}
-							<Router>
-								<ButtonShowcase path="/button" />
-								<CardShowcase path="/card" />
-								<ChipsShowcase path="/chips" />
-								<DialogShowcase path="/dialog" />
-								<DrawerShowcase path="/drawer" />
-								<DrawerFrame path="/drawer/frame" />
-								<FabShowcase path="/fab" />
-								<IconToggleShowcase path="/icon-toggle" />
-								<ListShowcase path="/list" />
-								<RippleShowcase path="/ripple" />
-								<TopAppBarShowcase path="/top-app-bar" />
-								<TopAppBarFrame path="/top-app-bar/frame" />
-							</Router>
-						</main>
+							<main>
+								<Router>
+									<ButtonShowcase path="/button" />
+									<CardShowcase path="/card" />
+									<ChipsShowcase path="/chips" />
+									<DialogShowcase path="/dialog" />
+									<DrawerShowcase path="/drawer" />
+									<DrawerFrame path="/drawer/frame" />
+									<FabShowcase path="/fab" />
+									<IconToggleShowcase path="/icon-toggle" />
+									<ListShowcase path="/list" />
+									<RippleShowcase path="/ripple" />
+									<TopAppBarShowcase path="/top-app-bar" />
+									<TopAppBarFrame path="/top-app-bar/frame" />
+								</Router>
+							</main>
+						</div>
 					</div>
 				)}
 			</Match>
