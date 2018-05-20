@@ -156,7 +156,7 @@ export default class DialogShowcase extends Component {
 					</Dialog>
 					<Button onClick={this.open}>Open dialog</Button>
 					{accepted !== undefined && (
-						<p class="mdc-typography--body1">
+						<p className="mdc-typography--body1">
 							{accepted
 								? 'Accepted reading my novel, thanks!'
 								: 'Declined to read my novel... Maybe next time?'}
