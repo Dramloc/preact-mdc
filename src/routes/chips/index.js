@@ -28,6 +28,11 @@ export default function ChipShowcase() {
 					</Chip>
 				</ChipSet>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/chips.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/chips/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/chips" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>Choice Chips</Showcase.Section.Title>

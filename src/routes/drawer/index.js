@@ -54,6 +54,11 @@ export default function DrawerShowcase() {
 					</Drawer.Drawer>
 				</Drawer>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/navigation-drawer.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/drawers/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-drawer" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/drawer" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>

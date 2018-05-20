@@ -20,6 +20,11 @@ export default function FabShowcase() {
 					<Fab.Icon>favorite_outline</Fab.Icon>
 				</RippledFab>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/buttons-floating-action-button.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/buttons/floating-action-buttons/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/fab" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>

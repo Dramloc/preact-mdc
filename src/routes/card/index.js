@@ -92,6 +92,11 @@ export default function CardShowcase() {
 					</Card.Actions>
 				</Card>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/cards.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/cards/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-card" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/card" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>Card Media</Showcase.Section.Title>

@@ -39,6 +39,11 @@ export default function ButtonShowcase() {
 					</RippledButton>
 				</div>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/buttons.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/buttons/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-button" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/button" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>Text Button</Showcase.Section.Title>

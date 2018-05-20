@@ -38,6 +38,11 @@ export default function TopAppBarShowcase() {
 					</TopAppBar>
 				</div>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/app-bars-top.html" />
+			<Showcase.Documentation href="https://material.io/develop/web/components/top-app-bar/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar" />
 			<Showcase.Subtitle>Demo</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>

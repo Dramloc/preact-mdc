@@ -31,6 +31,11 @@ export default function ListShowcase() {
 					</List>
 				</div>
 			</Showcase.Hero>
+			<Showcase.Subtitle>Resources</Showcase.Subtitle>
+			<Showcase.Guidelines href="https://material.io/design/components/lists.html" />
+			<Showcase.Documentation href="https://material.io/components/web/catalog/lists/" />
+			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-list" />
+			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/list" />
 			<Showcase.Subtitle>Demos</Showcase.Subtitle>
 			<Showcase.Section>
 				<Showcase.Section.Title>Single-Line</Showcase.Section.Title>
