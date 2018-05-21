@@ -3,7 +3,7 @@ import { MDCNotchedOutline } from '@material/notched-outline';
 
 import { withMaterialComponent } from '../with-material-component';
 
-export function NocthedOutlineBase() {
+export function NotchedOutlineBase() {
 	return (
 		<div>
 			<div class="mdc-notched-outline">
@@ -16,4 +16,4 @@ export function NocthedOutlineBase() {
 	);
 }
 
-export const NotchedOutline = withMaterialComponent(NocthedOutlineBase, MDCNotchedOutline);
+export const NotchedOutline = withMaterialComponent(NotchedOutlineBase, MDCNotchedOutline);
