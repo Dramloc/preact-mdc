@@ -1,12 +1,61 @@
-import { h } from 'preact';
+import { h, Component } from 'preact';
+
+import '@material/linear-progress/mdc-linear-progress.scss';
+
+import { LinearProgress } from '../../components/mdc-progress-linear';
 import Showcase from '../../components/showcase';
 
-function LinearProgressHero() {
-	return null;
+import style from './style.scss';
+
+class LinearProgressHero extends Component {
+	componentDidMount() {
+		this.indicator.MDCComponent.progress = 0.5;
+	}
+	render() {
+		return (
+			<div className={style['hero-linear-progress-indicator']}>
+				<LinearProgress ref={ref => (this.indicator = ref)} />
+			</div>
+		);
+	}
 }
 
-function LinearProgressDemos() {
-	return null;
+class LinearProgressDemos extends Component {
+	componentDidMount() {
+		this.bufferedIndicator.MDCComponent.progress = 0.5;
+		this.bufferedIndicator.MDCComponent.buffer = 0.75;
+		this.reversedIndicator.MDCComponent.progress = 0.5;
+		this.reversedBufferedIndicator.MDCComponent.progress = 0.5;
+		this.reversedBufferedIndicator.MDCComponent.buffer = 0.75;
+	}
+	render() {
+		return (
+			<div>
+				<Showcase.Section className={style['demo-linear-progress-indicator']}>
+					<Showcase.Section.Title>Buffered</Showcase.Section.Title>
+					<LinearProgress ref={ref => (this.bufferedIndicator = ref)} />
+				</Showcase.Section>
+				<Showcase.Section className={style['demo-linear-progress-indicator']}>
+					<Showcase.Section.Title>Indeterminate</Showcase.Section.Title>
+					<LinearProgress modifiers={{ indeterminate: true }} />
+				</Showcase.Section>
+				<Showcase.Section className={style['demo-linear-progress-indicator']}>
+					<Showcase.Section.Title>Reversed</Showcase.Section.Title>
+					<LinearProgress
+						modifiers={{ reversed: true }}
+						ref={ref => (this.reversedIndicator = ref)}
+					/>
+				</Showcase.Section>
+				<Showcase.Section className={style['demo-linear-progress-indicator']}>
+					<Showcase.Section.Title>Reversed Buffered</Showcase.Section.Title>
+					<LinearProgress
+						modifiers={{ reversed: true }}
+						ref={ref => (this.reversedBufferedIndicator = ref)}
+					/>
+				</Showcase.Section>
+			</div>
+		);
+	}
 }
 
 export default function LinearProgressShowcase() {
