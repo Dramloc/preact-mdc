@@ -1,11 +1,10 @@
 import { h } from 'preact';
 import { MDCFloatingLabel } from '@material/floating-label';
 
-import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
 
-export function FloatingLabelBase(props) {
-	return <Base element="label" classes={{ name: 'mdc-floating-label' }} {...props} />;
+export function FloatingLabelBase() {
+	return <label className="mdc-floating-label" />;
 }
 
 export const FloatingLabel = withMaterialComponent(FloatingLabelBase, MDCFloatingLabel);
