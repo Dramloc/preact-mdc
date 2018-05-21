@@ -7,10 +7,10 @@ import { withMaterialComponent } from '../with-material-component';
 export function RadioBase({ className, modifiers, ...props }) {
 	return (
 		<Base element="div" classes={{ name: 'mdc-radio' }} className={className} modifiers={modifiers}>
-			<input class="mdc-radio__native-control" type="radio" {...props} />
-			<div class="mdc-radio__background">
-				<div class="mdc-radio__outer-circle" />
-				<div class="mdc-radio__inner-circle" />
+			<input className="mdc-radio__native-control" type="radio" {...props} />
+			<div className="mdc-radio__background">
+				<div className="mdc-radio__outer-circle" />
+				<div className="mdc-radio__inner-circle" />
 			</div>
 		</Base>
 	);

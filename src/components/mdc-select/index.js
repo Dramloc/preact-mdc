@@ -14,7 +14,7 @@ export function SelectBase({ className, modifiers, label, ...props }) {
 		>
 			<select className="mdc-select__native-control" {...props} />
 			<label className="mdc-floating-label">{label}</label>
-			<div class="mdc-line-ripple" />
+			<div className="mdc-line-ripple" />
 		</Base>
 	);
 }

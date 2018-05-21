@@ -12,17 +12,17 @@ export function CheckboxBase({ className, modifiers, ...props }) {
 			className={className}
 			modifiers={modifiers}
 		>
-			<input type="checkbox" class="mdc-checkbox__native-control" {...props} />
-			<div class="mdc-checkbox__background">
-				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+			<input type="checkbox" className="mdc-checkbox__native-control" {...props} />
+			<div className="mdc-checkbox__background">
+				<svg className="mdc-checkbox__checkmark" viewBox="0 0 24 24">
 					<path
-						class="mdc-checkbox__checkmark-path"
+						className="mdc-checkbox__checkmark-path"
 						fill="none"
 						stroke="white"
 						d="M1.73,12.91 8.1,19.28 22.79,4.59"
 					/>
 				</svg>
-				<div class="mdc-checkbox__mixedmark" />
+				<div className="mdc-checkbox__mixedmark" />
 			</div>
 		</Base>
 	);
