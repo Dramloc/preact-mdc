@@ -2,6 +2,8 @@ import { h } from 'preact';
 import { MDCSelect } from '@material/select';
 
 import { Base } from '../mdc-base';
+import { FloatingLabelBase } from '../mdc-floating-label';
+import { LineRippleBase } from '../mdc-line-ripple';
 import { withMaterialComponent } from '../with-material-component';
 
 export function SelectBase({ className, modifiers, label, ...props }) {
@@ -13,8 +15,8 @@ export function SelectBase({ className, modifiers, label, ...props }) {
 			modifiers={modifiers}
 		>
 			<select className="mdc-select__native-control" {...props} />
-			{label && <label className="mdc-floating-label">{label}</label>}
-			<div className="mdc-line-ripple" />
+			{label && <FloatingLabelBase>{label}</FloatingLabelBase>}
+			<LineRippleBase />
 		</Base>
 	);
 }
