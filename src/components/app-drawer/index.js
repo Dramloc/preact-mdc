@@ -5,16 +5,14 @@ import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
-import { Drawer, DrawerContent, withPersistentDrawer } from '../mdc-drawer';
 import { ListGroup, ListItem } from '../mdc-list';
+import { PersistentDrawer, DrawerContent } from '../mdc-drawer';
 import { withDisabledUpdates } from '../with-disabled-updates';
-import { withRipple } from '../mdc-ripple';
 
-const PersistentDrawer = withPersistentDrawer(Drawer);
-const RippledListItem = withDisabledUpdates(withRipple(ListItem));
+const StaticListItem = withDisabledUpdates(ListItem);
 
 function DrawerListItem({ path, ...props }) {
-	return <RippledListItem element={Link} href={path} {...props} />;
+	return <StaticListItem element={Link} href={path} {...props} />;
 }
 
 export default class AppDrawer extends Component {

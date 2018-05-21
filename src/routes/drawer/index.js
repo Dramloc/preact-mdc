@@ -5,48 +5,44 @@ import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
 import {
-	Drawer,
+	PermanentDrawer,
 	DrawerHeader,
 	DrawerHeaderContent,
 	DrawerContent
 } from '../../components/mdc-drawer';
-import { Icon } from '../../components/mdc-icon';
+import { RippledIcon } from '../../components/mdc-icon';
 import { List, ListItem, ListItemGraphic } from '../../components/mdc-list';
-import { withRipple, withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const RippledListItem = withRipple(ListItem);
-const RippledIcon = withUnboundedSurfaceRipple(Icon);
-
 function DrawerHero() {
 	return (
-		<Drawer className={style['hero-drawer']} modifiers={{ permanent: true }}>
+		<PermanentDrawer className={style['hero-drawer']} modifiers={{ permanent: true }}>
 			<DrawerHeader className={style['hero-drawer__header']}>
 				<DrawerHeaderContent>Header here</DrawerHeaderContent>
 			</DrawerHeader>
 			<DrawerContent>
 				<List>
-					<RippledListItem modifiers={{ selected: true }}>
+					<ListItem modifiers={{ selected: true }}>
 						<ListItemGraphic>inbox</ListItemGraphic>
 						Inbox
-					</RippledListItem>
-					<RippledListItem>
+					</ListItem>
+					<ListItem>
 						<ListItemGraphic>star</ListItemGraphic>
 						Star
-					</RippledListItem>
-					<RippledListItem>
+					</ListItem>
+					<ListItem>
 						<ListItemGraphic>send</ListItemGraphic>
 						Sent Main
-					</RippledListItem>
-					<RippledListItem>
+					</ListItem>
+					<ListItem>
 						<ListItemGraphic>drafts</ListItemGraphic>
 						Drafts
-					</RippledListItem>
+					</ListItem>
 				</List>
 			</DrawerContent>
-		</Drawer>
+		</PermanentDrawer>
 	);
 }
 

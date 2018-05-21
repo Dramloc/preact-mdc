@@ -4,26 +4,23 @@ import '@material/button/mdc-button.scss';
 import '@material/ripple/mdc-ripple.scss';
 
 import { Button, ButtonIcon } from '../../components/mdc-button';
-import { withRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const RippledButton = withRipple(Button);
-
 function ButtonHero() {
 	return (
 		<div>
-			<RippledButton className={style['hero-button']}>Text</RippledButton>
-			<RippledButton className={style['hero-button']} modifiers={{ raised: true }}>
+			<Button className={style['hero-button']}>Text</Button>
+			<Button className={style['hero-button']} modifiers={{ raised: true }}>
 				Raised
-			</RippledButton>
-			<RippledButton className={style['hero-button']} modifiers={{ unelevated: true }}>
+			</Button>
+			<Button className={style['hero-button']} modifiers={{ unelevated: true }}>
 				Unelevated
-			</RippledButton>
-			<RippledButton className={style['hero-button']} modifiers={{ outlined: true }}>
+			</Button>
+			<Button className={style['hero-button']} modifiers={{ outlined: true }}>
 				Outlined
-			</RippledButton>
+			</Button>
 		</div>
 	);
 }
@@ -33,52 +30,49 @@ function ButtonDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Text Button</Showcase.Section.Title>
-				<RippledButton className={style['demo-button']}>Default</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ dense: true }}>
+				<Button className={style['demo-button']}>Default</Button>
+				<Button className={style['demo-button']} modifiers={{ dense: true }}>
 					Dense
-				</RippledButton>
-				<RippledButton className={style['demo-button']}>
+				</Button>
+				<Button className={style['demo-button']}>
 					<ButtonIcon>favorite</ButtonIcon>Icon
-				</RippledButton>
+				</Button>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
-				<RippledButton className={style['demo-button']} modifiers={{ raised: true }}>
+				<Button className={style['demo-button']} modifiers={{ raised: true }}>
 					Default
-				</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ raised: true, dense: true }}>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ raised: true, dense: true }}>
 					Dense
-				</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ raised: true }}>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ raised: true }}>
 					<ButtonIcon>favorite</ButtonIcon>Icon
-				</RippledButton>
+				</Button>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
-				<RippledButton className={style['demo-button']} modifiers={{ unelevated: true }}>
+				<Button className={style['demo-button']} modifiers={{ unelevated: true }}>
 					Default
-				</RippledButton>
-				<RippledButton
-					className={style['demo-button']}
-					modifiers={{ unelevated: true, dense: true }}
-				>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ unelevated: true, dense: true }}>
 					Dense
-				</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ unelevated: true }}>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ unelevated: true }}>
 					<ButtonIcon>favorite</ButtonIcon>Icon
-				</RippledButton>
+				</Button>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Outlined Button</Showcase.Section.Title>
-				<RippledButton className={style['demo-button']} modifiers={{ outlined: true }}>
+				<Button className={style['demo-button']} modifiers={{ outlined: true }}>
 					Default
-				</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ outlined: true, dense: true }}>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ outlined: true, dense: true }}>
 					Dense
-				</RippledButton>
-				<RippledButton className={style['demo-button']} modifiers={{ outlined: true }}>
+				</Button>
+				<Button className={style['demo-button']} modifiers={{ outlined: true }}>
 					<ButtonIcon>favorite</ButtonIcon>Icon
-				</RippledButton>
+				</Button>
 			</Showcase.Section>
 		</div>
 	);

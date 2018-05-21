@@ -1,47 +1,28 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { strings } from '@material/top-app-bar/constants';
 
 import { Base } from '../mdc-base';
 import { Icon } from '../mdc-icon';
+import { withMaterialComponent } from '../with-material-component';
+import { withUnboundedSurfaceRipple } from '../mdc-ripple';
 
-// FIXME: replace with higher order components
-export class TopAppBar extends Component {
-	onNav = e => {
-		if (this.props.onNav) {
-			this.props.onNav(e);
-		}
-	};
-	componentDidMount() {
-		this.MDCComponent = new MDCTopAppBar(this.__root.base);
-		this.MDCComponent.listen(strings.NAVIGATION_EVENT, this.onNav);
-	}
-	componentWillUnmount() {
-		this.MDCComponent.unlisten(strings.NAVIGATION_EVENT, this.onNav);
-		this.MDCComponent.destroy();
-	}
-	render(props) {
-		return (
-			<Base
-				ref={ref => (this.__root = ref)}
-				element="header"
-				classes={{
-					name: 'mdc-top-app-bar',
-					modifiers: [
-						'short',
-						'short-has-action-item',
-						'short-collapsed',
-						'fixed',
-						'fixed-scrolled',
-						'prominent',
-						'dense'
-					]
-				}}
-				{...props}
-			/>
-		);
-	}
+export function TopAppBarBase(props) {
+	return (
+		<Base
+			element="header"
+			classes={{
+				name: 'mdc-top-app-bar',
+				modifiers: ['short', 'short-collapsed', 'fixed', 'prominent', 'dense']
+			}}
+			{...props}
+		/>
+	);
 }
+
+export const TopAppBar = withMaterialComponent(TopAppBarBase, MDCTopAppBar, [
+	{ event: strings.NAVIGATION_EVENT, handler: 'onNav' }
+]);
 
 export function TopAppBarRow(props) {
 	return (
@@ -80,7 +61,7 @@ export function TopAppBarTitle(props) {
 	);
 }
 
-export function TopAppBarNavigationIcon(props) {
+export function TopAppBarNavigationIconBase(props) {
 	return (
 		<Base
 			element={Icon}
@@ -94,7 +75,9 @@ export function TopAppBarNavigationIcon(props) {
 	);
 }
 
-export function TopAppBarActionItem(props) {
+export const TopAppBarNavigationIcon = withUnboundedSurfaceRipple(TopAppBarNavigationIconBase);
+
+export function TopAppBarActionItemBase(props) {
 	return (
 		<Base
 			element={Icon}
@@ -107,3 +90,5 @@ export function TopAppBarActionItem(props) {
 		/>
 	);
 }
+
+export const TopAppBarActionItem = withUnboundedSurfaceRipple(TopAppBarNavigationIconBase);

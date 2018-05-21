@@ -11,11 +11,7 @@ import {
 	TopAppBarSection,
 	TopAppBarTitle
 } from '../../components/mdc-top-app-bar';
-import { withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
-
-const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBarNavigationIcon);
-const RippledActionItem = withUnboundedSurfaceRipple(TopAppBarActionItem);
 
 export default function TopAppBarFrame({ variant }) {
 	const modifiers = { [variant]: true };
@@ -40,13 +36,13 @@ export default function TopAppBarFrame({ variant }) {
 			<TopAppBar modifiers={modifiers}>
 				<TopAppBarRow>
 					<TopAppBarSection modifiers={{ 'align-start': true }}>
-						<RippledNavigationIcon>menu</RippledNavigationIcon>
+						<TopAppBarNavigationIcon>menu</TopAppBarNavigationIcon>
 						<TopAppBarTitle>San Francisco</TopAppBarTitle>
 					</TopAppBarSection>
 					<TopAppBarSection modifiers={{ 'align-end': true }}>
-						<RippledActionItem>file_download</RippledActionItem>
-						{modifiers.short !== true && <RippledActionItem>print</RippledActionItem>}
-						{modifiers.short !== true && <RippledActionItem>bookmark</RippledActionItem>}
+						<TopAppBarActionItem>file_download</TopAppBarActionItem>
+						{modifiers.short !== true && <TopAppBarActionItem>print</TopAppBarActionItem>}
+						{modifiers.short !== true && <TopAppBarActionItem>bookmark</TopAppBarActionItem>}
 					</TopAppBarSection>
 				</TopAppBarRow>
 			</TopAppBar>

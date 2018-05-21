@@ -3,10 +3,8 @@ import { h } from 'preact';
 import '@material/chips/mdc-chips.scss';
 
 import { Chip, ChipText, ChipCheckmark, ChipIcon } from '../../components/mdc-chip';
-import { ChipSet as ChipSetBase, withChipSet } from '../../components/mdc-chip-set';
+import { ChipSet } from '../../components/mdc-chip-set';
 import Showcase from '../../components/showcase';
-
-const ChipSet = withChipSet(ChipSetBase);
 
 function ChipsHero() {
 	return (

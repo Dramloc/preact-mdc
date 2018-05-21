@@ -7,6 +7,7 @@ import '@material/icon-toggle/mdc-icon-toggle.scss';
 import '@material/ripple/mdc-ripple.scss';
 
 import { Button } from '../../components/mdc-button';
+
 import {
 	Card,
 	CardPrimaryAction,
@@ -16,21 +17,15 @@ import {
 	CardActionIcons,
 	withCardAction
 } from '../../components/mdc-card';
-import { Icon } from '../../components/mdc-icon';
+import { RippledIcon } from '../../components/mdc-icon';
 import { IconToggle } from '../../components/mdc-icon-toggle';
-import {
-	withRipple,
-	withSurfaceRipple,
-	withUnboundedSurfaceRipple
-} from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const RippledActionButton = withCardAction(withRipple(Button));
+const ActionButton = withCardAction(Button);
 const ActionIconToggle = withCardAction(IconToggle);
-const RippledActionIcon = withCardAction(withUnboundedSurfaceRipple(Icon));
-const RippledPrimaryAction = withSurfaceRipple(CardPrimaryAction);
+const ActionIcon = withCardAction(RippledIcon);
 
 function DemoCardMedia() {
 	return <CardMedia className={style['demo-card__media']} modifiers={{ '16-9': true }} />;
@@ -61,8 +56,8 @@ function DemoCardActions() {
 	return (
 		<CardActions>
 			<CardActionButtons>
-				<RippledActionButton modifiers={{ button: true }}>Read</RippledActionButton>
-				<RippledActionButton modifiers={{ button: true }}>Bookmark</RippledActionButton>
+				<ActionButton modifiers={{ button: true }}>Read</ActionButton>
+				<ActionButton modifiers={{ button: true }}>Bookmark</ActionButton>
 			</CardActionButtons>
 			<CardActionIcons>
 				<ActionIconToggle
@@ -80,12 +75,12 @@ function DemoCardActions() {
 				>
 					favorite_border
 				</ActionIconToggle>
-				<RippledActionIcon modifiers={{ icon: true }} title="Share">
+				<ActionIcon modifiers={{ icon: true }} title="Share">
 					share
-				</RippledActionIcon>
-				<RippledActionIcon modifiers={{ icon: true }} title="More options">
+				</ActionIcon>
+				<ActionIcon modifiers={{ icon: true }} title="More options">
 					more_vert
-				</RippledActionIcon>
+				</ActionIcon>
 			</CardActionIcons>
 		</CardActions>
 	);
@@ -95,11 +90,11 @@ function CardHero() {
 	return (
 		<div>
 			<Card className={cx(style['demo-card'], style['demo-card--hero'])}>
-				<RippledPrimaryAction>
+				<CardPrimaryAction>
 					<DemoCardMedia />
 					<DemoCardPrimary />
 					<DemoCardSecondary />
-				</RippledPrimaryAction>
+				</CardPrimaryAction>
 				<DemoCardActions />
 			</Card>
 		</div>
@@ -112,30 +107,30 @@ function CardDemos() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Card Media</Showcase.Section.Title>
 				<Card className={style['demo-card']}>
-					<RippledPrimaryAction>
+					<CardPrimaryAction>
 						<DemoCardMedia />
 						<DemoCardPrimary />
 						<DemoCardSecondary />
-					</RippledPrimaryAction>
+					</CardPrimaryAction>
 				</Card>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Card Actions</Showcase.Section.Title>
 				<Card className={style['demo-card']}>
-					<RippledPrimaryAction>
+					<CardPrimaryAction>
 						<DemoCardPrimary />
 						<DemoCardSecondary />
-					</RippledPrimaryAction>
+					</CardPrimaryAction>
 					<DemoCardActions />
 				</Card>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Outlined</Showcase.Section.Title>
 				<Card className={style['demo-card']} modifiers={{ outlined: true }}>
-					<RippledPrimaryAction>
+					<CardPrimaryAction>
 						<DemoCardPrimary />
 						<DemoCardSecondary />
-					</RippledPrimaryAction>
+					</CardPrimaryAction>
 					<DemoCardActions />
 				</Card>
 			</Showcase.Section>

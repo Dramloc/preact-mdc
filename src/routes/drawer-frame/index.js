@@ -6,12 +6,12 @@ import '@material/ripple/mdc-ripple.scss';
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
 import {
-	Drawer,
+	PermanentDrawer,
+	PersistentDrawer,
+	TemporaryDrawer,
 	DrawerHeader,
 	DrawerHeaderContent,
-	DrawerContent,
-	withTemporaryDrawer,
-	withPersistentDrawer
+	DrawerContent
 } from '../../components/mdc-drawer';
 import { List, ListItem, ListDivider, ListItemGraphic } from '../../components/mdc-list';
 import {
@@ -22,17 +22,9 @@ import {
 	TopAppBarSection,
 	TopAppBarTitle
 } from '../../components/mdc-top-app-bar';
-import { withUnboundedSurfaceRipple, withRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from '../drawer/style.scss';
-
-const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBarNavigationIcon);
-const RippledActionItem = withUnboundedSurfaceRipple(TopAppBarActionItem);
-
-const TemporaryDrawer = withTemporaryDrawer(Drawer);
-const PersistentDrawer = withPersistentDrawer(Drawer);
-const RippledListItem = withRipple(ListItem);
 
 export default class DrawerFrame extends Component {
 	toggle = () => {
@@ -41,7 +33,7 @@ export default class DrawerFrame extends Component {
 	render({ variant }) {
 		variant = variant || 'permanent';
 		const modifiers = { [variant]: true };
-		let DemoDrawer = Drawer;
+		let DemoDrawer = PermanentDrawer;
 		let title = 'Permanent Drawer';
 		if (modifiers.temporary) {
 			DemoDrawer = TemporaryDrawer;
@@ -60,35 +52,35 @@ export default class DrawerFrame extends Component {
 						</DrawerHeader>
 						<DrawerContent>
 							<List>
-								<RippledListItem modifiers={{ selected: true }}>
+								<ListItem modifiers={{ selected: true }}>
 									<ListItemGraphic>inbox</ListItemGraphic>
 									Inbox
-								</RippledListItem>
-								<RippledListItem>
+								</ListItem>
+								<ListItem>
 									<ListItemGraphic>star</ListItemGraphic>
 									Star
-								</RippledListItem>
-								<RippledListItem>
+								</ListItem>
+								<ListItem>
 									<ListItemGraphic>send</ListItemGraphic>
 									Sent Main
-								</RippledListItem>
-								<RippledListItem>
+								</ListItem>
+								<ListItem>
 									<ListItemGraphic>drafts</ListItemGraphic>
 									Drafts
-								</RippledListItem>
+								</ListItem>
 								<ListDivider />
-								<RippledListItem>
+								<ListItem>
 									<ListItemGraphic>email</ListItemGraphic>
 									All Mail
-								</RippledListItem>
-								<RippledListItem>
+								</ListItem>
+								<ListItem>
 									<ListItemGraphic>delete</ListItemGraphic>
 									Trash
-								</RippledListItem>
-								<RippledListItem>
+								</ListItem>
+								<ListItem>
 									<ListItemGraphic>report</ListItemGraphic>
 									Spam
-								</RippledListItem>
+								</ListItem>
 							</List>
 						</DrawerContent>
 					</DemoDrawer>
@@ -96,18 +88,18 @@ export default class DrawerFrame extends Component {
 						<TopAppBar>
 							<TopAppBarRow>
 								<TopAppBarSection modifiers={{ 'align-start': true }}>
-									<RippledNavigationIcon
+									<TopAppBarNavigationIcon
 										onClick={this.toggle}
 										style={modifiers.permanent ? { display: 'none' } : {}}
 									>
 										menu
-									</RippledNavigationIcon>
+									</TopAppBarNavigationIcon>
 									<TopAppBarTitle>{title}</TopAppBarTitle>
 								</TopAppBarSection>
 								<TopAppBarSection modifiers={{ 'align-end': true }}>
-									<RippledActionItem>file_download</RippledActionItem>
-									{modifiers.short !== true && <RippledActionItem>print</RippledActionItem>}
-									{modifiers.short !== true && <RippledActionItem>bookmark</RippledActionItem>}
+									<TopAppBarActionItem>file_download</TopAppBarActionItem>
+									{modifiers.short !== true && <TopAppBarActionItem>print</TopAppBarActionItem>}
+									{modifiers.short !== true && <TopAppBarActionItem>bookmark</TopAppBarActionItem>}
 								</TopAppBarSection>
 							</TopAppBarRow>
 						</TopAppBar>

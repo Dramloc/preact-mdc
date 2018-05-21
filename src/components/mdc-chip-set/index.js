@@ -4,7 +4,7 @@ import { MDCChipSet } from '@material/chips';
 import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
 
-export function ChipSet(props) {
+export function ChipSetBase(props) {
 	return (
 		<Base
 			element="div"
@@ -17,6 +17,4 @@ export function ChipSet(props) {
 	);
 }
 
-export function withChipSet(Element) {
-	return withMaterialComponent(Element, MDCChipSet);
-}
+export const ChipSet = withMaterialComponent(ChipSetBase, MDCChipSet);

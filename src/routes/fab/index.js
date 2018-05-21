@@ -4,16 +4,13 @@ import '@material/fab/mdc-fab.scss';
 import '@material/ripple/mdc-ripple.scss';
 
 import { Fab, FabIcon } from '../../components/mdc-fab';
-import { withRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
-
-const RippledFab = withRipple(Fab);
 
 function FabHero() {
 	return (
-		<RippledFab aria-label="Favorite">
+		<Fab aria-label="Favorite">
 			<FabIcon>favorite_outline</FabIcon>
-		</RippledFab>
+		</Fab>
 	);
 }
 
@@ -22,15 +19,15 @@ function FabDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Standard Floating Action Button</Showcase.Section.Title>
-				<RippledFab aria-label="Favorite">
+				<Fab aria-label="Favorite">
 					<FabIcon>favorite_outline</FabIcon>
-				</RippledFab>
+				</Fab>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Mini Floating Action Button</Showcase.Section.Title>
-				<RippledFab modifiers={{ mini: true }} aria-label="Favorite">
+				<Fab modifiers={{ mini: true }} aria-label="Favorite">
 					<FabIcon>favorite_outline</FabIcon>
-				</RippledFab>
+				</Fab>
 			</Showcase.Section>
 		</div>
 	);

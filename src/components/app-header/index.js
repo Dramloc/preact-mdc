@@ -10,11 +10,10 @@ import {
 	TopAppBarTitle
 } from '../mdc-top-app-bar';
 import { withDisabledUpdates } from '../with-disabled-updates';
-import { withUnboundedSurfaceRipple } from '../mdc-ripple';
 
 import style from './style.scss';
 
-const AppHeaderIcon = withDisabledUpdates(withUnboundedSurfaceRipple(TopAppBarNavigationIcon));
+const AppHeaderIcon = withDisabledUpdates(TopAppBarNavigationIcon);
 
 export default function AppHeader({ toggleDrawer }) {
 	return (

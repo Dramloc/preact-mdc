@@ -2,6 +2,7 @@ import { h } from 'preact';
 
 import { Base } from '../mdc-base';
 import { Icon } from '../mdc-icon';
+import { withRipple } from '../mdc-ripple';
 
 export function List(props) {
 	return (
@@ -17,7 +18,7 @@ export function List(props) {
 	);
 }
 
-export function ListItem(props) {
+export function ListItemBase(props) {
 	return (
 		<Base
 			element="li"
@@ -30,6 +31,8 @@ export function ListItem(props) {
 		/>
 	);
 }
+
+export const ListItem = withRipple(ListItemBase);
 
 export function ListItemText(props) {
 	return (

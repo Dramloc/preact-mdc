@@ -3,6 +3,7 @@ import { h } from 'preact';
 import { Base } from '../mdc-base';
 import { withAttributes } from '../with-attributes';
 import { withBemClasses } from '../with-bem-classes';
+import { withSurfaceRipple } from '../mdc-ripple';
 
 export function Card(props) {
 	return (
@@ -17,7 +18,7 @@ export function Card(props) {
 	);
 }
 
-export function CardPrimaryAction(props) {
+export function CardPrimaryActionBase(props) {
 	return (
 		<Base
 			element="div"
@@ -29,6 +30,8 @@ export function CardPrimaryAction(props) {
 		/>
 	);
 }
+
+export const CardPrimaryAction = withSurfaceRipple(CardPrimaryActionBase);
 
 export function CardMedia(props) {
 	return (

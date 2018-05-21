@@ -3,8 +3,8 @@ import cx from 'classnames';
 
 import '@material/ripple/mdc-ripple.scss';
 
-import { Icon } from '../../components/mdc-icon';
-import { withSurfaceRipple, withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
+import { RippledIcon } from '../../components/mdc-icon';
+import { withSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -14,7 +14,6 @@ function Box(props) {
 }
 
 const RippledBox = withSurfaceRipple(Box);
-const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
 function RippleHero() {
 	return <RippledBox className={style['ripple-demo-box']}>Click here!</RippledBox>;
