@@ -4,9 +4,14 @@ import { MDCCheckbox } from '@material/checkbox';
 import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
 
-export function CheckboxBase({ className, ...props }) {
+export function CheckboxBase({ className, modifiers, ...props }) {
 	return (
-		<Base element="div" classes={{ name: 'mdc-checkbox' }} className={className}>
+		<Base
+			element="div"
+			classes={{ name: 'mdc-checkbox' }}
+			className={className}
+			modifiers={modifiers}
+		>
 			<input type="checkbox" class="mdc-checkbox__native-control" {...props} />
 			<div class="mdc-checkbox__background">
 				<svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
