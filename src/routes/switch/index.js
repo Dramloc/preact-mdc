@@ -1,12 +1,21 @@
 import { h } from 'preact';
+
+import '@material/switch/mdc-switch.scss';
+
+import { Switch } from '../../components/mdc-switch';
 import Showcase from '../../components/showcase';
 
-function SwitchHero() {
-	return null;
-}
+import style from './style.scss';
 
-function SwitchDemos() {
-	return null;
+function SwitchHero() {
+	return (
+		<div>
+			<Switch id="hero-switch" />
+			<label className={style['hero-switch-label']} for="hero-switch">
+				off/on
+			</label>
+		</div>
+	);
 }
 
 export default function SwitchShowcase() {
@@ -19,7 +28,6 @@ export default function SwitchShowcase() {
 			documentationLink="https://material.io/develop/web/components/input-controls/switches/"
 			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch"
 			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/switch"
-			demos={<SwitchDemos />}
 		/>
 	);
 }

@@ -41,7 +41,7 @@ function Showcase({
 			{documentationLink && <ShowcaseDocumentation href={documentationLink} />}
 			{sourceCodeLink && <ShowcaseSourceCode href={sourceCodeLink} />}
 			{demoLink && <ShowcaseDemo href={demoLink} />}
-			<ShowcaseSubtitle>Demos</ShowcaseSubtitle>
+			{demos && <ShowcaseSubtitle>Demos</ShowcaseSubtitle>}
 			{demos}
 		</article>
 	);
