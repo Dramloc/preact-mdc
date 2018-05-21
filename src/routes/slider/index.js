@@ -1,12 +1,45 @@
 import { h } from 'preact';
+
+import '@material/slider/mdc-slider.scss';
+
+import { Slider } from '../../components/mdc-slider';
 import Showcase from '../../components/showcase';
 
 function SliderHero() {
-	return null;
+	return (
+		<Slider aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Select Value" />
+	);
 }
 
 function SliderDemos() {
-	return null;
+	return (
+		<div>
+			<Showcase.Section>
+				<Showcase.Section.Title>Continuous</Showcase.Section.Title>
+				<Slider aria-valuemin="0" aria-valuemax="50" aria-valuenow="25" aria-label="Select Value" />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Discrete</Showcase.Section.Title>
+				<Slider
+					modifiers={{ discrete: true }}
+					aria-valuemin="0"
+					aria-valuemax="50"
+					aria-valuenow="25"
+					aria-label="Select Value"
+				/>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Discrete with Tick Marks</Showcase.Section.Title>
+				<Slider
+					modifiers={{ discrete: true, 'display-markers': true }}
+					aria-valuemin="0"
+					aria-valuemax="50"
+					aria-valuenow="25"
+					aria-label="Select Value"
+				/>
+			</Showcase.Section>
+		</div>
+	);
 }
 
 export default function SliderShowcase() {
