@@ -58,6 +58,7 @@
 		"@material/list": "^0.35.0",
 		"@material/radio": "^0.35.0",
 		"@material/ripple": "^0.35.0",
+		"@material/select": "^0.35.1",
 		"@material/top-app-bar": "^0.35.1",
 		"@material/typography": "^0.35.0",
 		"bem-classnames": "^1.0.7",
