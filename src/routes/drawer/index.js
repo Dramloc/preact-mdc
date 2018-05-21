@@ -4,45 +4,48 @@ import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
+import {
+	Drawer,
+	DrawerHeader,
+	DrawerHeaderContent,
+	DrawerContent
+} from '../../components/mdc-drawer';
+import { Icon } from '../../components/mdc-icon';
+import { List, ListItem, ListItemGraphic } from '../../components/mdc-list';
 import { withRipple, withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
-import Drawer from '../../components/mdc-drawer';
-import Icon from '../../components/mdc-icon';
-import List from '../../components/mdc-list';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const RippledListItem = withRipple(List.Item);
+const RippledListItem = withRipple(ListItem);
 const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
 function DrawerHero() {
 	return (
 		<Drawer className={style['hero-drawer']} modifiers={{ permanent: true }}>
-			<Drawer.Drawer>
-				<Drawer.Header className={style['hero-drawer__header']}>
-					<Drawer.Header.Content>Header here</Drawer.Header.Content>
-				</Drawer.Header>
-				<Drawer.Content>
-					<List>
-						<RippledListItem modifiers={{ selected: true }}>
-							<List.Item.Graphic>inbox</List.Item.Graphic>
-							Inbox
-						</RippledListItem>
-						<RippledListItem>
-							<List.Item.Graphic>star</List.Item.Graphic>
-							Star
-						</RippledListItem>
-						<RippledListItem>
-							<List.Item.Graphic>send</List.Item.Graphic>
-							Sent Main
-						</RippledListItem>
-						<RippledListItem>
-							<List.Item.Graphic>drafts</List.Item.Graphic>
-							Drafts
-						</RippledListItem>
-					</List>
-				</Drawer.Content>
-			</Drawer.Drawer>
+			<DrawerHeader className={style['hero-drawer__header']}>
+				<DrawerHeaderContent>Header here</DrawerHeaderContent>
+			</DrawerHeader>
+			<DrawerContent>
+				<List>
+					<RippledListItem modifiers={{ selected: true }}>
+						<ListItemGraphic>inbox</ListItemGraphic>
+						Inbox
+					</RippledListItem>
+					<RippledListItem>
+						<ListItemGraphic>star</ListItemGraphic>
+						Star
+					</RippledListItem>
+					<RippledListItem>
+						<ListItemGraphic>send</ListItemGraphic>
+						Sent Main
+					</RippledListItem>
+					<RippledListItem>
+						<ListItemGraphic>drafts</ListItemGraphic>
+						Drafts
+					</RippledListItem>
+				</List>
+			</DrawerContent>
 		</Drawer>
 	);
 }

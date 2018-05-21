@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-function List(props) {
+export function List(props) {
 	return (
 		<Base
 			element="ul"
@@ -17,7 +17,7 @@ function List(props) {
 	);
 }
 
-function ListItem(props) {
+export function ListItem(props) {
 	return (
 		<Base
 			element="li"
@@ -31,7 +31,7 @@ function ListItem(props) {
 	);
 }
 
-function ListItemText(props) {
+export function ListItemText(props) {
 	return (
 		<Base
 			element="span"
@@ -43,7 +43,7 @@ function ListItemText(props) {
 	);
 }
 
-function ListItemGraphic(props) {
+export function ListItemGraphic(props) {
 	return (
 		<Base
 			element={Icon}
@@ -55,7 +55,7 @@ function ListItemGraphic(props) {
 	);
 }
 
-function ListItemMeta(props) {
+export function ListItemMeta(props) {
 	return (
 		<Base
 			element={Icon}
@@ -67,7 +67,7 @@ function ListItemMeta(props) {
 	);
 }
 
-function ListItemSecondaryText(props) {
+export function ListItemSecondaryText(props) {
 	return (
 		<Base
 			element="span"
@@ -79,7 +79,7 @@ function ListItemSecondaryText(props) {
 	);
 }
 
-function ListGroup(props) {
+export function ListGroup(props) {
 	return (
 		<Base
 			element="div"
@@ -91,7 +91,7 @@ function ListGroup(props) {
 	);
 }
 
-function ListGroupSubheader(props) {
+export function ListGroupSubheader(props) {
 	return (
 		<Base
 			element="h3"
@@ -103,7 +103,7 @@ function ListGroupSubheader(props) {
 	);
 }
 
-function ListDivider(props) {
+export function ListDivider(props) {
 	return (
 		<Base
 			element="li"
@@ -116,14 +116,3 @@ function ListDivider(props) {
 		/>
 	);
 }
-
-List.Item = ListItem;
-List.Item.Text = ListItemText;
-List.Item.SecondaryText = ListItemSecondaryText;
-List.Item.Graphic = ListItemGraphic;
-List.Item.Meta = ListItemMeta;
-List.Group = ListGroup;
-List.Group.Subheader = ListGroupSubheader;
-List.Divider = ListDivider;
-
-export default List;

@@ -3,12 +3,19 @@ import { h } from 'preact';
 import '@material/ripple/mdc-ripple.scss';
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
+import {
+	TopAppBar,
+	TopAppBarNavigationIcon,
+	TopAppBarActionItem,
+	TopAppBarRow,
+	TopAppBarSection,
+	TopAppBarTitle
+} from '../../components/mdc-top-app-bar';
 import { withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
-import TopAppBar from '../../components/mdc-top-app-bar';
 
-const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIcon);
-const RippledActionItem = withUnboundedSurfaceRipple(TopAppBar.ActionItem);
+const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBarNavigationIcon);
+const RippledActionItem = withUnboundedSurfaceRipple(TopAppBarActionItem);
 
 export default function TopAppBarFrame({ variant }) {
 	const modifiers = { [variant]: true };
@@ -31,17 +38,17 @@ export default function TopAppBarFrame({ variant }) {
 	return (
 		<Showcase.Frame>
 			<TopAppBar modifiers={modifiers}>
-				<TopAppBar.Row>
-					<TopAppBar.Section modifiers={{ 'align-start': true }}>
+				<TopAppBarRow>
+					<TopAppBarSection modifiers={{ 'align-start': true }}>
 						<RippledNavigationIcon>menu</RippledNavigationIcon>
-						<TopAppBar.Title>San Francisco</TopAppBar.Title>
-					</TopAppBar.Section>
-					<TopAppBar.Section modifiers={{ 'align-end': true }}>
+						<TopAppBarTitle>San Francisco</TopAppBarTitle>
+					</TopAppBarSection>
+					<TopAppBarSection modifiers={{ 'align-end': true }}>
 						<RippledActionItem>file_download</RippledActionItem>
 						{modifiers.short !== true && <RippledActionItem>print</RippledActionItem>}
 						{modifiers.short !== true && <RippledActionItem>bookmark</RippledActionItem>}
-					</TopAppBar.Section>
-				</TopAppBar.Row>
+					</TopAppBarSection>
+				</TopAppBarRow>
 			</TopAppBar>
 			<main className={adjustClassName}>
 				<p>

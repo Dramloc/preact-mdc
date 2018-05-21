@@ -1,9 +1,10 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import { MDCPersistentDrawer, MDCTemporaryDrawer } from '@material/drawer';
 
-import Base from '../mdc-base';
+import { Base } from '../mdc-base';
+import { withMaterialComponent } from '../with-material-component';
 
-function Drawer(props) {
+export function Drawer({ children, ...props }) {
 	return (
 		<Base
 			element="aside"
@@ -12,62 +13,34 @@ function Drawer(props) {
 				modifiers: ['permanent', 'persistent', 'temporary', 'open', 'animating']
 			}}
 			{...props}
-		/>
+		>
+			<Base element="nav" classes={{ name: 'mdc-drawer__drawer' }}>
+				{children}
+			</Base>
+		</Base>
 	);
 }
 
-function DrawerDrawer(props) {
-	return <Base element="nav" classes={{ name: 'mdc-drawer__drawer' }} {...props} />;
-}
-
-function DrawerHeader(props) {
+export function DrawerHeader(props) {
 	return <Base element="header" classes={{ name: 'mdc-drawer__header' }} {...props} />;
 }
 
-function DrawerHeaderContent(props) {
+export function DrawerHeaderContent(props) {
 	return <Base element="div" classes={{ name: 'mdc-drawer__header-content' }} {...props} />;
 }
 
-function DrawerContent(props) {
+export function DrawerContent(props) {
 	return <Base element="nav" classes={{ name: 'mdc-drawer__content' }} {...props} />;
 }
 
-function DrawerToolbarSpacer(props) {
+export function DrawerToolbarSpacer(props) {
 	return <Base element="div" classes={{ name: 'mdc-drawer__toolbar-spacer' }} {...props} />;
 }
 
 export function withPersistentDrawer(Element) {
-	return class PersistentDrawer extends Component {
-		componentDidMount() {
-			this.MDCComponent = new MDCPersistentDrawer(this.__root.base);
-		}
-		componentWillUnmount() {
-			this.MDCComponent.destroy();
-		}
-		render(props) {
-			return <Element ref={ref => (this.__root = ref)} {...props} />;
-		}
-	};
+	return withMaterialComponent(Element, MDCPersistentDrawer);
 }
 
 export function withTemporaryDrawer(Element) {
-	return class TemporaryDrawer extends Component {
-		componentDidMount() {
-			this.MDCComponent = new MDCTemporaryDrawer(this.__root.base);
-		}
-		componentWillUnmount() {
-			this.MDCComponent.destroy();
-		}
-		render(props) {
-			return <Element ref={ref => (this.__root = ref)} {...props} />;
-		}
-	};
+	return withMaterialComponent(Element, MDCTemporaryDrawer);
 }
-
-Drawer.Drawer = DrawerDrawer;
-Drawer.Header = DrawerHeader;
-Drawer.Header.Content = DrawerHeaderContent;
-Drawer.Content = DrawerContent;
-Drawer.ToolbarSpacer = DrawerToolbarSpacer;
-
-export default Drawer;

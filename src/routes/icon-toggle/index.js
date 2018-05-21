@@ -2,7 +2,7 @@ import { h } from 'preact';
 
 import '@material/icon-toggle/mdc-icon-toggle.scss';
 
-import IconToggle from '../../components/mdc-icon-toggle';
+import { IconToggle } from '../../components/mdc-icon-toggle';
 import Showcase from '../../components/showcase';
 
 function onChange(e) {

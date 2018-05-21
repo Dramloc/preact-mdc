@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-function Button(props) {
+export function Button(props) {
 	return (
 		<Base
 			element="button"
@@ -16,7 +16,7 @@ function Button(props) {
 	);
 }
 
-function ButtonIcon(props) {
+export function ButtonIcon(props) {
 	return (
 		<Base
 			element={Icon}
@@ -27,6 +27,3 @@ function ButtonIcon(props) {
 		/>
 	);
 }
-
-Button.Icon = ButtonIcon;
-export default Button;

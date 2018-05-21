@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-function Fab(props) {
+export function Fab(props) {
 	return (
 		<Base
 			element="button"
@@ -16,9 +16,6 @@ function Fab(props) {
 	);
 }
 
-function FabIcon(props) {
+export function FabIcon(props) {
 	return <Base element={Icon} classes={{ name: 'mdc-fab__icon' }} {...props} />;
 }
-
-Fab.Icon = FabIcon;
-export default Fab;

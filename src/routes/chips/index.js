@@ -2,24 +2,26 @@ import { h } from 'preact';
 
 import '@material/chips/mdc-chips.scss';
 
-import Chip from '../../components/mdc-chip';
-import ChipSet from '../../components/mdc-chip-set';
+import { Chip, ChipText, ChipCheckmark, ChipIcon } from '../../components/mdc-chip';
+import { ChipSet as ChipSetBase, withChipSet } from '../../components/mdc-chip-set';
 import Showcase from '../../components/showcase';
+
+const ChipSet = withChipSet(ChipSetBase);
 
 function ChipsHero() {
 	return (
 		<ChipSet>
 			<Chip>
-				<Chip.Text>Chip One</Chip.Text>
+				<ChipText>Chip One</ChipText>
 			</Chip>
 			<Chip>
-				<Chip.Text>Chip Two</Chip.Text>
+				<ChipText>Chip Two</ChipText>
 			</Chip>
 			<Chip>
-				<Chip.Text>Chip Three</Chip.Text>
+				<ChipText>Chip Three</ChipText>
 			</Chip>
 			<Chip>
-				<Chip.Text>Chip Four</Chip.Text>
+				<ChipText>Chip Four</ChipText>
 			</Chip>
 		</ChipSet>
 	);
@@ -32,19 +34,19 @@ function ChipsDemos() {
 				<Showcase.Section.Title>Choice Chips</Showcase.Section.Title>
 				<ChipSet modifiers={{ choice: true }}>
 					<Chip>
-						<Chip.Text>Extra Small</Chip.Text>
+						<ChipText>Extra Small</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Text>Small</Chip.Text>
+						<ChipText>Small</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Text>Medium</Chip.Text>
+						<ChipText>Medium</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Text>Large</Chip.Text>
+						<ChipText>Large</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Text>Extra Large</Chip.Text>
+						<ChipText>Extra Large</ChipText>
 					</Chip>
 				</ChipSet>
 			</Showcase.Section>
@@ -53,43 +55,43 @@ function ChipsDemos() {
 				<Showcase.Section.Subtitle>No leading icon</Showcase.Section.Subtitle>
 				<ChipSet modifiers={{ filter: true }}>
 					<Chip modifiers={{ selected: true }}>
-						<Chip.Checkmark />
-						<Chip.Text>Tops</Chip.Text>
+						<ChipCheckmark />
+						<ChipText>Tops</ChipText>
 					</Chip>
 					<Chip modifiers={{ selected: true }}>
-						<Chip.Checkmark />
-						<Chip.Text>Bottoms</Chip.Text>
+						<ChipCheckmark />
+						<ChipText>Bottoms</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Checkmark />
-						<Chip.Text>Shoes</Chip.Text>
+						<ChipCheckmark />
+						<ChipText>Shoes</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Checkmark />
-						<Chip.Text>Accessories</Chip.Text>
+						<ChipCheckmark />
+						<ChipText>Accessories</ChipText>
 					</Chip>
 				</ChipSet>
 				<Showcase.Section.Subtitle>With leading icon</Showcase.Section.Subtitle>
 				<ChipSet modifiers={{ filter: true }}>
 					<Chip modifiers={{ selected: true }}>
-						<Chip.Icon modifiers={{ leading: true, 'leading-hidden': true }}>face</Chip.Icon>
-						<Chip.Checkmark />
-						<Chip.Text>Alice</Chip.Text>
+						<ChipIcon modifiers={{ leading: true, 'leading-hidden': true }}>face</ChipIcon>
+						<ChipCheckmark />
+						<ChipText>Alice</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>face</Chip.Icon>
-						<Chip.Checkmark />
-						<Chip.Text>Bob</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>face</ChipIcon>
+						<ChipCheckmark />
+						<ChipText>Bob</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>face</Chip.Icon>
-						<Chip.Checkmark />
-						<Chip.Text>Charlie</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>face</ChipIcon>
+						<ChipCheckmark />
+						<ChipText>Charlie</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>face</Chip.Icon>
-						<Chip.Checkmark />
-						<Chip.Text>Danielle</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>face</ChipIcon>
+						<ChipCheckmark />
+						<ChipText>Danielle</ChipText>
 					</Chip>
 				</ChipSet>
 			</Showcase.Section>
@@ -97,20 +99,20 @@ function ChipsDemos() {
 				<Showcase.Section.Title>Action Chips</Showcase.Section.Title>
 				<ChipSet>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>event</Chip.Icon>
-						<Chip.Text>Add to calendar</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>event</ChipIcon>
+						<ChipText>Add to calendar</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>bookmark</Chip.Icon>
-						<Chip.Text>Bookmark</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>bookmark</ChipIcon>
+						<ChipText>Bookmark</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>alarm</Chip.Icon>
-						<Chip.Text>Set alarm</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>alarm</ChipIcon>
+						<ChipText>Set alarm</ChipText>
 					</Chip>
 					<Chip>
-						<Chip.Icon modifiers={{ leading: true }}>directions</Chip.Icon>
-						<Chip.Text>Get directions</Chip.Text>
+						<ChipIcon modifiers={{ leading: true }}>directions</ChipIcon>
+						<ChipText>Get directions</ChipText>
 					</Chip>
 				</ChipSet>
 			</Showcase.Section>
@@ -118,16 +120,16 @@ function ChipsDemos() {
 				<Showcase.Section.Title>Input Chips</Showcase.Section.Title>
 				<ChipSet modifiers={{ input: true }}>
 					<Chip>
-						<Chip.Text>Apple</Chip.Text>
-						<Chip.Icon modifiers={{ trailing: true }}>close</Chip.Icon>
+						<ChipText>Apple</ChipText>
+						<ChipIcon modifiers={{ trailing: true }}>close</ChipIcon>
 					</Chip>
 					<Chip>
-						<Chip.Text>Orange</Chip.Text>
-						<Chip.Icon modifiers={{ trailing: true }}>close</Chip.Icon>
+						<ChipText>Orange</ChipText>
+						<ChipIcon modifiers={{ trailing: true }}>close</ChipIcon>
 					</Chip>
 					<Chip>
-						<Chip.Text>Banana</Chip.Text>
-						<Chip.Icon modifiers={{ trailing: true }}>close</Chip.Icon>
+						<ChipText>Banana</ChipText>
+						<ChipIcon modifiers={{ trailing: true }}>close</ChipIcon>
 					</Chip>
 				</ChipSet>
 			</Showcase.Section>

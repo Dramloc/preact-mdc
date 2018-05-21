@@ -2,10 +2,11 @@ import { h, Component } from 'preact';
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { strings } from '@material/top-app-bar/constants';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-class TopAppBar extends Component {
+// FIXME: replace with higher order components
+export class TopAppBar extends Component {
 	onNav = e => {
 		if (this.props.onNav) {
 			this.props.onNav(e);
@@ -42,7 +43,7 @@ class TopAppBar extends Component {
 	}
 }
 
-function TopAppBarRow(props) {
+export function TopAppBarRow(props) {
 	return (
 		<Base
 			element="div"
@@ -54,7 +55,7 @@ function TopAppBarRow(props) {
 	);
 }
 
-function TopAppBarSection(props) {
+export function TopAppBarSection(props) {
 	return (
 		<Base
 			element="section"
@@ -67,7 +68,7 @@ function TopAppBarSection(props) {
 	);
 }
 
-function TopAppBarTitle(props) {
+export function TopAppBarTitle(props) {
 	return (
 		<Base
 			element="span"
@@ -79,7 +80,7 @@ function TopAppBarTitle(props) {
 	);
 }
 
-function TopAppBarNavigationIcon(props) {
+export function TopAppBarNavigationIcon(props) {
 	return (
 		<Base
 			element={Icon}
@@ -93,7 +94,7 @@ function TopAppBarNavigationIcon(props) {
 	);
 }
 
-function TopAppBarActionItem(props) {
+export function TopAppBarActionItem(props) {
 	return (
 		<Base
 			element={Icon}
@@ -106,11 +107,3 @@ function TopAppBarActionItem(props) {
 		/>
 	);
 }
-
-TopAppBar.Row = TopAppBarRow;
-TopAppBar.Section = TopAppBarSection;
-TopAppBar.Title = TopAppBarTitle;
-TopAppBar.NavigationIcon = TopAppBarNavigationIcon;
-TopAppBar.ActionItem = TopAppBarActionItem;
-
-export default TopAppBar;

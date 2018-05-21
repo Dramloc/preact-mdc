@@ -3,8 +3,17 @@ import { h, Component } from 'preact';
 import '@material/button/mdc-button.scss';
 import '@material/dialog/mdc-dialog.scss';
 
-import Button from '../../components/mdc-button';
-import Dialog from '../../components/mdc-dialog';
+import { Button } from '../../components/mdc-button';
+import {
+	Dialog,
+	DialogSurface,
+	DialogHeader,
+	DialogHeaderTitle,
+	DialogBody,
+	DialogFooter,
+	DialogFooterButton,
+	DialogBackdrop
+} from '../../components/mdc-dialog';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -19,20 +28,18 @@ function DialogHero() {
 				aria-describedby="my-mdc-dialog-description"
 				modifiers={{ open: true }}
 			>
-				<Dialog.Surface>
-					<Dialog.Header>
-						<Dialog.Header.Title id="my-mdc-dialog-label">
-							Get this party started?
-						</Dialog.Header.Title>
-					</Dialog.Header>
-					<Dialog.Body id="my-mdc-dialog-description">
+				<DialogSurface>
+					<DialogHeader>
+						<DialogHeaderTitle id="my-mdc-dialog-label">Get this party started?</DialogHeaderTitle>
+					</DialogHeader>
+					<DialogBody id="my-mdc-dialog-description">
 						Turn up the jams and have a good time.
-					</Dialog.Body>
-					<Dialog.Footer>
-						<Dialog.Footer.Button modifiers={{ cancel: true }}>Decline</Dialog.Footer.Button>
-						<Dialog.Footer.Button modifiers={{ accept: true }}>Accept</Dialog.Footer.Button>
-					</Dialog.Footer>
-				</Dialog.Surface>
+					</DialogBody>
+					<DialogFooter>
+						<DialogFooterButton modifiers={{ cancel: true }}>Decline</DialogFooterButton>
+						<DialogFooterButton modifiers={{ accept: true }}>Accept</DialogFooterButton>
+					</DialogFooter>
+				</DialogSurface>
 			</Dialog>
 		</div>
 	);
@@ -65,13 +72,13 @@ class DialogDemos extends Component {
 						onAccept={this.onAccept}
 						onCancel={this.onCancel}
 					>
-						<Dialog.Surface>
-							<Dialog.Header>
-								<Dialog.Header.Title id="mdc-dialog-with-list-label">
+						<DialogSurface>
+							<DialogHeader>
+								<DialogHeaderTitle id="mdc-dialog-with-list-label">
 									Read my novel?
-								</Dialog.Header.Title>
-							</Dialog.Header>
-							<Dialog.Body id="mdc-dialog-with-list-description" modifiers={{ scrollable: true }}>
+								</DialogHeaderTitle>
+							</DialogHeader>
+							<DialogBody id="mdc-dialog-with-list-description" modifiers={{ scrollable: true }}>
 								<p>
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus,
 									incidunt. Debitis, repudiandae dignissimos et quam velit autem mollitia tenetur,
@@ -124,13 +131,13 @@ class DialogDemos extends Component {
 									voluptatibus expedita, error ducimus distinctio necessitatibus laudantium officiis
 									dolorum nam vitae?
 								</p>
-							</Dialog.Body>
-							<Dialog.Footer>
-								<Dialog.Footer.Button modifiers={{ cancel: true }}>Decline</Dialog.Footer.Button>
-								<Dialog.Footer.Button modifiers={{ accept: true }}>Accept</Dialog.Footer.Button>
-							</Dialog.Footer>
-						</Dialog.Surface>
-						<Dialog.Backdrop />
+							</DialogBody>
+							<DialogFooter>
+								<DialogFooterButton modifiers={{ cancel: true }}>Decline</DialogFooterButton>
+								<DialogFooterButton modifiers={{ accept: true }}>Accept</DialogFooterButton>
+							</DialogFooter>
+						</DialogSurface>
+						<DialogBackdrop />
 					</Dialog>
 				</div>
 				<Button onClick={this.open}>Open dialog</Button>

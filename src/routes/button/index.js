@@ -3,8 +3,8 @@ import { h } from 'preact';
 import '@material/button/mdc-button.scss';
 import '@material/ripple/mdc-ripple.scss';
 
+import { Button, ButtonIcon } from '../../components/mdc-button';
 import { withRipple } from '../../components/mdc-ripple';
-import Button from '../../components/mdc-button';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -38,7 +38,7 @@ function ButtonDemos() {
 					Dense
 				</RippledButton>
 				<RippledButton className={style['demo-button']}>
-					<Button.Icon>favorite</Button.Icon>Icon
+					<ButtonIcon>favorite</ButtonIcon>Icon
 				</RippledButton>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -50,7 +50,7 @@ function ButtonDemos() {
 					Dense
 				</RippledButton>
 				<RippledButton className={style['demo-button']} modifiers={{ raised: true }}>
-					<Button.Icon>favorite</Button.Icon>Icon
+					<ButtonIcon>favorite</ButtonIcon>Icon
 				</RippledButton>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -65,7 +65,7 @@ function ButtonDemos() {
 					Dense
 				</RippledButton>
 				<RippledButton className={style['demo-button']} modifiers={{ unelevated: true }}>
-					<Button.Icon>favorite</Button.Icon>Icon
+					<ButtonIcon>favorite</ButtonIcon>Icon
 				</RippledButton>
 			</Showcase.Section>
 			<Showcase.Section>
@@ -77,7 +77,7 @@ function ButtonDemos() {
 					Dense
 				</RippledButton>
 				<RippledButton className={style['demo-button']} modifiers={{ outlined: true }}>
-					<Button.Icon>favorite</Button.Icon>Icon
+					<ButtonIcon>favorite</ButtonIcon>Icon
 				</RippledButton>
 			</Showcase.Section>
 		</div>

@@ -5,12 +5,12 @@ import Helmet from 'preact-helmet';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
+import { ListItem, ListItemGraphic, ListItemText } from '../mdc-list';
 import { withRipple } from '../mdc-ripple';
-import List from '../mdc-list';
 
 import style from './style.scss';
 
-const RippledListItem = withRipple(List.Item);
+const RippledListItem = withRipple(ListItem);
 
 function Showcase({
 	title,
@@ -118,10 +118,10 @@ function ShowcaseFrame({ children }) {
 function ShowcaseResource({ href, src, alt, children }) {
 	return (
 		<RippledListItem element="a" target="_blank" rel="noopener" href={href}>
-			<List.Item.Graphic element="span">
+			<ListItemGraphic element="span">
 				<img className={style['resources-icon']} src={src} alt="Material Design Guidelines icon" />
-			</List.Item.Graphic>
-			<List.Item.Text>{children}</List.Item.Text>
+			</ListItemGraphic>
+			<ListItemText>{children}</ListItemText>
 		</RippledListItem>
 	);
 }

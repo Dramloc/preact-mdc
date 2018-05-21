@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-function Chip(props) {
+export function Chip(props) {
 	return (
 		<Base
 			element="div"
@@ -13,11 +13,11 @@ function Chip(props) {
 	);
 }
 
-function ChipText(props) {
+export function ChipText(props) {
 	return <Base element="div" classes={{ name: 'mdc-chip__text' }} {...props} />;
 }
 
-function ChipIcon(props) {
+export function ChipIcon(props) {
 	return (
 		<Base
 			element={Icon}
@@ -30,7 +30,7 @@ function ChipIcon(props) {
 	);
 }
 
-function ChipCheckmark(props) {
+export function ChipCheckmark(props) {
 	return (
 		<Base
 			element="div"
@@ -50,9 +50,3 @@ function ChipCheckmark(props) {
 		/>
 	);
 }
-
-Chip.Text = ChipText;
-Chip.Icon = ChipIcon;
-Chip.Checkmark = ChipCheckmark;
-
-export default Chip;

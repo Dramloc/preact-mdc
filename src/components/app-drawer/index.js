@@ -5,20 +5,16 @@ import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
+import { Drawer, DrawerContent, withPersistentDrawer } from '../mdc-drawer';
+import { ListGroup, ListItem } from '../mdc-list';
+import { withDisabledUpdates } from '../with-disabled-updates';
 import { withRipple } from '../mdc-ripple';
-import Drawer, { withPersistentDrawer } from '../mdc-drawer';
-import List from '../mdc-list';
 
 const PersistentDrawer = withPersistentDrawer(Drawer);
-const RippledListItem = withRipple(List.Item);
+const RippledListItem = withDisabledUpdates(withRipple(ListItem));
 
-class ListItem extends Component {
-	shouldComponentUpdate() {
-		return false;
-	}
-	render({ path, ...props }) {
-		return <RippledListItem element={Link} href={path} {...props} />;
-	}
+function DrawerListItem({ path, ...props }) {
+	return <RippledListItem element={Link} href={path} {...props} />;
 }
 
 export default class AppDrawer extends Component {
@@ -51,38 +47,37 @@ export default class AppDrawer extends Component {
 	render() {
 		return (
 			<PersistentDrawer ref={ref => (this.drawer = ref)} modifiers={{ persistent: true }}>
-				<Drawer.Drawer>
-					<Drawer.Content>
-						<List>
-							<ListItem path="/button">Button</ListItem>
-							<ListItem path="/card">Card</ListItem>
-							<ListItem path="/checkbox">Checkbox</ListItem>
-							<ListItem path="/chips">Chips</ListItem>
-							<ListItem path="/dialog">Dialog</ListItem>
-							<ListItem path="/drawer">Drawer</ListItem>
-							<ListItem path="/elevation">Elevation</ListItem>
-							<ListItem path="/fab">FAB</ListItem>
-							<ListItem path="/icon-toggle">Icon Toggle</ListItem>
-							<ListItem path="/image-list">Image List</ListItem>
-							<ListItem path="/layout-grid">Layout Grid</ListItem>
-							<ListItem path="/linear-progress">Linear Progress Indicator</ListItem>
-							<ListItem path="/list">List</ListItem>
-							<ListItem path="/menu">Menu</ListItem>
-							<ListItem path="/radio">Radio Button</ListItem>
-							<ListItem path="/ripple">Ripple</ListItem>
-							<ListItem path="/select">Select</ListItem>
-							<ListItem path="/shape">Shape</ListItem>
-							<ListItem path="/slider">Slider</ListItem>
-							<ListItem path="/snackbar">Snackbar</ListItem>
-							<ListItem path="/switch">Switch</ListItem>
-							<ListItem path="/tabs">Tabs</ListItem>
-							<ListItem path="/text-field">Text Field</ListItem>
-							<ListItem path="/theme">Theme</ListItem>
-							<ListItem path="/top-app-bar">Top App Bar</ListItem>
-							<ListItem path="/typography">Typography</ListItem>
-						</List>
-					</Drawer.Content>
-				</Drawer.Drawer>
+				<DrawerContent>
+					<ListGroup element="nav">
+						<DrawerListItem path="/">Home</DrawerListItem>
+						<DrawerListItem path="/button">Button</DrawerListItem>
+						<DrawerListItem path="/card">Card</DrawerListItem>
+						<DrawerListItem path="/checkbox">Checkbox</DrawerListItem>
+						<DrawerListItem path="/chips">Chips</DrawerListItem>
+						<DrawerListItem path="/dialog">Dialog</DrawerListItem>
+						<DrawerListItem path="/drawer">Drawer</DrawerListItem>
+						<DrawerListItem path="/elevation">Elevation</DrawerListItem>
+						<DrawerListItem path="/fab">FAB</DrawerListItem>
+						<DrawerListItem path="/icon-toggle">Icon Toggle</DrawerListItem>
+						<DrawerListItem path="/image-list">Image List</DrawerListItem>
+						<DrawerListItem path="/layout-grid">Layout Grid</DrawerListItem>
+						<DrawerListItem path="/linear-progress">Linear Progress Indicator</DrawerListItem>
+						<DrawerListItem path="/list">List</DrawerListItem>
+						<DrawerListItem path="/menu">Menu</DrawerListItem>
+						<DrawerListItem path="/radio">Radio Button</DrawerListItem>
+						<DrawerListItem path="/ripple">Ripple</DrawerListItem>
+						<DrawerListItem path="/select">Select</DrawerListItem>
+						<DrawerListItem path="/shape">Shape</DrawerListItem>
+						<DrawerListItem path="/slider">Slider</DrawerListItem>
+						<DrawerListItem path="/snackbar">Snackbar</DrawerListItem>
+						<DrawerListItem path="/switch">Switch</DrawerListItem>
+						<DrawerListItem path="/tabs">Tabs</DrawerListItem>
+						<DrawerListItem path="/text-field">Text Field</DrawerListItem>
+						<DrawerListItem path="/theme">Theme</DrawerListItem>
+						<DrawerListItem path="/top-app-bar">Top App Bar</DrawerListItem>
+						<DrawerListItem path="/typography">Typography</DrawerListItem>
+					</ListGroup>
+				</DrawerContent>
 			</PersistentDrawer>
 		);
 	}

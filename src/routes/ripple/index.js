@@ -3,11 +3,11 @@ import cx from 'classnames';
 
 import '@material/ripple/mdc-ripple.scss';
 
+import { Icon } from '../../components/mdc-icon';
 import { withSurfaceRipple, withUnboundedSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
-import Icon from '../../components/mdc-icon';
 
 function Box(props) {
 	return <div {...props} />;

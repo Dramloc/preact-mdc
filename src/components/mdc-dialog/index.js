@@ -2,10 +2,11 @@ import { h, Component } from 'preact';
 import { MDCDialog } from '@material/dialog';
 import { strings } from '@material/dialog/constants';
 
-import Base from '../mdc-base';
-import Button from '../mdc-button';
+import { Base } from '../mdc-base';
+import { Button } from '../mdc-button';
 
-class Dialog extends Component {
+// FIXME: use higher order components
+export class Dialog extends Component {
 	onAccept = e => {
 		if (this.props.onAccept) {
 			this.props.onAccept(e);
@@ -39,23 +40,23 @@ class Dialog extends Component {
 	}
 }
 
-function DialogSurface(props) {
+export function DialogSurface(props) {
 	return <Base element="div" classes={{ name: 'mdc-dialog__surface' }} {...props} />;
 }
 
-function DialogBackdrop(props) {
+export function DialogBackdrop(props) {
 	return <Base element="div" classes={{ name: 'mdc-dialog__backdrop' }} {...props} />;
 }
 
-function DialogHeader(props) {
+export function DialogHeader(props) {
 	return <Base element="header" classes={{ name: 'mdc-dialog__header' }} {...props} />;
 }
 
-function DialogHeaderTitle(props) {
+export function DialogHeaderTitle(props) {
 	return <Base element="h2" classes={{ name: 'mdc-dialog__header__title' }} {...props} />;
 }
 
-function DialogBody(props) {
+export function DialogBody(props) {
 	return (
 		<Base
 			element="section"
@@ -65,11 +66,11 @@ function DialogBody(props) {
 	);
 }
 
-function DialogFooter(props) {
+export function DialogFooter(props) {
 	return <Base element="footer" classes={{ name: 'mdc-dialog__footer' }} {...props} />;
 }
 
-function DialogFooterButton(props) {
+export function DialogFooterButton(props) {
 	return (
 		<Base
 			element={Button}
@@ -81,13 +82,3 @@ function DialogFooterButton(props) {
 		/>
 	);
 }
-
-Dialog.Surface = DialogSurface;
-Dialog.Backdrop = DialogBackdrop;
-Dialog.Header = DialogHeader;
-Dialog.Header.Title = DialogHeaderTitle;
-Dialog.Body = DialogBody;
-Dialog.Footer = DialogFooter;
-Dialog.Footer.Button = DialogFooterButton;
-
-export default Dialog;

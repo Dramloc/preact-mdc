@@ -1,34 +1,32 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
+import {
+	TopAppBar,
+	TopAppBarNavigationIcon,
+	TopAppBarRow,
+	TopAppBarSection,
+	TopAppBarTitle
+} from '../mdc-top-app-bar';
+import { withDisabledUpdates } from '../with-disabled-updates';
 import { withUnboundedSurfaceRipple } from '../mdc-ripple';
-import TopAppBar from '../mdc-top-app-bar';
 
 import style from './style.scss';
 
-const RippleNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIcon);
-
-class AppHeaderIcon extends Component {
-	shouldComponentUpdate() {
-		return false;
-	}
-	render({ toggleDrawer }) {
-		return <RippleNavigationIcon onClick={toggleDrawer}>menu</RippleNavigationIcon>;
-	}
-}
+const AppHeaderIcon = withDisabledUpdates(withUnboundedSurfaceRipple(TopAppBarNavigationIcon));
 
 export default function AppHeader({ toggleDrawer }) {
 	return (
 		<TopAppBar className={style['app-header']}>
-			<TopAppBar.Row>
-				<TopAppBar.Section>
-					<AppHeaderIcon toggleDrawer={toggleDrawer} />
-					<TopAppBar.Title className={style['app-header__title']}>
+			<TopAppBarRow>
+				<TopAppBarSection>
+					<AppHeaderIcon onClick={toggleDrawer}>menu</AppHeaderIcon>
+					<TopAppBarTitle className={style['app-header__title']}>
 						Preact Material Components
-					</TopAppBar.Title>
-				</TopAppBar.Section>
-			</TopAppBar.Row>
+					</TopAppBarTitle>
+				</TopAppBarSection>
+			</TopAppBarRow>
 		</TopAppBar>
 	);
 }

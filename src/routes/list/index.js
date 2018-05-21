@@ -3,26 +3,36 @@ import { h } from 'preact';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
+import {
+	List,
+	ListItem,
+	ListItemText,
+	ListItemSecondaryText,
+	ListItemGraphic,
+	ListItemMeta,
+	ListDivider,
+	ListGroup,
+	ListGroupSubheader
+} from '../../components/mdc-list';
 import { withRipple } from '../../components/mdc-ripple';
-import List from '../../components/mdc-list';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const RippledListItem = withRipple(List.Item);
+const RippledListItem = withRipple(ListItem);
 
 function ListHero() {
 	return (
 		<div className={style['hero-list']}>
 			<List className={style['demo-list']}>
 				<RippledListItem>
-					<List.Item.Text>Line item</List.Item.Text>
+					<ListItemText>Line item</ListItemText>
 				</RippledListItem>
 				<RippledListItem>
-					<List.Item.Text>Line item</List.Item.Text>
+					<ListItemText>Line item</ListItemText>
 				</RippledListItem>
 				<RippledListItem>
-					<List.Item.Text>Line item</List.Item.Text>
+					<ListItemText>Line item</ListItemText>
 				</RippledListItem>
 			</List>
 		</div>
@@ -36,13 +46,13 @@ function ListDemos() {
 				<Showcase.Section.Title>Single-Line</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -50,22 +60,22 @@ function ListDemos() {
 				<Showcase.Section.Title>Two-Line</Showcase.Section.Title>
 				<List className={style['demo-list']} modifiers={{ 'two-line': true }}>
 					<RippledListItem>
-						<List.Item.Text>
+						<ListItemText>
 							Line item
-							<List.Item.SecondaryText>Secondary text</List.Item.SecondaryText>
-						</List.Item.Text>
+							<ListItemSecondaryText>Secondary text</ListItemSecondaryText>
+						</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>
+						<ListItemText>
 							Line item
-							<List.Item.SecondaryText>Secondary text</List.Item.SecondaryText>
-						</List.Item.Text>
+							<ListItemSecondaryText>Secondary text</ListItemSecondaryText>
+						</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>
+						<ListItemText>
 							Line item
-							<List.Item.SecondaryText>Secondary text</List.Item.SecondaryText>
-						</List.Item.Text>
+							<ListItemSecondaryText>Secondary text</ListItemSecondaryText>
+						</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -73,16 +83,16 @@ function ListDemos() {
 				<Showcase.Section.Title>Leading Icon</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem>
-						<List.Item.Graphic>wifi</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>wifi</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Graphic>bluetooth</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>bluetooth</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Graphic>data_usage</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>data_usage</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -90,16 +100,16 @@ function ListDemos() {
 				<Showcase.Section.Title>Trailing Icon</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+						<ListItemText>Line item</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+						<ListItemText>Line item</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+						<ListItemText>Line item</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -109,45 +119,37 @@ function ListDemos() {
 				</Showcase.Section.Title>
 				<List className={style['demo-list']} modifiers={{ 'two-line': true, 'avatar-list': true }}>
 					<RippledListItem>
-						<List.Item.Graphic className={style['demo-list-item__graphic']}>
-							folder
-						</List.Item.Graphic>
-						<List.Item.Text>
+						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemText>
 							Dog Photos
-							<List.Item.SecondaryText>9 Jan 2018</List.Item.SecondaryText>
-						</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+							<ListItemSecondaryText>9 Jan 2018</ListItemSecondaryText>
+						</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Graphic className={style['demo-list-item__graphic']}>
-							folder
-						</List.Item.Graphic>
-						<List.Item.Text>
+						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemText>
 							Cat Photos
-							<List.Item.SecondaryText>22 Dec 2017</List.Item.SecondaryText>
-						</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+							<ListItemSecondaryText>22 Dec 2017</ListItemSecondaryText>
+						</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
-					<List.Divider />
+					<ListDivider />
 					<RippledListItem>
-						<List.Item.Graphic className={style['demo-list-item__graphic']}>
-							folder
-						</List.Item.Graphic>
-						<List.Item.Text>
+						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemText>
 							Potatoes
-							<List.Item.SecondaryText>30 Nov 2017</List.Item.SecondaryText>
-						</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+							<ListItemSecondaryText>30 Nov 2017</ListItemSecondaryText>
+						</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Graphic className={style['demo-list-item__graphic']}>
-							folder
-						</List.Item.Graphic>
-						<List.Item.Text>
+						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemText>
 							Carrots
-							<List.Item.SecondaryText>17 Oct 2017</List.Item.SecondaryText>
-						</List.Item.Text>
-						<List.Item.Meta>info</List.Item.Meta>
+							<ListItemSecondaryText>17 Oct 2017</ListItemSecondaryText>
+						</ListItemText>
+						<ListItemMeta>info</ListItemMeta>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -155,62 +157,62 @@ function ListDemos() {
 				<Showcase.Section.Title>Dense</Showcase.Section.Title>
 				<List className={style['demo-list']} modifiers={{ dense: true }}>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Groups</Showcase.Section.Title>
 				<div className={style['demo-list']}>
-					<List.Group>
-						<List.Group.Subheader>Group 1</List.Group.Subheader>
+					<ListGroup>
+						<ListGroupSubheader>Group 1</ListGroupSubheader>
 						<List>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
-							<List.Divider />
+							<ListDivider />
 						</List>
-					</List.Group>
-					<List.Group>
-						<List.Group.Subheader>Group 2</List.Group.Subheader>
+					</ListGroup>
+					<ListGroup>
+						<ListGroupSubheader>Group 2</ListGroupSubheader>
 						<List>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
 							<RippledListItem>
-								<List.Item.Text>Line item</List.Item.Text>
+								<ListItemText>Line item</ListItemText>
 							</RippledListItem>
 						</List>
-					</List.Group>
+					</ListGroup>
 				</div>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Padded Divider</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
-					<List.Divider modifiers={{ padded: true }} />
+					<ListDivider modifiers={{ padded: true }} />
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -218,17 +220,17 @@ function ListDemos() {
 				<Showcase.Section.Title>Inset Divider</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem>
-						<List.Item.Graphic>wifi</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>wifi</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Graphic>bluetooth</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>bluetooth</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
-					<List.Divider modifiers={{ inset: true }} />
+					<ListDivider modifiers={{ inset: true }} />
 					<RippledListItem>
-						<List.Item.Graphic>data_usage</List.Item.Graphic>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemGraphic>data_usage</ListItemGraphic>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
@@ -236,13 +238,13 @@ function ListDemos() {
 				<Showcase.Section.Title>Activated Item</Showcase.Section.Title>
 				<List className={style['demo-list']}>
 					<RippledListItem modifiers={{ activated: true }}>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 					<RippledListItem>
-						<List.Item.Text>Line item</List.Item.Text>
+						<ListItemText>Line item</ListItemText>
 					</RippledListItem>
 				</List>
 			</Showcase.Section>

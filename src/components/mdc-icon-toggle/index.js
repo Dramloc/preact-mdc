@@ -2,10 +2,11 @@ import { h, Component } from 'preact';
 import { MDCIconToggle } from '@material/icon-toggle';
 import { strings } from '@material/icon-toggle/constants';
 
-import Base from '../mdc-base';
-import Icon from '../mdc-icon';
+import { Base } from '../mdc-base';
+import { Icon } from '../mdc-icon';
 
-class IconToggle extends Component {
+// FIXME: replace with higher order components
+export class IconToggle extends Component {
 	onChange = e => {
 		if (this.props.onChange) {
 			this.props.onChange(e);
@@ -40,5 +41,3 @@ class IconToggle extends Component {
 		);
 	}
 }
-
-export default IconToggle;

@@ -1,9 +1,10 @@
 import { h } from 'preact';
-import cx from 'bem-classnames';
 
-import Base from '../mdc-base';
+import { Base } from '../mdc-base';
+import { withAttributes } from '../with-attributes';
+import { withBemClasses } from '../with-bem-classes';
 
-function Card(props) {
+export function Card(props) {
 	return (
 		<Base
 			element="div"
@@ -16,7 +17,7 @@ function Card(props) {
 	);
 }
 
-function CardPrimaryAction(props) {
+export function CardPrimaryAction(props) {
 	return (
 		<Base
 			element="div"
@@ -29,7 +30,7 @@ function CardPrimaryAction(props) {
 	);
 }
 
-function CardMedia(props) {
+export function CardMedia(props) {
 	return (
 		<Base
 			element="div"
@@ -42,7 +43,7 @@ function CardMedia(props) {
 	);
 }
 
-function CardMediaContent(props) {
+export function CardMediaContent(props) {
 	return (
 		<Base
 			element="div"
@@ -54,7 +55,7 @@ function CardMediaContent(props) {
 	);
 }
 
-function CardActions(props) {
+export function CardActions(props) {
 	return (
 		<Base
 			element="div"
@@ -67,7 +68,7 @@ function CardActions(props) {
 	);
 }
 
-function CardActionButtons(props) {
+export function CardActionButtons(props) {
 	return (
 		<Base
 			element="div"
@@ -79,7 +80,7 @@ function CardActionButtons(props) {
 	);
 }
 
-function CardActionIcons(props) {
+export function CardActionIcons(props) {
 	return (
 		<Base
 			element="div"
@@ -91,29 +92,15 @@ function CardActionIcons(props) {
 	);
 }
 
-function withAction(Element) {
-	return function CardAction({ className, ...props }) {
-		const classes = {
+export function withCardAction(Element) {
+	return withAttributes(
+		withBemClasses(Element, {
 			name: 'mdc-card__action',
 			modifiers: ['button', 'icon']
-		};
-		return (
-			<Element
-				className={cx(classes, props.modifiers, className)}
-				role="button"
-				tabindex="0"
-				{...props}
-			/>
-		);
-	};
+		}),
+		{
+			role: 'button',
+			tabindex: '0'
+		}
+	);
 }
-
-Card.PrimaryAction = CardPrimaryAction;
-Card.Media = CardMedia;
-Card.MediaContent = CardMediaContent;
-Card.Actions = CardActions;
-Card.ActionButtons = CardActionButtons;
-Card.ActionIcons = CardActionIcons;
-
-export default Card;
-export { withAction };
