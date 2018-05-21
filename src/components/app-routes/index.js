@@ -1,3 +1,4 @@
+import { h } from 'preact';
 import { Router } from 'preact-router';
 
 import ButtonShowcase from '../../routes/button';

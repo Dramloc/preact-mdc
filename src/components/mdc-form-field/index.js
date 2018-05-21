@@ -1,3 +1,4 @@
+import { h } from 'preact';
 import { MDCFormField } from '@material/form-field';
 
 import { Base } from '../mdc-base';
