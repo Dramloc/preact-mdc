@@ -40,10 +40,10 @@ function Showcase({
 			<ShowcaseDescription>{description}</ShowcaseDescription>
 			<ShowcaseHero>{hero}</ShowcaseHero>
 			<ShowcaseSubtitle>Resources</ShowcaseSubtitle>
-			<ShowcaseGuidelines href={guidelinesLink} />
-			<ShowcaseDocumentation href={documentationLink} />
-			<ShowcaseSourceCode href={sourceCodeLink} />
-			<ShowcaseDemo href={demoLink} />
+			{guidelinesLink && <ShowcaseGuidelines href={guidelinesLink} />}
+			{documentationLink && <ShowcaseDocumentation href={documentationLink} />}
+			{sourceCodeLink && <ShowcaseSourceCode href={sourceCodeLink} />}
+			{demoLink && <ShowcaseDemo href={demoLink} />}
 			<ShowcaseSubtitle>Demos</ShowcaseSubtitle>
 			{demos}
 		</article>
