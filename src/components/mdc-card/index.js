@@ -2,7 +2,7 @@ import { h } from 'preact';
 
 import { Base } from '../mdc-base';
 import { withAttributes } from '../with-attributes';
-import { withBemClasses } from '../with-bem-classes';
+import { withMaterialClasses } from '../with-material-classes';
 import { withSurfaceRipple } from '../mdc-ripple';
 
 export function Card(props) {
@@ -97,7 +97,7 @@ export function CardActionIcons(props) {
 
 export function withCardAction(Element) {
 	return withAttributes(
-		withBemClasses(Element, {
+		withMaterialClasses(Element, {
 			name: 'mdc-card__action',
 			modifiers: ['button', 'icon']
 		}),

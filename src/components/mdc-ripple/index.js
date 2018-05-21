@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { MDCRipple } from '@material/ripple';
 
-import { withBemClasses } from '../with-bem-classes';
+import { withMaterialClasses } from '../with-material-classes';
 import { withMaterialComponent } from '../with-material-component';
 
 /**
@@ -16,7 +16,7 @@ export function withRipple(Element) {
  */
 export function withSurfaceRipple(Element) {
 	return function SurfaceRipple(props) {
-		const RippledElement = withBemClasses(withRipple(Element), {
+		const RippledElement = withMaterialClasses(withRipple(Element), {
 			name: 'mdc-ripple-surface',
 			modifiers: ['primary', 'accent']
 		});
