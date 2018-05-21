@@ -1,12 +1,38 @@
 import { h } from 'preact';
+
+import '@material/checkbox/mdc-checkbox.scss';
+
+import { Checkbox } from '../../components/mdc-checkbox';
 import Showcase from '../../components/showcase';
 
+import style from './style.scss';
+
 function CheckboxHero() {
-	return null;
+	return (
+		<div>
+			<Checkbox className={style['demo-checkbox']} checked />
+			<Checkbox className={style['demo-checkbox']} />
+		</div>
+	);
 }
 
 function CheckboxDemos() {
-	return null;
+	return (
+		<div>
+			<Showcase.Section>
+				<Showcase.Section.Title>Unchecked</Showcase.Section.Title>
+				<Checkbox className={style['demo-checkbox']} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Indeterminate</Showcase.Section.Title>
+				<Checkbox className={style['demo-checkbox']} indeterminate />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Checked</Showcase.Section.Title>
+				<Checkbox className={style['demo-checkbox']} checked />
+			</Showcase.Section>
+		</div>
+	);
 }
 
 export default function CheckboxShowcase() {
