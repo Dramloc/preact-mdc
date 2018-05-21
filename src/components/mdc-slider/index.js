@@ -15,12 +15,18 @@ export function SliderBase(props) {
 		>
 			<div className="mdc-slider__track-container">
 				<div className="mdc-slider__track" />
-				<div className="mdc-slider__track-marker-container" />
+				{props.modifiers &&
+					props.modifiers['display-markers'] && (
+					<div className="mdc-slider__track-marker-container" />
+				)}
 			</div>
 			<div className="mdc-slider__thumb-container">
-				<div className="mdc-slider__pin">
-					<span className="mdc-slider__pin-value-marker" />
-				</div>
+				{props.modifiers &&
+					props.modifiers.discrete && (
+					<div className="mdc-slider__pin">
+						<span className="mdc-slider__pin-value-marker" />
+					</div>
+				)}
 				<svg className="mdc-slider__thumb" width="21" height="21">
 					<circle cx="10.5" cy="10.5" r="7.875" />
 				</svg>
