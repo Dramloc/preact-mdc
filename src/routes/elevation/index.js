@@ -11,19 +11,19 @@ function ElevationHero() {
 		<div>
 			<Elevation
 				className={cx(style['elevation-demo-surface'], style['elevation-demo-surface--hero'])}
-				modifiers={{ z0: true }}
+				modifiers={{ z: 0 }}
 			>
 				Flat 0dp
 			</Elevation>
 			<Elevation
 				className={cx(style['elevation-demo-surface'], style['elevation-demo-surface--hero'])}
-				modifiers={{ z8: true }}
+				modifiers={{ z: 8 }}
 			>
 				Raised 8dp
 			</Elevation>
 			<Elevation
 				className={cx(style['elevation-demo-surface'], style['elevation-demo-surface--hero'])}
-				modifiers={{ z16: true }}
+				modifiers={{ z: 16 }}
 			>
 				Raised 16dp
 			</Elevation>
@@ -46,10 +46,7 @@ class ElevationDemos extends Component {
 				<Showcase.Section>
 					<Showcase.Section.Title>Elevations</Showcase.Section.Title>
 					{Array(...{ length: 25 }).map((_, index) => (
-						<Elevation
-							className={style['elevation-demo-surface']}
-							modifiers={{ [`z${index}`]: true }}
-						>
+						<Elevation className={style['elevation-demo-surface']} modifiers={{ z: index }}>
 							{`${index}dp`}
 						</Elevation>
 					))}
@@ -59,7 +56,7 @@ class ElevationDemos extends Component {
 					<TransitionedElevation
 						onClick={this.incrementElevation}
 						className={style['elevation-demo-surface']}
-						modifiers={{ [`z${elevation}`]: true }}
+						modifiers={{ z: elevation }}
 					>
 						Click me!
 					</TransitionedElevation>

@@ -1,17 +1,16 @@
 import { h } from 'preact';
+import cx from 'bem-classnames';
 
 import '@material/elevation/mdc-elevation.scss';
 
 import { Base } from '../mdc-base';
 import { withMaterialClasses } from '../with-material-classes';
 
-const modifiers = [];
-for (let elevationIndex = 0; elevationIndex <= 24; elevationIndex += 1) {
-	modifiers.push(`z${elevationIndex}`);
-}
-
+cx.prefixes['mdc-elevation--z'] = '{name}--z';
 export function Elevation(props) {
-	return <Base element="div" classes={{ name: 'mdc-elevation', modifiers }} {...props} />;
+	return (
+		<Base element="div" classes={{ name: 'mdc-elevation', 'mdc-elevation--z': ['z'] }} {...props} />
+	);
 }
 
 export function withElevationTransition(Element) {
