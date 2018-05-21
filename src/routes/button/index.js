@@ -11,34 +11,26 @@ import style from './style.scss';
 
 const RippledButton = withRipple(Button);
 
-export default function ButtonShowcase() {
+function ButtonHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>Button</Showcase.Title>
-			<Showcase.Description>
-				Buttons communicate an action a user can take. They are typically placed throughout your UI,
-				in places like dialogs, forms, cards, and toolbars.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<div>
-					<RippledButton className={style['hero-button']}>Text</RippledButton>
-					<RippledButton className={style['hero-button']} modifiers={{ raised: true }}>
-						Raised
-					</RippledButton>
-					<RippledButton className={style['hero-button']} modifiers={{ unelevated: true }}>
-						Unelevated
-					</RippledButton>
-					<RippledButton className={style['hero-button']} modifiers={{ outlined: true }}>
-						Outlined
-					</RippledButton>
-				</div>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/buttons.html" />
-			<Showcase.Documentation href="https://material.io/components/web/catalog/buttons/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-button" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/button" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<div>
+			<RippledButton className={style['hero-button']}>Text</RippledButton>
+			<RippledButton className={style['hero-button']} modifiers={{ raised: true }}>
+				Raised
+			</RippledButton>
+			<RippledButton className={style['hero-button']} modifiers={{ unelevated: true }}>
+				Unelevated
+			</RippledButton>
+			<RippledButton className={style['hero-button']} modifiers={{ outlined: true }}>
+				Outlined
+			</RippledButton>
+		</div>
+	);
+}
+
+function ButtonDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Text Button</Showcase.Section.Title>
 				<RippledButton className={style['demo-button']}>Default</RippledButton>
@@ -88,6 +80,21 @@ export default function ButtonShowcase() {
 					<Button.Icon>favorite</Button.Icon>Icon
 				</RippledButton>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function ButtonShowcase() {
+	return (
+		<Showcase
+			title="Button"
+			description="Buttons communicate an action a user can take. They are typically placed throughout your UI, in places like dialogs, forms, cards, and toolbars."
+			hero={<ButtonHero />}
+			guidelinesLink="https://material.io/design/components/buttons.html"
+			documentationLink="https://material.io/components/web/catalog/buttons/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-button"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/button"
+			demos={<ButtonDemos />}
+		/>
 	);
 }

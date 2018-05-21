@@ -11,34 +11,27 @@ import style from './style.scss';
 
 const RippledListItem = withRipple(List.Item);
 
-export default function ListShowcase() {
+function ListHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>List</Showcase.Title>
-			<Showcase.Description>
-				Lists present multiple line items vertically as a single continuous element.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<div className={style['hero-list']}>
-					<List className={style['demo-list']}>
-						<RippledListItem>
-							<List.Item.Text>Line item</List.Item.Text>
-						</RippledListItem>
-						<RippledListItem>
-							<List.Item.Text>Line item</List.Item.Text>
-						</RippledListItem>
-						<RippledListItem>
-							<List.Item.Text>Line item</List.Item.Text>
-						</RippledListItem>
-					</List>
-				</div>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/lists.html" />
-			<Showcase.Documentation href="https://material.io/components/web/catalog/lists/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-list" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/list" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<div className={style['hero-list']}>
+			<List className={style['demo-list']}>
+				<RippledListItem>
+					<List.Item.Text>Line item</List.Item.Text>
+				</RippledListItem>
+				<RippledListItem>
+					<List.Item.Text>Line item</List.Item.Text>
+				</RippledListItem>
+				<RippledListItem>
+					<List.Item.Text>Line item</List.Item.Text>
+				</RippledListItem>
+			</List>
+		</div>
+	);
+}
+
+function ListDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Single-Line</Showcase.Section.Title>
 				<List className={style['demo-list']}>
@@ -253,6 +246,21 @@ export default function ListShowcase() {
 					</RippledListItem>
 				</List>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function ListShowcase() {
+	return (
+		<Showcase
+			title="List"
+			description="Lists present multiple line items vertically as a single continuous element."
+			hero={<ListHero />}
+			guidelinesLink="https://material.io/design/components/lists.html"
+			documentationLink="https://material.io/components/web/catalog/lists/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-list"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/list"
+			demos={<ListDemos />}
+		/>
 	);
 }

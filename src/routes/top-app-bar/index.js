@@ -14,37 +14,29 @@ const RippledNavigationIcon = withUnboundedSurfaceRipple(TopAppBar.NavigationIco
 const RippledActionItem = withUnboundedSurfaceRipple(TopAppBar.ActionItem);
 const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
-export default function TopAppBarShowcase() {
+function TopAppBarHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>Top App Bar</Showcase.Title>
-			<Showcase.Description>
-				Top App Bars are a container for items such as application title, navigation icon, and
-				action items.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<div className={style['hero-top-app-bar']}>
-					<TopAppBar modifiers={{ fixed: true }}>
-						<TopAppBar.Row>
-							<TopAppBar.Section modifiers={{ 'align-start': true }}>
-								<RippledNavigationIcon>menu</RippledNavigationIcon>
-								<TopAppBar.Title>San Francisco</TopAppBar.Title>
-							</TopAppBar.Section>
-							<TopAppBar.Section modifiers={{ 'align-end': true }}>
-								<RippledActionItem>file_download</RippledActionItem>
-								<RippledActionItem>print</RippledActionItem>
-								<RippledActionItem>bookmark</RippledActionItem>
-							</TopAppBar.Section>
-						</TopAppBar.Row>
-					</TopAppBar>
-				</div>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/app-bars-top.html" />
-			<Showcase.Documentation href="https://material.io/develop/web/components/top-app-bar/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar" />
-			<Showcase.Subtitle>Demo</Showcase.Subtitle>
+		<div className={style['hero-top-app-bar']}>
+			<TopAppBar modifiers={{ fixed: true }}>
+				<TopAppBar.Row>
+					<TopAppBar.Section modifiers={{ 'align-start': true }}>
+						<RippledNavigationIcon>menu</RippledNavigationIcon>
+						<TopAppBar.Title>San Francisco</TopAppBar.Title>
+					</TopAppBar.Section>
+					<TopAppBar.Section modifiers={{ 'align-end': true }}>
+						<RippledActionItem>file_download</RippledActionItem>
+						<RippledActionItem>print</RippledActionItem>
+						<RippledActionItem>bookmark</RippledActionItem>
+					</TopAppBar.Section>
+				</TopAppBar.Row>
+			</TopAppBar>
+		</div>
+	);
+}
+
+function TopAppBarDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>
 					Standard
@@ -130,6 +122,21 @@ export default function TopAppBarShowcase() {
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/short-collapsed" />
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function TopAppBarShowcase() {
+	return (
+		<Showcase
+			title="Top App Bar"
+			description="Top App Bars are a container for items such as application title, navigation icon, and action items."
+			hero={<TopAppBarHero />}
+			guidelinesLink="https://material.io/design/components/app-bars-top.html"
+			documentationLink="https://material.io/develop/web/components/top-app-bar/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar"
+			demos={<TopAppBarDemos />}
+		/>
 	);
 }

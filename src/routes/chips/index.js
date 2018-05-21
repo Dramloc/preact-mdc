@@ -6,36 +6,28 @@ import Chip from '../../components/mdc-chip';
 import ChipSet from '../../components/mdc-chip-set';
 import Showcase from '../../components/showcase';
 
-export default function ChipShowcase() {
+function ChipsHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>Chips</Showcase.Title>
-			<Showcase.Description>
-				Chips are compact elements that allow users to enter information, select a choice, filter
-				content, or trigger an action.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<ChipSet>
-					<Chip>
-						<Chip.Text>Chip One</Chip.Text>
-					</Chip>
-					<Chip>
-						<Chip.Text>Chip Two</Chip.Text>
-					</Chip>
-					<Chip>
-						<Chip.Text>Chip Three</Chip.Text>
-					</Chip>
-					<Chip>
-						<Chip.Text>Chip Four</Chip.Text>
-					</Chip>
-				</ChipSet>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/chips.html" />
-			<Showcase.Documentation href="https://material.io/components/web/catalog/chips/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/chips" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<ChipSet>
+			<Chip>
+				<Chip.Text>Chip One</Chip.Text>
+			</Chip>
+			<Chip>
+				<Chip.Text>Chip Two</Chip.Text>
+			</Chip>
+			<Chip>
+				<Chip.Text>Chip Three</Chip.Text>
+			</Chip>
+			<Chip>
+				<Chip.Text>Chip Four</Chip.Text>
+			</Chip>
+		</ChipSet>
+	);
+}
+
+function ChipsDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Choice Chips</Showcase.Section.Title>
 				<ChipSet modifiers={{ choice: true }}>
@@ -139,6 +131,21 @@ export default function ChipShowcase() {
 					</Chip>
 				</ChipSet>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function ChipShowcase() {
+	return (
+		<Showcase
+			title="Chips"
+			description="Chips are compact elements that allow users to enter information, select a choice, filter content, or trigger an action."
+			hero={<ChipsHero />}
+			guidelinesLink="https://material.io/design/components/chips.html"
+			documentationLink="https://material.io/components/web/catalog/chips/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-chips"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/chips"
+			demos={<ChipsDemos />}
+		/>
 	);
 }

@@ -12,7 +12,16 @@ import style from './style.scss';
 
 const RippledListItem = withRipple(List.Item);
 
-function Showcase({ children }) {
+function Showcase({
+	title,
+	description,
+	hero,
+	guidelinesLink,
+	documentationLink,
+	sourceCodeLink,
+	demoLink,
+	demos
+}) {
 	return (
 		<article className={style.showcase}>
 			<Helmet
@@ -27,7 +36,16 @@ function Showcase({ children }) {
 					}
 				]}
 			/>
-			{children}
+			<ShowcaseTitle>{title}</ShowcaseTitle>
+			<ShowcaseDescription>{description}</ShowcaseDescription>
+			<ShowcaseHero>{hero}</ShowcaseHero>
+			<ShowcaseSubtitle>Resources</ShowcaseSubtitle>
+			<ShowcaseGuidelines href={guidelinesLink} />
+			<ShowcaseDocumentation href={documentationLink} />
+			<ShowcaseSourceCode href={sourceCodeLink} />
+			<ShowcaseDemo href={demoLink} />
+			<ShowcaseSubtitle>Demos</ShowcaseSubtitle>
+			{demos}
 		</article>
 	);
 }

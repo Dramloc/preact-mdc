@@ -16,23 +16,13 @@ function Box(props) {
 const RippledBox = withSurfaceRipple(Box);
 const RippledIcon = withUnboundedSurfaceRipple(Icon);
 
-export default function RippleShowcase() {
+function RippleHero() {
+	return <RippledBox className={style['ripple-demo-box']}>Click here!</RippledBox>;
+}
+
+function RippleDemos() {
 	return (
-		<Showcase>
-			<Showcase.Title>Ripple</Showcase.Title>
-			<Showcase.Description>
-				Ripples are visual representations used to communicate the status of a component or
-				interactive element.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<RippledBox className={style['ripple-demo-box']}>Click here!</RippledBox>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/interaction/states.html" />
-			<Showcase.Documentation href="https://material.io/develop/web/components/ripples/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/ripple" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Bounded Ripple</Showcase.Section.Title>
 				<RippledBox className={style['ripple-demo-box']}>Interact with me!</RippledBox>
@@ -59,6 +49,21 @@ export default function RippleShowcase() {
 					Secondary
 				</RippledBox>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function RippleShowcase() {
+	return (
+		<Showcase
+			title="Ripple"
+			description="Ripples are visual representations used to communicate the status of a component or interactive element."
+			hero={<RippleHero />}
+			guidelinesLink="https://material.io/design/interaction/states.html"
+			documentationLink="https://material.io/develop/web/components/ripples/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-ripple"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/ripple"
+			demos={<RippleDemos />}
+		/>
 	);
 }

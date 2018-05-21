@@ -9,36 +9,28 @@ function onChange(e) {
 	console.log(`on: ${e.detail.isOn}`);
 }
 
-export default function IconToggleShowcase() {
+function IconToggleHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>Icon Toggle</Showcase.Title>
-			<Showcase.Description>
-				Icons are appropriate for toggle buttons that allow a single choice to be selected or
-				deselected, such as adding or removing a star to an item.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<IconToggle
-					aria-pressed="false"
-					aria-label="Add to favorites"
-					data-toggle-on={{
-						label: 'Remove from favorites',
-						content: 'favorite'
-					}}
-					data-toggle-off={{
-						label: 'Add to favorites',
-						content: 'favorite_border'
-					}}
-				>
-					favorite_border
-				</IconToggle>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/buttons.html" />
-			<Showcase.Documentation href="https://material.io/components/web/catalog/buttons/icon-toggle-buttons/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-toggle" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/icon-toggle" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<IconToggle
+			aria-pressed="false"
+			aria-label="Add to favorites"
+			data-toggle-on={{
+				label: 'Remove from favorites',
+				content: 'favorite'
+			}}
+			data-toggle-off={{
+				label: 'Add to favorites',
+				content: 'favorite_border'
+			}}
+		>
+			favorite_border
+		</IconToggle>
+	);
+}
+
+function IconToggleDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Pressed</Showcase.Section.Title>
 				<IconToggle
@@ -92,6 +84,21 @@ export default function IconToggleShowcase() {
 					favorite_border
 				</IconToggle>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function IconToggleShowcase() {
+	return (
+		<Showcase
+			title="Icon Toggle"
+			description="Icons are appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item."
+			hero={<IconToggleHero />}
+			guidelinesLink="https://material.io/design/components/buttons.html"
+			documentationLink="https://material.io/components/web/catalog/buttons/icon-toggle-buttons/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/tree/master/packages/mdc-icon-toggle"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/icon-toggle"
+			demos={<IconToggleDemos />}
+		/>
 	);
 }

@@ -9,25 +9,17 @@ import Showcase from '../../components/showcase';
 
 const RippledFab = withRipple(Fab);
 
-export default function FabShowcase() {
+function FabHero() {
 	return (
-		<Showcase>
-			<Showcase.Title>Floating Action Button</Showcase.Title>
-			<Showcase.Description>
-				Floating action buttons represents the primary action in an application. Only one floating
-				action button is recommended per screen to represent the most common action.
-			</Showcase.Description>
-			<Showcase.Hero>
-				<RippledFab aria-label="Favorite">
-					<Fab.Icon>favorite_outline</Fab.Icon>
-				</RippledFab>
-			</Showcase.Hero>
-			<Showcase.Subtitle>Resources</Showcase.Subtitle>
-			<Showcase.Guidelines href="https://material.io/design/components/buttons-floating-action-button.html" />
-			<Showcase.Documentation href="https://material.io/components/web/catalog/buttons/floating-action-buttons/" />
-			<Showcase.SourceCode href="https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/" />
-			<Showcase.Demo href="https://material-components.github.io/material-components-web-catalog/#/component/fab" />
-			<Showcase.Subtitle>Demos</Showcase.Subtitle>
+		<RippledFab aria-label="Favorite">
+			<Fab.Icon>favorite_outline</Fab.Icon>
+		</RippledFab>
+	);
+}
+
+function FabDemos() {
+	return (
+		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Standard Floating Action Button</Showcase.Section.Title>
 				<RippledFab aria-label="Favorite">
@@ -40,6 +32,21 @@ export default function FabShowcase() {
 					<Fab.Icon>favorite_outline</Fab.Icon>
 				</RippledFab>
 			</Showcase.Section>
-		</Showcase>
+		</div>
+	);
+}
+
+export default function FabShowcase() {
+	return (
+		<Showcase
+			title="Floating Action Button"
+			description="Floating action buttons represents the primary action in an application. Only one floating action button is recommended per screen to represent the most common action."
+			hero={<FabHero />}
+			guidelinesLink="https://material.io/design/components/buttons-floating-action-button.html"
+			documentationLink="https://material.io/components/web/catalog/buttons/floating-action-buttons/"
+			sourceCodeLink="https://github.com/material-components/material-components-web/blob/master/packages/mdc-fab/"
+			demoLink="https://material-components.github.io/material-components-web-catalog/#/component/fab"
+			demos={<FabDemos />}
+		/>
 	);
 }
