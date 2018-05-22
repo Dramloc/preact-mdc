@@ -1,12 +1,124 @@
 import { h } from 'preact';
+import cx from 'classnames';
+
+import '@material/textfield/mdc-text-field.scss';
+
+import {
+	TextField,
+	TextFieldHelperText,
+	TextFieldInput,
+	TextFieldIcon
+} from '../../components/mdc-text-field';
+import { NotchedOutlineIdle, NotchedOutlineBase } from '../../components/mdc-notched-outline';
+import { FloatingLabelBase } from '../../components/mdc-floating-label';
+import { LineRippleBase } from '../../components/mdc-line-ripple';
 import Showcase from '../../components/showcase';
 
+import style from './style.scss';
+
 function TextFieldHero() {
-	return null;
+	return (
+		<div className={style['text-field-container']}>
+			<TextField className={style['text-field']}>
+				<TextFieldInput id="hero-text-field-id" />
+				<FloatingLabelBase for="hero-text-field-id">Standard</FloatingLabelBase>
+				<LineRippleBase />
+			</TextField>
+		</div>
+	);
+}
+
+function TextFieldContainer({ modifiers = {} }) {
+	const idSuffix = Object.keys(modifiers).join('-');
+	const label = modifiers.dense ? 'Dense' : 'Standard';
+	const showFloatingLabel = !modifiers.fullwidth || modifiers.textarea;
+	return (
+		<div className={style['text-field-container']}>
+			<TextField className={style['text-field']} modifiers={modifiers}>
+				{modifiers['with-leading-icon'] && <TextFieldIcon>event</TextFieldIcon>}
+				<TextFieldInput
+					element={modifiers.textarea ? 'textarea' : 'input'}
+					id={`text-field-${idSuffix}`}
+					placeholder={showFloatingLabel ? '' : label}
+				/>
+				{showFloatingLabel && (
+					<FloatingLabelBase for={`text-field-${idSuffix}`}>{label}</FloatingLabelBase>
+				)}
+				{modifiers['with-trailing-icon'] && <TextFieldIcon>delete</TextFieldIcon>}
+				{!modifiers.outlined && !modifiers.textarea && <LineRippleBase />}
+				{modifiers.outlined && <NotchedOutlineBase />}
+				{modifiers.outlined && <NotchedOutlineIdle />}
+			</TextField>
+			{modifiers.helper && (
+				<TextFieldHelperText modifiers={{ persistent: true, 'validation-msg': true }}>
+					Helper Text
+				</TextFieldHelperText>
+			)}
+		</div>
+	);
+}
+
+function TextFieldRow({ className, modifiers }) {
+	return (
+		<div className={cx(style['text-field-row'], className)}>
+			<TextFieldContainer modifiers={modifiers} />
+			<TextFieldContainer modifiers={{ dense: true, ...modifiers }} />
+			<TextFieldContainer modifiers={{ helper: true, ...modifiers }} />
+		</div>
+	);
 }
 
 function TextFieldDemos() {
-	return null;
+	return (
+		<div>
+			<Showcase.Section>
+				<Showcase.Section.Title>Standard</Showcase.Section.Title>
+				<TextFieldRow />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Box</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ box: true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ outlined: true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Box With Leading Icon</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ box: true, 'with-leading-icon': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Box With Trailing Icon</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ box: true, 'with-trailing-icon': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined With Leading Icon</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ outlined: true, 'with-leading-icon': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined With Trailing Icon</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ outlined: true, 'with-trailing-icon': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Textarea</Showcase.Section.Title>
+				<TextFieldRow modifiers={{ textarea: true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Full Width</Showcase.Section.Title>
+				<TextFieldRow
+					className={style['text-field-row-fullwidth']}
+					modifiers={{ fullwidth: true }}
+				/>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Full Width Textarea</Showcase.Section.Title>
+				<TextFieldRow
+					className={style['text-field-row-fullwidth']}
+					modifiers={{ fullwidth: true, textarea: true }}
+				/>
+			</Showcase.Section>
+		</div>
+	);
 }
 
 export default function TextFieldShowcase() {

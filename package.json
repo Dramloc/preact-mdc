@@ -63,6 +63,7 @@
 		"@material/select": "^0.35.1",
 		"@material/slider": "^0.35.0",
 		"@material/switch": "^0.35.0",
+		"@material/textfield": "^0.35.1",
 		"@material/top-app-bar": "^0.35.1",
 		"@material/typography": "^0.35.0",
 		"bem-classnames": "^1.0.7",
