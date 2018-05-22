@@ -3,10 +3,3 @@
 body {
   margin: 0;
 }
-
-@media (max-width: 599px) {
-  .mdc-top-app-bar--fixed-adjust {
-    margin-top: 0;
-    padding-top: 56px;
-  }
-}
