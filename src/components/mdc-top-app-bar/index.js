@@ -13,7 +13,7 @@ export function TopAppBarBase(props) {
 			element="header"
 			classes={{
 				name: 'mdc-top-app-bar',
-				modifiers: ['short', 'short-collapsed', 'fixed', 'prominent', 'dense']
+				modifiers: ['short', 'short-collapsed', 'short-has-action-item', 'fixed', 'prominent', 'dense']
 			}}
 			{...props}
 		/>

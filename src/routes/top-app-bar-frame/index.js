@@ -15,8 +15,11 @@ import Showcase from '../../components/showcase';
 
 export default function TopAppBarFrame({ variant }) {
 	const modifiers = { [variant]: true };
-	if (variant === 'short-collapsed') {
+	if (modifiers['short-collapsed']) {
 		modifiers.short = true;
+	}
+	if (modifiers.short) {
+		modifiers['short-has-action-item'] = true;
 	}
 	let adjustClassName = 'mdc-top-app-bar--fixed-adjust';
 	switch (variant) {
