@@ -5,13 +5,23 @@ import { withMaterialComponent } from '../with-material-component';
 
 export function NotchedOutlineBase() {
 	return (
+		<div className="mdc-notched-outline">
+			<svg>
+				<path className="mdc-notched-outline__path" />
+			</svg>
+		</div>
+	);
+}
+
+export function NotchedOutlineIdle() {
+	return <div className="mdc-notched-outline__idle" />;
+}
+
+export function NotchedOutlineFull() {
+	return (
 		<div>
-			<div class="mdc-notched-outline">
-				<svg>
-					<path class="mdc-notched-outline__path" />
-				</svg>
-			</div>
-			<div class="mdc-notched-outline__idle" />
+			<NotchedOutlineBase />
+			<NotchedOutlineIdle />
 		</div>
 	);
 }
