@@ -5,7 +5,7 @@ import Helmet from 'preact-helmet';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
-import { ListItem, ListItemGraphic, ListItemText } from '../mdc-list';
+import { ListItem, ListItemGraphic, ListItemText, List } from '../mdc-list';
 
 import style from './style.scss';
 
@@ -37,11 +37,13 @@ function Showcase({
 			<ShowcaseDescription>{description}</ShowcaseDescription>
 			<ShowcaseHero>{hero}</ShowcaseHero>
 			<ShowcaseSubtitle>Resources</ShowcaseSubtitle>
-			{guidelinesLink && <ShowcaseGuidelines href={guidelinesLink} />}
-			{documentationLink && <ShowcaseDocumentation href={documentationLink} />}
-			{sourceCodeLink && <ShowcaseSourceCode href={sourceCodeLink} />}
-			{demoLink && <ShowcaseDemo href={demoLink} />}
-			{demos && <ShowcaseSubtitle>Demos</ShowcaseSubtitle>}
+			<List>
+				{guidelinesLink && <ShowcaseGuidelines href={guidelinesLink} />}
+				{documentationLink && <ShowcaseDocumentation href={documentationLink} />}
+				{sourceCodeLink && <ShowcaseSourceCode href={sourceCodeLink} />}
+				{demoLink && <ShowcaseDemo href={demoLink} />}
+				{demos && <ShowcaseSubtitle>Demos</ShowcaseSubtitle>}
+			</List>
 			{demos}
 		</article>
 	);
