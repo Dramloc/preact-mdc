@@ -9,7 +9,8 @@
 		"serve": "npm run -s build && preact serve",
 		"dev": "preact watch --template src/template.html",
 		"prettier": "prettier src/**/{*.scss,*.js} --write",
-		"lint": "eslint src"
+		"lint": "eslint src",
+		"deploy": "npm run -s build && surge ./build --domain https://preact-mdc.surge.sh"
 	},
 	"eslintConfig": {
 		"extends": "eslint-config-synacor",
@@ -32,11 +33,11 @@
 		"build/*"
 	],
 	"devDependencies": {
-		"eslint": "^4.9.0",
-		"eslint-config-synacor": "^2.0.2",
-		"if-env": "^1.0.0",
+		"eslint": "^4.19.1",
+		"eslint-config-synacor": "^3.0.1",
+		"if-env": "^1.0.4",
 		"node-sass": "^4.9.0",
-		"preact-cli": "^2.1.0",
+		"preact-cli": "^2.2.1",
 		"sass-loader": "^7.0.1"
 	},
 	"dependencies": {
@@ -45,11 +46,11 @@
 		"@material/card": "^0.35.0",
 		"@material/checkbox": "^0.35.0",
 		"@material/chips": "^0.35.1",
-		"@material/dialog": "^0.35.0",
+		"@material/dialog": "^0.35.2",
 		"@material/drawer": "^0.35.0",
 		"@material/elevation": "^0.35.0",
 		"@material/fab": "^0.35.0",
-		"@material/floating-label": "^0.35.0",
+		"@material/floating-label": "^0.35.2",
 		"@material/form-field": "^0.35.0",
 		"@material/icon-toggle": "^0.35.0",
 		"@material/image-list": "^0.35.0",
@@ -60,17 +61,17 @@
 		"@material/notched-outline": "^0.35.0",
 		"@material/radio": "^0.35.0",
 		"@material/ripple": "^0.35.0",
-		"@material/select": "^0.35.1",
+		"@material/select": "^0.35.2",
 		"@material/slider": "^0.35.0",
-		"@material/switch": "^0.35.0",
-		"@material/textfield": "^0.35.1",
-		"@material/top-app-bar": "^0.35.1",
+		"@material/switch": "^0.35.2",
+		"@material/textfield": "^0.35.2",
+		"@material/top-app-bar": "^0.35.2",
 		"@material/typography": "^0.35.0",
 		"bem-classnames": "^1.0.7",
 		"classnames": "^2.2.5",
-		"preact": "^8.2.6",
-		"preact-compat": "^3.17.0",
+		"preact": "^8.2.9",
+		"preact-compat": "^3.18.0",
 		"preact-helmet": "^4.0.0-alpha-3",
-		"preact-router": "^2.5.7"
+		"preact-router": "^2.6.1"
 	}
 }
