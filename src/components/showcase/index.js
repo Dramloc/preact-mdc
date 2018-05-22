@@ -55,7 +55,13 @@ function ShowcaseTitle({ children }) {
 				meta={[
 					{
 						itemprop: 'name',
+						content: children
+					},
+					{
 						property: 'og:title',
+						content: children
+					},
+					{
 						name: 'twitter:title',
 						content: children
 					}
@@ -72,8 +78,10 @@ function ShowcaseDescription({ children }) {
 			<Helmet
 				meta={[
 					{
-						itemprop: 'description',
-						property: 'og:description',
+						name: 'description',
+						content: children
+					},
+					{
 						name: 'twitter:description',
 						content: children
 					}
