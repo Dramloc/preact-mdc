@@ -5,7 +5,7 @@ import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 import '@material/ripple/mdc-ripple.scss';
 
-import { ListGroup, ListItem } from '../mdc-list';
+import { List, ListItem } from '../mdc-list';
 import { PersistentDrawer, DrawerContent } from '../mdc-drawer';
 import { withDisabledUpdates } from '../with-disabled-updates';
 
@@ -46,7 +46,7 @@ export default class AppDrawer extends Component {
 		return (
 			<PersistentDrawer ref={ref => (this.drawer = ref)} modifiers={{ persistent: true }}>
 				<DrawerContent>
-					<ListGroup element="nav">
+					<List element="nav">
 						<DrawerListItem path="/">Home</DrawerListItem>
 						<DrawerListItem path="/button">Button</DrawerListItem>
 						<DrawerListItem path="/card">Card</DrawerListItem>
@@ -74,7 +74,7 @@ export default class AppDrawer extends Component {
 						<DrawerListItem path="/theme">Theme</DrawerListItem>
 						<DrawerListItem path="/top-app-bar">Top App Bar</DrawerListItem>
 						<DrawerListItem path="/typography">Typography</DrawerListItem>
-					</ListGroup>
+					</List>
 				</DrawerContent>
 			</PersistentDrawer>
 		);
