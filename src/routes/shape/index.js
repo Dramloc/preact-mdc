@@ -1,6 +1,11 @@
 import { h } from 'preact';
 import cx from 'classnames';
 
+import '@material/button/mdc-button.scss';
+import '@material/card/mdc-card.scss';
+import '@material/icon-toggle/mdc-icon-toggle.scss';
+import '@material/shape/mdc-shape.scss';
+
 import { Button } from '../../components/mdc-button';
 import {
 	Card,
