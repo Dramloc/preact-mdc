@@ -81,9 +81,6 @@
 		"url": "/text-field"
 	},
 	{
-		"url": "/theme"
-	},
-	{
 		"url": "/top-app-bar"
 	},
 	{
@@ -109,8 +106,5 @@
 	},
 	{
 		"url": "/top-app-bar/frame/short-collapsed"
-	},
-	{
-		"url": "/typography"
 	}
 ]

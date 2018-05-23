@@ -71,9 +71,7 @@ export default class AppDrawer extends Component {
 						<DrawerListItem path="/switch">Switch</DrawerListItem>
 						<DrawerListItem path="/tabs">Tabs</DrawerListItem>
 						<DrawerListItem path="/text-field">Text Field</DrawerListItem>
-						<DrawerListItem path="/theme">Theme</DrawerListItem>
 						<DrawerListItem path="/top-app-bar">Top App Bar</DrawerListItem>
-						<DrawerListItem path="/typography">Typography</DrawerListItem>
 					</List>
 				</DrawerContent>
 			</PersistentDrawer>

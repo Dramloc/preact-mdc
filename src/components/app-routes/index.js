@@ -24,9 +24,7 @@ import SnackbarShowcase from '../../routes/snackbar';
 import SwitchShowcase from '../../routes/switch';
 import TabsShowcase from '../../routes/tabs';
 import TextFieldShowcase from '../../routes/text-field';
-import ThemeShowcase from '../../routes/theme';
 import TopAppBarShowcase from '../../routes/top-app-bar';
-import TypographyShowcase from '../../routes/typography';
 
 export default function AppRoutes() {
 	return (
@@ -54,9 +52,7 @@ export default function AppRoutes() {
 			<SwitchShowcase path="/switch" />
 			<TabsShowcase path="/tabs" />
 			<TextFieldShowcase path="/text-field" />
-			<ThemeShowcase path="/theme" />
 			<TopAppBarShowcase path="/top-app-bar" />
-			<TypographyShowcase path="/typography" />
 		</Router>
 	);
 }
