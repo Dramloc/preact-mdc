@@ -5,10 +5,6 @@ import '@material/icon-toggle/mdc-icon-toggle.scss';
 import { IconToggle } from '../../components/mdc-icon-toggle';
 import Showcase from '../../components/showcase';
 
-function onChange(e) {
-	console.log(`on: ${e.detail.isOn}`);
-}
-
 function IconToggleHero() {
 	return (
 		<IconToggle
@@ -62,24 +58,6 @@ function IconToggleDemos() {
 						label: 'Add to favorites',
 						content: 'favorite_border'
 					}}
-				>
-					favorite_border
-				</IconToggle>
-			</Showcase.Section>
-			<Showcase.Section>
-				<Showcase.Section.Title>Change Detection</Showcase.Section.Title>
-				<IconToggle
-					aria-pressed="false"
-					aria-label="Add to favorites"
-					data-toggle-on={{
-						label: 'Remove from favorites',
-						content: 'favorite'
-					}}
-					data-toggle-off={{
-						label: 'Add to favorites',
-						content: 'favorite_border'
-					}}
-					onChange={onChange}
 				>
 					favorite_border
 				</IconToggle>
