@@ -1,0 +1,39 @@
+:global {
+  @import "@material/button/mdc-button";
+  @import "@material/card/mdc-card";
+  @import "@material/icon-toggle/mdc-icon-toggle";
+  @import "@material/shape/mdc-shape";
+}
+@import "@material/shape/mixins";
+
+.hero-shape-container {
+  :global {
+    @include mdc-shape-angled-corner(#f2f2f2, 10px);
+  }
+}
+
+.contained-button-shape-container {
+  margin: 10px;
+  :global {
+    @include mdc-shape-angled-corner(#fff, 10px);
+  }
+}
+
+.outlined-button-shape-container {
+  margin: 10px;
+  :global {
+    @include mdc-shape-angled-corner(#fff, 10px);
+    @include mdc-shape-angled-corner-outline(2px, #6200ee);
+  }
+}
+
+.card-shape-container {
+  :global {
+    @include mdc-shape-angled-corner(#fff, 40px);
+    @include mdc-shape-angled-corner-outline(1px, #e0e0e0);
+  }
+}
+
+.card-shape-container__card {
+  width: 380px;
+}
