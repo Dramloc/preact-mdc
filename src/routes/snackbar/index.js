@@ -1,12 +1,77 @@
-import { h } from 'preact';
+import { h, Component } from 'preact';
+
+import '@material/button/mdc-button.scss';
+import '@material/snackbar/mdc-snackbar.scss';
+
+import { Button } from '../../components/mdc-button';
+import {
+	SnackbarBase,
+	SnackbarText,
+	SnackbarActionWrapper,
+	SnackbarActionButton,
+	Snackbar
+} from '../../components/mdc-snackbar';
 import Showcase from '../../components/showcase';
 
+import style from './style.scss';
+
 function SnackbarHero() {
-	return null;
+	return (
+		<div>
+			<SnackbarBase className={style['hero-snackbar']} modifiers={{ active: true }}>
+				<SnackbarText>Message Sent</SnackbarText>
+				<SnackbarActionWrapper>
+					<SnackbarActionButton>Undo</SnackbarActionButton>
+				</SnackbarActionWrapper>
+			</SnackbarBase>
+		</div>
+	);
+}
+
+class SnackbarDemo extends Component {
+	showSnackbar = () => {
+		this.snackbar.MDCComponent.show({
+			message: this.props.message || 'Message Sent',
+			actionHandler: () => {},
+			actionText: 'Undo'
+		});
+	};
+	render({ modifiers }) {
+		return (
+			<div>
+				<Button onClick={this.showSnackbar}>Show Snackbar</Button>
+				<Snackbar ref={ref => (this.snackbar = ref)} modifiers={modifiers}>
+					<SnackbarText />
+					<SnackbarActionWrapper>
+						<SnackbarActionButton />
+					</SnackbarActionWrapper>
+				</Snackbar>
+			</div>
+		);
+	}
 }
 
 function SnackbarDemos() {
-	return null;
+	return (
+		<div>
+			<Showcase.Section>
+				<Showcase.Section.Title>Snackbar</Showcase.Section.Title>
+				<SnackbarDemo />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Snackbar Start Aligned</Showcase.Section.Title>
+				<SnackbarDemo modifiers={{ 'align-start': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Snackbar with Action on Bottom</Showcase.Section.Title>
+				<SnackbarDemo modifiers={{ 'action-on-bottom': true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Multiline Snackbar</Showcase.Section.Title>
+				<SnackbarDemo modifiers={{ multiline: true }} message="This is a longer message, it will be displayed on multiple lines" />
+			</Showcase.Section>
+		</div>
+	);
 }
 
 export default function SnackbarShowcase() {

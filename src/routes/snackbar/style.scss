@@ -1,0 +1,7 @@
+.hero-snackbar {
+  position: relative;
+  left: auto;
+  &:global(.mdc-snackbar--active) {
+    transform: none;
+  }
+}
