@@ -66,6 +66,7 @@
 		"@material/shape": "^0.35.0",
 		"@material/slider": "^0.35.0",
 		"@material/switch": "^0.35.2",
+		"@material/tabs": "^0.35.0",
 		"@material/textfield": "^0.35.2",
 		"@material/top-app-bar": "^0.35.2",
 		"@material/typography": "^0.35.0",
