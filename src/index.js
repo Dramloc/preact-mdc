@@ -1,5 +1,8 @@
 import Helmet from 'preact-helmet';
 
+import '@material/ripple/mdc-ripple.scss';
+import '@material/typography/mdc-typography.scss';
+
 import App from './components/app';
 
 import './style/index.scss';
