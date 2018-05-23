@@ -1,8 +1,6 @@
 import { h } from 'preact';
 import cx from 'classnames';
 
-import '@material/ripple/mdc-ripple.scss';
-
 import { RippledIcon } from '../../components/mdc-icon';
 import { withSurfaceRipple } from '../../components/mdc-ripple';
 import Showcase from '../../components/showcase';

@@ -1,7 +1,7 @@
 import { h } from 'preact';
+import cx from 'classnames';
 
 import '@material/list/mdc-list.scss';
-import '@material/ripple/mdc-ripple.scss';
 
 import {
 	List,
@@ -114,9 +114,12 @@ function ListDemos() {
 				<Showcase.Section.Title>
 					Two-Line with Leading and Trailing Icon and Divider
 				</Showcase.Section.Title>
-				<List className={style['demo-list']} modifiers={{ 'two-line': true, 'avatar-list': true }}>
+				<List
+					className={cx(style['demo-list'], style['demo-list--avatar-list'])}
+					modifiers={{ 'two-line': true, 'avatar-list': true }}
+				>
 					<ListItem>
-						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemGraphic>folder</ListItemGraphic>
 						<ListItemText>
 							Dog Photos
 							<ListItemSecondaryText>9 Jan 2018</ListItemSecondaryText>
@@ -124,7 +127,7 @@ function ListDemos() {
 						<ListItemMeta>info</ListItemMeta>
 					</ListItem>
 					<ListItem>
-						<ListItemGraphic className={style['demo-list-item__graphic']}>folder</ListItemGraphic>
+						<ListItemGraphic>folder</ListItemGraphic>
 						<ListItemText>
 							Cat Photos
 							<ListItemSecondaryText>22 Dec 2017</ListItemSecondaryText>

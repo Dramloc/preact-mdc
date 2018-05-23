@@ -3,7 +3,6 @@ import cx from 'classnames';
 import Helmet from 'preact-helmet';
 
 import '@material/list/mdc-list.scss';
-import '@material/ripple/mdc-ripple.scss';
 
 import { ListItem, ListItemGraphic, ListItemText, List } from '../mdc-list';
 

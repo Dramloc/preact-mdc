@@ -1,7 +1,6 @@
 import { h } from 'preact';
 
 import '@material/button/mdc-button.scss';
-import '@material/ripple/mdc-ripple.scss';
 
 import { Button, ButtonIcon } from '../../components/mdc-button';
 import Showcase from '../../components/showcase';

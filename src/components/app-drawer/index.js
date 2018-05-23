@@ -3,7 +3,6 @@ import { Link } from 'preact-router';
 
 import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
-import '@material/ripple/mdc-ripple.scss';
 
 import { List, ListItem } from '../mdc-list';
 import { PersistentDrawer, DrawerContent } from '../mdc-drawer';
