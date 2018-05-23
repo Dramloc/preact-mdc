@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
 import cx from 'classnames';
 
+import '@material/elevation/mdc-elevation.scss';
+
 import { Elevation, withElevationTransition } from '../../components/mdc-elevation';
 import Showcase from '../../components/showcase';
 

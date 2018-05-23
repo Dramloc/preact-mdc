@@ -1,8 +1,6 @@
 import { h } from 'preact';
 import cx from 'bem-classnames';
 
-import '@material/elevation/mdc-elevation.scss';
-
 import { Base } from '../mdc-base';
 import { withMaterialClasses } from '../with-material-classes';
 
