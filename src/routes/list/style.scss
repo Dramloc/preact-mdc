@@ -1,3 +1,5 @@
+@import "@material/list/mixins";
+
 .demo-list {
   max-width: 600px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -7,8 +9,9 @@
   background: #fff;
 }
 
-.demo-list-item__graphic {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  display: inline-flex;
+.demo-list--avatar-list {
+  :global {
+    @include mdc-list-item-graphic-fill-color(text-icon-on-background);
+    @include mdc-list-item-graphic-ink-color(text-primary-on-dark);
+  }
 }

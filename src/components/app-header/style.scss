@@ -1,6 +1,10 @@
+@import "@material/top-app-bar/mixins";
+
 .app-header {
   z-index: 2;
-  background-color: #202124;
+  :global {
+    @include mdc-top-app-bar-fill-color(#202124);
+  }
 
   &__title {
     font-family: "Roboto Mono", sans-serif;
