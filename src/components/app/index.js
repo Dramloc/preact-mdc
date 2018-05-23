@@ -36,16 +36,6 @@ export default class App extends Component {
 							content: 'Preact Material Components'
 						}
 					]}
-					link={[
-						{
-							href: 'https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,500',
-							rel: 'stylesheet'
-						},
-						{
-							href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
-							rel: 'stylesheet'
-						}
-					]}
 				/>
 				<Router onChange={this.handleChange}>
 					<TopAppBarFrame path="/top-app-bar/frame/:variant?" />
