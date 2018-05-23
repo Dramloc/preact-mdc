@@ -2,7 +2,6 @@ import { h, Component } from 'preact';
 
 import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
-import '@material/ripple/mdc-ripple.scss';
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
 import {
@@ -24,7 +23,7 @@ import {
 } from '../../components/mdc-top-app-bar';
 import Showcase from '../../components/showcase';
 
-import style from '../drawer/style.scss';
+import style from './style.scss';
 
 export default class DrawerFrame extends Component {
 	toggle = () => {
