@@ -1,12 +1,53 @@
-import { h } from 'preact';
+import { h, Component } from 'preact';
+
+import '@material/button/mdc-button.scss';
+import '@material/menu/mdc-menu.scss';
+
+import { Button } from '../../components/mdc-button';
+import { ListDivider } from '../../components/mdc-list';
+import { MenuItems, Menu, MenuItem, MenuBase, MenuAnchor } from '../../components/mdc-menu';
 import Showcase from '../../components/showcase';
 
 function MenuHero() {
-	return null;
+	return (
+		<MenuBase modifiers={{ open: true }}>
+			<MenuItems>
+				<MenuItem>A Menu Item</MenuItem>
+				<MenuItem>Another Menu Item</MenuItem>
+			</MenuItems>
+		</MenuBase>
+	);
 }
 
-function MenuDemos() {
-	return null;
+class MenuDemos extends Component {
+	openMenu = () => {
+		this.menu.MDCComponent.open = true;
+	};
+	render() {
+		return (
+			<div>
+				<Showcase.Section>
+					<Showcase.Section.Title>Anchored Menu</Showcase.Section.Title>
+					<Button onClick={this.openMenu}>Open Menu</Button>
+					<MenuAnchor>
+						<Menu ref={ref => (this.menu = ref)}>
+							<MenuItems>
+								<MenuItem>Passionfruit</MenuItem>
+								<MenuItem>Orange</MenuItem>
+								<MenuItem>Guava</MenuItem>
+								<MenuItem>Pitaya</MenuItem>
+								<ListDivider />
+								<MenuItem>Pineapple</MenuItem>
+								<MenuItem>Mango</MenuItem>
+								<MenuItem>Papaya</MenuItem>
+								<MenuItem>Lychee</MenuItem>
+							</MenuItems>
+						</Menu>
+					</MenuAnchor>
+				</Showcase.Section>
+			</div>
+		);
+	}
 }
 
 export default function MenuShowcase() {
