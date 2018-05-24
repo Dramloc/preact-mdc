@@ -44,7 +44,7 @@ export default class AppLayout extends Component {
 				<AppHeader toggleDrawer={this.toggleDrawer} />
 				<div className={cx(style['app-layout__main'], 'mdc-top-app-bar--fixed-adjust')}>
 					<AppDrawer
-						isDrawerOpen={isDrawerOpen}
+						open={isDrawerOpen}
 						handleOpen={this.handleOpen}
 						handleClose={this.handleClose}
 					/>

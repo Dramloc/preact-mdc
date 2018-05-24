@@ -17,7 +17,7 @@ import style from './style.scss';
 
 function DrawerHero() {
 	return (
-		<PermanentDrawer className={style['hero-drawer']} modifiers={{ permanent: true }}>
+		<PermanentDrawer className={style['hero-drawer']}>
 			<DrawerHeader className={style['hero-drawer__header']}>
 				<DrawerHeaderContent>Header here</DrawerHeaderContent>
 			</DrawerHeader>

@@ -18,32 +18,19 @@ export default class AppDrawer extends Component {
 	computeDrawerWidth() {
 		return this.drawer.MDCComponent.drawer.offsetWidth;
 	}
-
-	handleDrawerOpen() {
+	handleOpen = () => {
 		this.props.handleOpen(this.computeDrawerWidth());
 	}
-
-	handleDrawerClose() {
+	handleClose = () => {
 		this.props.handleClose(this.computeDrawerWidth());
 	}
-
-	componentWillReceiveProps(nextProps) {
-		if (this.drawer) {
-			if (this.props.isDrawerOpen !== nextProps.isDrawerOpen) {
-				this.drawer.MDCComponent.open = !this.drawer.MDCComponent.open;
-				if (this.drawer.MDCComponent.open) {
-					this.handleDrawerOpen();
-				}
-				else {
-					this.handleDrawerClose();
-				}
-			}
-		}
-	}
-
-	render() {
+	render({ open }) {
 		return (
-			<PersistentDrawer ref={ref => (this.drawer = ref)} modifiers={{ persistent: true }}>
+			<PersistentDrawer onOpen={this.handleOpen}
+				onClose={this.handleClose}
+				ref={ref => (this.drawer = ref)}
+				open={open}
+			>
 				<DrawerContent>
 					<List element="nav">
 						<DrawerListItem path="/">Home</DrawerListItem>

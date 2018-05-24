@@ -16,7 +16,6 @@ import { List, ListItem, ListDivider, ListItemGraphic } from '../../components/m
 import {
 	TopAppBar,
 	TopAppBarNavigationIcon,
-	TopAppBarActionItem,
 	TopAppBarRow,
 	TopAppBarSection,
 	TopAppBarTitle
@@ -26,26 +25,34 @@ import Showcase from '../../components/showcase';
 import style from './style.scss';
 
 export default class DrawerFrame extends Component {
-	toggle = () => {
-		this.drawer.MDCComponent.open = !this.drawer.MDCComponent.open;
+	state = {
+		open: false
 	};
-	render({ variant }) {
+	toggle = () => {
+		this.setState({ open: !this.state.open });
+	};
+	handleOpen = () => {
+		this.setState({ open: true });
+	};
+	handleClose = () => {
+		this.setState({ open: false });
+	};
+	render({ variant }, { open }) {
 		variant = variant || 'permanent';
-		const modifiers = { [variant]: true };
 		let DemoDrawer = PermanentDrawer;
 		let title = 'Permanent Drawer';
-		if (modifiers.temporary) {
+		if (variant === 'temporary') {
 			DemoDrawer = TemporaryDrawer;
 			title = 'Temporary Drawer';
 		}
-		if (modifiers.persistent) {
+		if (variant === 'persistent') {
 			DemoDrawer = PersistentDrawer;
 			title = 'Persistent Drawer';
 		}
 		return (
 			<Showcase.Frame>
 				<div className={style['drawer-container-flex']}>
-					<DemoDrawer ref={ref => (this.drawer = ref)} modifiers={modifiers}>
+					<DemoDrawer open={open} onOpen={this.handleOpen} onClose={this.handleClose}>
 						<DrawerHeader className={style['hero-drawer__header']}>
 							<DrawerHeaderContent>Header here</DrawerHeaderContent>
 						</DrawerHeader>
@@ -86,19 +93,14 @@ export default class DrawerFrame extends Component {
 					<div className={style['drawer-header-flex']}>
 						<TopAppBar>
 							<TopAppBarRow>
-								<TopAppBarSection modifiers={{ 'align-start': true }}>
+								<TopAppBarSection>
 									<TopAppBarNavigationIcon
 										onClick={this.toggle}
-										style={modifiers.permanent ? { display: 'none' } : {}}
+										style={variant === 'permanent' ? { display: 'none' } : {}}
 									>
 										menu
 									</TopAppBarNavigationIcon>
 									<TopAppBarTitle>{title}</TopAppBarTitle>
-								</TopAppBarSection>
-								<TopAppBarSection modifiers={{ 'align-end': true }}>
-									<TopAppBarActionItem>file_download</TopAppBarActionItem>
-									{modifiers.short !== true && <TopAppBarActionItem>print</TopAppBarActionItem>}
-									{modifiers.short !== true && <TopAppBarActionItem>bookmark</TopAppBarActionItem>}
 								</TopAppBarSection>
 							</TopAppBarRow>
 						</TopAppBar>

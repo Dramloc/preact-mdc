@@ -1,8 +1,11 @@
 import { h } from 'preact';
 import { MDCPersistentDrawer, MDCTemporaryDrawer } from '@material/drawer';
+import { strings as persistentDrawerStrings } from '@material/drawer/persistent/constants';
+import { strings as temporaryDrawerStrings } from '@material/drawer/temporary/constants';
 
 import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
+import { withDefaultProps } from '../with-default-props';
 
 export function DrawerBase({ children, ...props }) {
 	return (
@@ -21,9 +24,25 @@ export function DrawerBase({ children, ...props }) {
 	);
 }
 
-export const PermanentDrawer = DrawerBase;
-export const PersistentDrawer = withMaterialComponent(DrawerBase, MDCPersistentDrawer);
-export const TemporaryDrawer = withMaterialComponent(DrawerBase, MDCTemporaryDrawer);
+export const PermanentDrawer = withDefaultProps(DrawerBase, { modifiers: { permanent: true } });
+export const PersistentDrawer = withMaterialComponent(
+	withDefaultProps(DrawerBase, { modifiers: { persistent: true } }),
+	MDCPersistentDrawer,
+	[
+		{ event: persistentDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
+		{ event: persistentDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
+	],
+	['open']
+);
+export const TemporaryDrawer = withMaterialComponent(
+	withDefaultProps(DrawerBase, { modifiers: { temporary: true } }),
+	MDCTemporaryDrawer,
+	[
+		{ event: temporaryDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
+		{ event: temporaryDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
+	],
+	['open']
+);
 
 export function DrawerHeader(props) {
 	return <Base element="header" classes={{ name: 'mdc-drawer__header' }} {...props} />;
