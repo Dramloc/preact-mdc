@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
 import { Base } from '../mdc-base';
-import { withAttributes } from '../with-attributes';
+import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
 import { withSurfaceRipple } from '../mdc-ripple';
 
@@ -96,7 +96,7 @@ export function CardActionIcons(props) {
 }
 
 export function withCardAction(Element) {
-	return withAttributes(
+	return withDefaultProps(
 		withMaterialClasses(Element, {
 			name: 'mdc-card__action',
 			modifiers: ['button', 'icon']

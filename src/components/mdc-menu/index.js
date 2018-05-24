@@ -4,7 +4,7 @@ import { strings } from '@material/menu/constants';
 
 import { Base } from '../mdc-base';
 import { List, ListItem } from '../mdc-list';
-import { withAttributes } from '../with-attributes';
+import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
 import { withMaterialComponent } from '../with-material-component';
 
@@ -24,12 +24,12 @@ export const Menu = withMaterialComponent(MenuBase, MDCMenu, [
 	{ event: strings.CANCEL_EVENT, handler: 'onCancel' }
 ]);
 
-export const MenuItems = withAttributes(withMaterialClasses(List, { name: 'mdc-menu__items' }), {
+export const MenuItems = withDefaultProps(withMaterialClasses(List, { name: 'mdc-menu__items' }), {
 	role: 'menu',
 	'aria-hidden': true
 });
 
-export const MenuItem = withAttributes(ListItem, { role: 'menuitem', tabindex: '0' });
+export const MenuItem = withDefaultProps(ListItem, { role: 'menuitem', tabindex: '0' });
 
 export function withMenuAnchor(Element) {
 	return withMaterialClasses(Element, { name: 'mdc-menu-anchor' });
