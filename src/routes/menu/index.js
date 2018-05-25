@@ -20,17 +20,23 @@ function MenuHero() {
 }
 
 class MenuDemos extends Component {
-	openMenu = () => {
-		this.menu.MDCComponent.open = true;
+	state = {
+		open: false
 	};
-	render() {
+	openMenu = () => {
+		this.setState({ open: true });
+	};
+	closeMenu = () => {
+		this.setState({ open: false });
+	};
+	render(_, { open }) {
 		return (
 			<div>
 				<Showcase.Section>
 					<Showcase.Section.Title>Anchored Menu</Showcase.Section.Title>
 					<Button onClick={this.openMenu}>Open Menu</Button>
 					<MenuAnchor>
-						<Menu ref={ref => (this.menu = ref)}>
+						<Menu open={open}>
 							<MenuItems>
 								<MenuItem>Passionfruit</MenuItem>
 								<MenuItem>Orange</MenuItem>

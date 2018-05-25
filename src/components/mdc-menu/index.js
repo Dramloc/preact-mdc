@@ -19,10 +19,15 @@ export function MenuBase(props) {
 	);
 }
 
-export const Menu = withMaterialComponent(MenuBase, MDCMenu, [
-	{ event: strings.SELECTED_EVENT, handler: 'onSelected' },
-	{ event: strings.CANCEL_EVENT, handler: 'onCancel' }
-]);
+export const Menu = withMaterialComponent(
+	MenuBase,
+	MDCMenu,
+	[
+		{ event: strings.SELECTED_EVENT, handler: 'onSelected' },
+		{ event: strings.CANCEL_EVENT, handler: 'onCancel' }
+	],
+	['open']
+);
 
 export const MenuItems = withDefaultProps(withMaterialClasses(List, { name: 'mdc-menu__items' }), {
 	role: 'menu',
