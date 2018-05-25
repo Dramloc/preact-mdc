@@ -7,11 +7,11 @@ import { Icon } from '../mdc-icon';
 import { withMaterialComponent } from '../with-material-component';
 
 export function IconToggleBase(props) {
-	if (props['data-toggle-on']) {
-		props['data-toggle-on'] = JSON.stringify(props['data-toggle-on']);
+	if (props[strings.DATA_TOGGLE_ON]) {
+		props[strings.DATA_TOGGLE_ON] = JSON.stringify(props[strings.DATA_TOGGLE_ON]);
 	}
-	if (props['data-toggle-off']) {
-		props['data-toggle-off'] = JSON.stringify(props['data-toggle-off']);
+	if (props[strings.DATA_TOGGLE_OFF]) {
+		props[strings.DATA_TOGGLE_OFF] = JSON.stringify(props[strings.DATA_TOGGLE_OFF]);
 	}
 	return (
 		<Base
@@ -26,6 +26,9 @@ export function IconToggleBase(props) {
 	);
 }
 
-export const IconToggle = withMaterialComponent(IconToggleBase, MDCIconToggle, [
-	{ event: strings.CHANGE_EVENT, handler: 'onChange' }
-]);
+export const IconToggle = withMaterialComponent(
+	IconToggleBase,
+	MDCIconToggle,
+	[{ event: strings.CHANGE_EVENT, handler: 'onChange' }],
+	['on']
+);
