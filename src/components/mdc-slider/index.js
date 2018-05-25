@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { MDCSlider } from '@material/slider';
+import { strings } from '@material/slider/constants';
 
 import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
@@ -36,4 +37,12 @@ export function SliderBase(props) {
 	);
 }
 
-export const Slider = withMaterialComponent(SliderBase, MDCSlider);
+export const Slider = withMaterialComponent(
+	SliderBase,
+	MDCSlider,
+	[
+		{ event: strings.CHANGE_EVENT, handler: 'onChange' },
+		{ event: strings.INPUT_EVENT, handler: 'onInput' }
+	],
+	['value', 'min', 'max', 'step', 'disabled']
+);

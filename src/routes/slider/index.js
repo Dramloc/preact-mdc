@@ -6,9 +6,7 @@ import { Slider } from '../../components/mdc-slider';
 import Showcase from '../../components/showcase';
 
 function SliderHero() {
-	return (
-		<Slider aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Select Value" />
-	);
+	return <Slider min={0} max={100} value={50} aria-label="Select Value" />;
 }
 
 function SliderDemos() {
@@ -16,15 +14,26 @@ function SliderDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Continuous</Showcase.Section.Title>
-				<Slider aria-valuemin="0" aria-valuemax="50" aria-valuenow="25" aria-label="Select Value" />
+				<Slider min={0} max={50} value={25} aria-label="Select Value" />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Discrete</Showcase.Section.Title>
 				<Slider
 					modifiers={{ discrete: true }}
-					aria-valuemin="0"
-					aria-valuemax="50"
-					aria-valuenow="25"
+					min={0}
+					max={50}
+					value={25}
+					aria-label="Select Value"
+				/>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Custom Step</Showcase.Section.Title>
+				<Slider
+					modifiers={{ discrete: true }}
+					min={0}
+					max={50}
+					value={25}
+					step={5}
 					aria-label="Select Value"
 				/>
 			</Showcase.Section>
@@ -32,11 +41,15 @@ function SliderDemos() {
 				<Showcase.Section.Title>Discrete with Tick Marks</Showcase.Section.Title>
 				<Slider
 					modifiers={{ discrete: true, 'display-markers': true }}
-					aria-valuemin="0"
-					aria-valuemax="50"
-					aria-valuenow="25"
+					min={0}
+					max={50}
+					value={25}
 					aria-label="Select Value"
 				/>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Disabled</Showcase.Section.Title>
+				<Slider min={0} max={50} value={25} disabled aria-label="Select Value" />
 			</Showcase.Section>
 		</div>
 	);
