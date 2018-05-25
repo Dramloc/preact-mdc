@@ -8,8 +8,7 @@ import Showcase from '../../components/showcase';
 function IconToggleHero() {
 	return (
 		<IconToggle
-			aria-pressed="false"
-			aria-label="Add to favorites"
+			on={false}
 			data-toggle-on={{
 				label: 'Remove from favorites',
 				content: 'favorite'
@@ -18,9 +17,7 @@ function IconToggleHero() {
 				label: 'Add to favorites',
 				content: 'favorite_border'
 			}}
-		>
-			favorite_border
-		</IconToggle>
+		/>
 	);
 }
 
@@ -30,8 +27,7 @@ function IconToggleDemos() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Pressed</Showcase.Section.Title>
 				<IconToggle
-					aria-pressed="true"
-					aria-label="Remove from favorites"
+					on
 					data-toggle-on={{
 						label: 'Remove from favorites',
 						content: 'favorite'
@@ -40,16 +36,13 @@ function IconToggleDemos() {
 						label: 'Add to favorites',
 						content: 'favorite_border'
 					}}
-				>
-					favorite
-				</IconToggle>
+				/>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Disabled</Showcase.Section.Title>
 				<IconToggle
-					aria-pressed="false"
+					on={false}
 					aria-disabled="true"
-					aria-label="Add to favorites"
 					data-toggle-on={{
 						label: 'Remove from favorites',
 						content: 'favorite'
@@ -58,9 +51,7 @@ function IconToggleDemos() {
 						label: 'Add to favorites',
 						content: 'favorite_border'
 					}}
-				>
-					favorite_border
-				</IconToggle>
+				/>
 			</Showcase.Section>
 		</div>
 	);

@@ -52,8 +52,7 @@ function DemoCardActions() {
 			<CardActionIcons>
 				<ActionIconToggle
 					modifiers={{ icon: true }}
-					aria-pressed="false"
-					aria-label="Add to favorites"
+					on={false}
 					data-toggle-on={{
 						content: 'favorite',
 						label: 'Remove from favorites'
@@ -62,9 +61,7 @@ function DemoCardActions() {
 						content: 'favorite_border',
 						label: 'Add to favorites'
 					}}
-				>
-					favorite_border
-				</ActionIconToggle>
+				/>
 				<ActionIcon modifiers={{ icon: true }} title="Share">
 					share
 				</ActionIcon>
