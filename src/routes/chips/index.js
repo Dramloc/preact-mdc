@@ -2,8 +2,7 @@ import { h } from 'preact';
 
 import '@material/chips/mdc-chips.scss';
 
-import { Chip, ChipText, ChipCheckmark, ChipIcon } from '../../components/mdc-chip';
-import { ChipSet } from '../../components/mdc-chip-set';
+import { ChipSet, Chip, ChipText, ChipCheckmark, ChipIcon } from '../../components/mdc-chips';
 import Showcase from '../../components/showcase';
 
 function ChipsHero() {

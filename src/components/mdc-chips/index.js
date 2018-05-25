@@ -1,7 +1,29 @@
 import { h } from 'preact';
+import { MDCChipSet } from '@material/chips';
+import { strings } from '@material/chips/chip/constants';
 
 import { Base } from '../mdc-base';
 import { Icon } from '../mdc-icon';
+import { withMaterialComponent } from '../with-material-component';
+
+export function ChipSetBase(props) {
+	return (
+		<Base
+			element="div"
+			classes={{
+				name: 'mdc-chip-set',
+				modifiers: ['input', 'choice', 'filter']
+			}}
+			{...props}
+		/>
+	);
+}
+
+export const ChipSet = withMaterialComponent(ChipSetBase, MDCChipSet, [
+	{ event: strings.INTERACTION_EVENT, handler: 'onInteraction' },
+	{ event: strings.TRAILING_ICON_INTERACTION_EVENT, handler: 'onTrailingIconInteraction' },
+	{ event: strings.REMOVAL_EVENT, handler: 'onRemoval' }
+]);
 
 export function Chip(props) {
 	return (
