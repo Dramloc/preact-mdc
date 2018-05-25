@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 
 import '@material/linear-progress/mdc-linear-progress.scss';
 
-import { LinearProgress } from '../../components/mdc-progress-linear';
+import { LinearProgress } from '../../components/mdc-linear-progress';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
