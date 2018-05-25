@@ -14,13 +14,16 @@ export function withMaterialComponent(Element, MDCComponent, listeners = [], bin
 		}
 		componentDidMount() {
 			this.MDCComponent = new MDCComponent(this.__root.base);
-			setBindings(bindings, this.MDCComponent, this.props);
+			synchronizeBindings(bindings, this.MDCComponent, this.props);
 			listeners.forEach(listener => {
 				this.MDCComponent.listen(listener.event, this[listener.handler]);
 			});
 		}
 		componentWillReceiveProps(nextProps) {
 			setBindings(bindings, this.MDCComponent, this.props, nextProps);
+		}
+		shouldComponentUpdate(nextProps) {
+			return bindings.some(binding => this.props[binding] !== nextProps[binding]);
 		}
 		componentWillUnmount() {
 			listeners.forEach(listener => {
@@ -38,13 +41,18 @@ export function withMaterialComponent(Element, MDCComponent, listeners = [], bin
 	};
 }
 
-function setBindings(bindings, MDCComponent, props, nextProps) {
+function synchronizeBindings(bindings, MDCComponent, props, nextProps) {
 	bindings.forEach(binding => {
-		if (!nextProps) {
+		if (MDCComponent[binding] !== props[binding] && props[binding] !== undefined) {
 			MDCComponent[binding] = props[binding];
-			return;
 		}
-		if (props[binding] !== nextProps[binding]) {
+	});
+}
+
+function setBindings(bindings, MDCComponent, props, nextProps) {
+	synchronizeBindings(bindings, MDCComponent, props);
+	bindings.forEach(binding => {
+		if (props[binding] !== nextProps[binding] && nextProps[binding] !== undefined) {
 			MDCComponent[binding] = nextProps[binding];
 		}
 	});
