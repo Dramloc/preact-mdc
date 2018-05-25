@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { MDCSnackbar } from '@material/snackbar';
+import { strings } from '@material/snackbar/constants';
 
 import { Base } from '../mdc-base';
 import { withMaterialComponent } from '../with-material-component';
@@ -20,7 +21,10 @@ export function SnackbarBase(props) {
 	);
 }
 
-export const Snackbar = withMaterialComponent(SnackbarBase, MDCSnackbar);
+export const Snackbar = withMaterialComponent(SnackbarBase, MDCSnackbar, [
+	{ event: strings.SHOW_EVENT, handler: 'onShow' },
+	{ event: strings.HIDE_EVENT, handler: 'onHide' }
+]);
 
 export function SnackbarText(props) {
 	return <Base element="div" classes={{ name: 'mdc-snackbar__text' }} {...props} />;
