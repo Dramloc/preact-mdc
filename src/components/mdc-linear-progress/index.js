@@ -24,4 +24,9 @@ export function LinearProgressBase(props) {
 	);
 }
 
-export const LinearProgress = withMaterialComponent(LinearProgressBase, MDCLinearProgress);
+export const LinearProgress = withMaterialComponent(
+	LinearProgressBase,
+	MDCLinearProgress,
+	[],
+	['determinate', 'progress', 'buffer', 'reverse']
+);
