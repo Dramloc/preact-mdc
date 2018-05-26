@@ -1,7 +1,7 @@
 {
   "name": "@preact/mdc",
   "version": "1.0.0",
-  "description": "Material Components Web wrapper for Preact",
+  "description": "Preact wrapper for Material Components Web",
   "main": "index.js",
   "repository": "https://github.com/dramloc/preact-mdc",
   "author": "Antoine Colmard <a.colmard@gmail.com>",

@@ -1,6 +1,6 @@
 # preact-mdc
 
-[https://github.com/material-components/material-components-web/](Material Components Web) wrapper for [https://github.com/developit/preact](Preact).
+[Preact](https://github.com/developit/preact) wrapper for [Material Components Web](https://github.com/material-components/material-components-web).
 
 Docs and demos available at [https://preact-mdc.surge.sh](https://preact-mdc.surge.sh).
 
