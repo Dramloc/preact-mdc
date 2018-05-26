@@ -9,6 +9,7 @@ import DialogShowcase from '../../routes/dialog';
 import DrawerShowcase from '../../routes/drawer';
 import ElevationShowcase from '../../routes/elevation';
 import FabShowcase from '../../routes/fab';
+import Home from '../../routes/home';
 import IconToggleShowcase from '../../routes/icon-toggle';
 import ImageListShowcase from '../../routes/image-list';
 import LayoutGridShowcase from '../../routes/layout-grid';
@@ -29,6 +30,7 @@ import TopAppBarShowcase from '../../routes/top-app-bar';
 export default function AppRoutes() {
 	return (
 		<Router>
+      <Home path="/" />
 			<ButtonShowcase path="/button" />
 			<CardShowcase path="/card" />
 			<CheckboxShowcase path="/checkbox" />

@@ -49,13 +49,17 @@
 		"@material/switch": "^0.35.2",
 		"@material/tabs": "^0.35.0",
 		"@material/textfield": "^0.35.2",
+		"@material/theme": "^0.35.0",
 		"@material/top-app-bar": "^0.35.2",
 		"@material/typography": "^0.35.0",
 		"bem-classnames": "^1.0.7",
 		"classnames": "^2.2.5",
+		"highlight.js": "^9.12.0",
+		"marked": "^0.4.0",
 		"preact": "^8.2.9",
 		"preact-compat": "^3.18.0",
 		"preact-helmet": "^4.0.0-alpha-3",
+		"preact-markup": "^1.6.0",
 		"preact-router": "^2.6.1"
 	}
 }

@@ -1,0 +1,20 @@
+@import '@material/theme/mixins';
+
+.markdown {
+  a {
+    @include mdc-theme-prop(color, primary);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  pre code {
+    border-radius: 3px;
+  }
+
+  p code {
+    @include mdc-theme-prop(color, secondary);
+  }
+}
