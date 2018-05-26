@@ -10,8 +10,8 @@ import style from './style.scss';
 const materialRenderer = new marked.Renderer();
 
 materialRenderer.heading = (text, level) => {
-  const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
-  const headline = level + 2;
+	const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+	const headline = level + 2;
 	return `<h${level} class="mdc-typography--headline${headline}" id="${escapedText}">${text}</h${level}>`;
 };
 
@@ -19,7 +19,7 @@ materialRenderer.paragraph = text => `<p class="mdc-typography--body1">${text}</
 
 export default ({ content, ...props }) => {
 	const markup = marked(content, {
-    langPrefix: 'hljs ',
+		langPrefix: 'hljs ',
 		highlight(code) {
 			return highlightjs.highlightAuto(code).value;
 		},

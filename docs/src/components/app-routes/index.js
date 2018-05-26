@@ -30,7 +30,7 @@ import TopAppBarShowcase from '../../routes/top-app-bar';
 export default function AppRoutes() {
 	return (
 		<Router>
-      <Home path="/" />
+			<Home path="/" />
 			<ButtonShowcase path="/button" />
 			<CardShowcase path="/card" />
 			<CheckboxShowcase path="/checkbox" />
