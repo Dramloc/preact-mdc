@@ -1,6 +1,7 @@
 @import "@material/top-app-bar/mixins";
 
 .app-header {
+  // FIXME: z-index will no longer be required (https://github.com/material-components/material-components-web/commit/3f6bbc110571b6023a1276be89c32c86e8eb77cd)
   z-index: 2;
   :global {
     @include mdc-top-app-bar-fill-color(#202124);
