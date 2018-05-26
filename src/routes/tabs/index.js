@@ -34,8 +34,8 @@ function TabsDemos() {
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Icon with Text Tabs</Showcase.Section.Title>
-				<TabBar modifiers={{ 'icons-with-text': true }}>
-					<Tab modifiers={{ active: true }}>
+				<TabBar modifiers={{ 'icons-with-text': true }} activeTabIndex={1}>
+					<Tab>
 						<TabIcon>home</TabIcon>
 						<TabIconText>Home</TabIconText>
 					</Tab>
@@ -52,7 +52,7 @@ function TabsDemos() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Scrolling Tabs</Showcase.Section.Title>
 				<TabBarScroller>
-					<Tab modifiers={{ active: true }}>Passionfruit</Tab>
+					<Tab>Passionfruit</Tab>
 					<Tab>Orange</Tab>
 					<Tab>Guava</Tab>
 					<Tab>Pitaya</Tab>

@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { MDCTabBar, MDCTabBarScroller } from '@material/tabs';
+import { strings } from '@material/tabs/tab-bar/constants';
 
 import { Base } from '../mdc-base';
 import { Icon } from '../mdc-icon';
@@ -18,7 +19,12 @@ export function TabBarBase({ children, ...props }) {
 	);
 }
 
-export const TabBar = withMaterialComponent(TabBarBase, MDCTabBar);
+export const TabBar = withMaterialComponent(
+	TabBarBase,
+	MDCTabBar,
+	[{ event: strings.CHANGE_EVENT, handler: 'onChange' }],
+	['activeTab', 'activeTabIndex']
+);
 
 export function Tab(props) {
 	return <Base element="a" classes={{ name: 'mdc-tab', modifiers: ['active'] }} {...props} />;
