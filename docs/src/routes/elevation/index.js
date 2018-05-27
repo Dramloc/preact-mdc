@@ -10,7 +10,7 @@ import style from './style.scss';
 
 function ElevationHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<Elevation
 				className={cx(style['elevation-demo-surface'], style['elevation-demo-surface--hero'])}
 				modifiers={{ z: 0 }}
@@ -29,7 +29,7 @@ function ElevationHero() {
 			>
 				Raised 16dp
 			</Elevation>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -44,24 +44,28 @@ class ElevationDemos extends Component {
 	};
 	render(_, { elevation }) {
 		return (
-			<div className={style['elevation-demo-container']}>
+			<div>
 				<Showcase.Section>
 					<Showcase.Section.Title>Elevations</Showcase.Section.Title>
-					{Array(...{ length: 25 }).map((_, index) => (
-						<Elevation className={style['elevation-demo-surface']} modifiers={{ z: index }}>
-							{`${index}dp`}
-						</Elevation>
-					))}
+					<Showcase.Demo className={style['elevation-demo-container']}>
+						{Array(...{ length: 25 }).map((_, index) => (
+							<Elevation className={style['elevation-demo-surface']} modifiers={{ z: index }}>
+								{`${index}dp`}
+							</Elevation>
+						))}
+					</Showcase.Demo>
 				</Showcase.Section>
 				<Showcase.Section>
 					<Showcase.Section.Title>Elevation Transition</Showcase.Section.Title>
-					<TransitionedElevation
-						onClick={this.incrementElevation}
-						className={style['elevation-demo-surface']}
-						modifiers={{ z: elevation }}
-					>
-						Click me!
-					</TransitionedElevation>
+					<Showcase.Demo>
+						<TransitionedElevation
+							onClick={this.incrementElevation}
+							className={style['elevation-demo-surface']}
+							modifiers={{ z: elevation }}
+						>
+							Click me!
+						</TransitionedElevation>
+					</Showcase.Demo>
 				</Showcase.Section>
 			</div>
 		);

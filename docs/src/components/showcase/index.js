@@ -179,8 +179,8 @@ function ShowcaseDemoLink({ href }) {
 	);
 }
 
-function ShowcaseDemo({ children }) {
-	return <div>{children}</div>;
+function ShowcaseDemo({ className, children }) {
+	return <div className={className}>{children}</div>;
 }
 
 Showcase.Hero = ShowcaseHero;
