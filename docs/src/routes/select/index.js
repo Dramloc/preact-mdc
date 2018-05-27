@@ -9,14 +9,14 @@ import style from './style.scss';
 
 function SelectHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<Select className={style['demo-select']} label="Fruit" value="">
 				<option value="" disabled />
 				<option value="apple">Apple</option>
 				<option value="orange">Orange</option>
 				<option value="banana">Banana</option>
 			</Select>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -24,12 +24,14 @@ function SelectDemos() {
 	return (
 		<Showcase.Section>
 			<Showcase.Section.Title>Box Select</Showcase.Section.Title>
-			<Select className={style['demo-select']} modifiers={{ box: true }} label="Fruit" value="">
-				<option value="" disabled />
-				<option value="apple">Apple</option>
-				<option value="orange">Orange</option>
-				<option value="banana">Banana</option>
-			</Select>
+			<Showcase.Demo>
+				<Select className={style['demo-select']} modifiers={{ box: true }} label="Fruit" value="">
+					<option value="" disabled />
+					<option value="apple">Apple</option>
+					<option value="orange">Orange</option>
+					<option value="banana">Banana</option>
+				</Select>
+			</Showcase.Demo>
 		</Showcase.Section>
 	);
 }
