@@ -9,10 +9,10 @@ import style from './style.scss';
 
 function CheckboxHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<Checkbox className={style['demo-checkbox']} checked />
 			<Checkbox className={style['demo-checkbox']} />
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -21,15 +21,21 @@ function CheckboxDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Unchecked</Showcase.Section.Title>
-				<Checkbox className={style['demo-checkbox']} />
+				<Showcase.Demo>
+					<Checkbox className={style['demo-checkbox']} />
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Indeterminate</Showcase.Section.Title>
-				<Checkbox className={style['demo-checkbox']} indeterminate />
+				<Showcase.Demo>
+					<Checkbox className={style['demo-checkbox']} indeterminate />
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Checked</Showcase.Section.Title>
-				<Checkbox className={style['demo-checkbox']} checked />
+				<Showcase.Demo>
+					<Checkbox className={style['demo-checkbox']} checked />
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
