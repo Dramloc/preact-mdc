@@ -10,12 +10,14 @@ import Showcase from '../../components/showcase';
 
 function MenuHero() {
 	return (
-		<MenuBase modifiers={{ open: true }}>
-			<MenuItems>
-				<MenuItem>A Menu Item</MenuItem>
-				<MenuItem>Another Menu Item</MenuItem>
-			</MenuItems>
-		</MenuBase>
+		<Showcase.Demo>
+			<MenuBase modifiers={{ open: true }}>
+				<MenuItems>
+					<MenuItem>A Menu Item</MenuItem>
+					<MenuItem>Another Menu Item</MenuItem>
+				</MenuItems>
+			</MenuBase>
+		</Showcase.Demo>
 	);
 }
 
@@ -34,22 +36,24 @@ class MenuDemos extends Component {
 			<div>
 				<Showcase.Section>
 					<Showcase.Section.Title>Anchored Menu</Showcase.Section.Title>
-					<Button onClick={this.openMenu}>Open Menu</Button>
-					<MenuAnchor>
-						<Menu open={open}>
-							<MenuItems>
-								<MenuItem>Passionfruit</MenuItem>
-								<MenuItem>Orange</MenuItem>
-								<MenuItem>Guava</MenuItem>
-								<MenuItem>Pitaya</MenuItem>
-								<ListDivider />
-								<MenuItem>Pineapple</MenuItem>
-								<MenuItem>Mango</MenuItem>
-								<MenuItem>Papaya</MenuItem>
-								<MenuItem>Lychee</MenuItem>
-							</MenuItems>
-						</Menu>
-					</MenuAnchor>
+					<Showcase.Demo>
+						<Button onClick={this.openMenu}>Open Menu</Button>
+						<MenuAnchor>
+							<Menu open={open}>
+								<MenuItems>
+									<MenuItem>Passionfruit</MenuItem>
+									<MenuItem>Orange</MenuItem>
+									<MenuItem>Guava</MenuItem>
+									<MenuItem>Pitaya</MenuItem>
+									<ListDivider />
+									<MenuItem>Pineapple</MenuItem>
+									<MenuItem>Mango</MenuItem>
+									<MenuItem>Papaya</MenuItem>
+									<MenuItem>Lychee</MenuItem>
+								</MenuItems>
+							</Menu>
+						</MenuAnchor>
+					</Showcase.Demo>
 				</Showcase.Section>
 			</div>
 		);
