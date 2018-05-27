@@ -91,6 +91,11 @@ export default class AppDrawer extends Component {
 			this.props.handleClose(this.computeDrawerWidth());
 		}
 	};
+	handleItemClick = () => {
+		if (this.state.Drawer === TemporaryDrawer) {
+			this.handleClose();
+		}
+	};
 	componentDidMount() {
 		window.addEventListener('resize', this.debounceHandleResize);
 	}
@@ -113,7 +118,7 @@ export default class AppDrawer extends Component {
 				<DrawerContent>
 					<List element="nav">
 						{drawerItems.map(item => (
-							<DrawerListItem href={item.path} key={item.path}>
+							<DrawerListItem href={item.path} key={item.path} onClick={this.handleItemClick}>
 								<Match path={item.path}>
 									{({ matches }) => (
 										<ListItemText
