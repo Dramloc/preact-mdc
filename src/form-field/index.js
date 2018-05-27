@@ -8,4 +8,4 @@ export function FormFieldBase(props) {
 	return <Base element="div" classes={{ name: 'mdc-form-field' }} {...props} />;
 }
 
-export const FormField = withMaterialComponent(FormFieldBase, MDCFormField);
+export const FormField = withMaterialComponent(MDCFormField)(FormFieldBase);

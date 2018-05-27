@@ -3,6 +3,7 @@ import { MDCMenu } from '@material/menu';
 import { strings } from '@material/menu/constants';
 
 import { Base } from '../base';
+import { compose } from '../compose';
 import { List, ListItem } from '../list';
 import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
@@ -20,24 +21,21 @@ export function MenuBase(props) {
 }
 
 export const Menu = withMaterialComponent(
-	MenuBase,
 	MDCMenu,
 	[
 		{ event: strings.SELECTED_EVENT, handler: 'onSelected' },
 		{ event: strings.CANCEL_EVENT, handler: 'onCancel' }
 	],
 	['open']
-);
+)(MenuBase);
 
-export const MenuItems = withDefaultProps(withMaterialClasses(List, { name: 'mdc-menu__items' }), {
-	role: 'menu',
-	'aria-hidden': true
-});
+export const MenuItems = compose(
+	withDefaultProps({ role: 'menu', 'aria-hidden': true }),
+	withMaterialClasses({ name: 'mdc-menu__items' })
+)(List);
 
-export const MenuItem = withDefaultProps(ListItem, { role: 'menuitem', tabindex: '0' });
+export const MenuItem = withDefaultProps({ role: 'menuitem', tabindex: '0' })(ListItem);
 
-export function withMenuAnchor(Element) {
-	return withMaterialClasses(Element, { name: 'mdc-menu-anchor' });
-}
+export const withMenuAnchor = withMaterialClasses({ name: 'mdc-menu-anchor' });
 
 export const MenuAnchor = withMenuAnchor('div');

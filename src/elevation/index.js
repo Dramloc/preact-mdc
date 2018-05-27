@@ -11,6 +11,4 @@ export function Elevation(props) {
 	);
 }
 
-export function withElevationTransition(Element) {
-	return withMaterialClasses(Element, { name: 'mdc-elevation-transition' });
-}
+export const withElevationTransition = withMaterialClasses({ name: 'mdc-elevation-transition' });

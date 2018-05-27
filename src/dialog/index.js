@@ -17,10 +17,10 @@ export function DialogBase(props) {
 	);
 }
 
-export const Dialog = withMaterialComponent(DialogBase, MDCDialog, [
+export const Dialog = withMaterialComponent(MDCDialog, [
 	{ event: strings.ACCEPT_EVENT, handler: 'onAccept' },
 	{ event: strings.CANCEL_EVENT, handler: 'onCancel' }
-]);
+])(DialogBase);
 
 export function DialogSurface(props) {
 	return <Base element="div" classes={{ name: 'mdc-dialog__surface' }} {...props} />;

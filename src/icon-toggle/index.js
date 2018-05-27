@@ -27,8 +27,7 @@ export function IconToggleBase(props) {
 }
 
 export const IconToggle = withMaterialComponent(
-	IconToggleBase,
 	MDCIconToggle,
 	[{ event: strings.CHANGE_EVENT, handler: 'onChange' }],
 	['on']
-);
+)(IconToggleBase);

@@ -20,11 +20,10 @@ export function TabBarBase({ children, ...props }) {
 }
 
 export const TabBar = withMaterialComponent(
-	TabBarBase,
 	MDCTabBar,
 	[{ event: strings.CHANGE_EVENT, handler: 'onChange' }],
 	['activeTab', 'activeTabIndex']
-);
+)(TabBarBase);
 
 export function Tab(props) {
 	return <Base element="a" classes={{ name: 'mdc-tab', modifiers: ['active'] }} {...props} />;
@@ -79,4 +78,4 @@ export function TabBarScrollerBase({
 	);
 }
 
-export const TabBarScroller = withMaterialComponent(TabBarScrollerBase, MDCTabBarScroller);
+export const TabBarScroller = withMaterialComponent(MDCTabBarScroller)(TabBarScrollerBase);

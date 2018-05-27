@@ -1,7 +1,7 @@
 import { h } from 'preact';
 
-export function withDefaultProps(Element, defaultProps) {
-	return function Attributes(props) {
+export function withDefaultProps(defaultProps) {
+	return Element => function DefaultProps(props) {
 		return <Element {...{ ...defaultProps, ...props }} />;
 	};
 }

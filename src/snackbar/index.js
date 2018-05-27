@@ -21,10 +21,10 @@ export function SnackbarBase(props) {
 	);
 }
 
-export const Snackbar = withMaterialComponent(SnackbarBase, MDCSnackbar, [
+export const Snackbar = withMaterialComponent(MDCSnackbar, [
 	{ event: strings.SHOW_EVENT, handler: 'onShow' },
 	{ event: strings.HIDE_EVENT, handler: 'onHide' }
-]);
+])(SnackbarBase);
 
 export function SnackbarText(props) {
 	return <Base element="div" classes={{ name: 'mdc-snackbar__text' }} {...props} />;

@@ -26,4 +26,4 @@ export function NotchedOutlineFull() {
 	);
 }
 
-export const NotchedOutline = withMaterialComponent(NotchedOutlineBase, MDCNotchedOutline);
+export const NotchedOutline = withMaterialComponent(MDCNotchedOutline)(NotchedOutlineBase);

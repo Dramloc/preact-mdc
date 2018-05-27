@@ -19,11 +19,11 @@ export function ChipSetBase(props) {
 	);
 }
 
-export const ChipSet = withMaterialComponent(ChipSetBase, MDCChipSet, [
+export const ChipSet = withMaterialComponent(MDCChipSet, [
 	{ event: strings.INTERACTION_EVENT, handler: 'onInteraction' },
 	{ event: strings.TRAILING_ICON_INTERACTION_EVENT, handler: 'onTrailingIconInteraction' },
 	{ event: strings.REMOVAL_EVENT, handler: 'onRemoval' }
-]);
+])(ChipSetBase);
 
 export function Chip(props) {
 	return (

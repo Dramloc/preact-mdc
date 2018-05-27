@@ -26,7 +26,7 @@ export function TextFieldBase(props) {
 	);
 }
 
-export const TextField = withMaterialComponent(TextFieldBase, MDCTextField);
+export const TextField = withMaterialComponent(MDCTextField)(TextFieldBase);
 
 export function TextFieldInput(props) {
 	return (

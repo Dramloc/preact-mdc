@@ -7,4 +7,4 @@ export function FloatingLabelBase(props) {
 	return <label className="mdc-floating-label" {...props} />;
 }
 
-export const FloatingLabel = withMaterialComponent(FloatingLabelBase, MDCFloatingLabel);
+export const FloatingLabel = withMaterialComponent(MDCFloatingLabel)(FloatingLabelBase);

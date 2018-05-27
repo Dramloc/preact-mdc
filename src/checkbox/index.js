@@ -28,4 +28,4 @@ export function CheckboxBase({ className, modifiers, ...props }) {
 	);
 }
 
-export const Checkbox = withMaterialComponent(CheckboxBase, MDCCheckbox);
+export const Checkbox = withMaterialComponent(MDCCheckbox)(CheckboxBase);

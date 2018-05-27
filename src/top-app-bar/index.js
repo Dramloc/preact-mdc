@@ -20,9 +20,9 @@ export function TopAppBarBase(props) {
 	);
 }
 
-export const TopAppBar = withMaterialComponent(TopAppBarBase, MDCTopAppBar, [
+export const TopAppBar = withMaterialComponent(MDCTopAppBar, [
 	{ event: strings.NAVIGATION_EVENT, handler: 'onNav' }
-]);
+])(TopAppBarBase);
 
 export function TopAppBarRow(props) {
 	return (

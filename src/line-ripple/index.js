@@ -7,4 +7,4 @@ export function LineRippleBase() {
 	return <div className="mdc-line-ripple" />;
 }
 
-export const LineRipple = withMaterialComponent(LineRippleBase, MDCLineRipple);
+export const LineRipple = withMaterialComponent(MDCLineRipple)(LineRippleBase);

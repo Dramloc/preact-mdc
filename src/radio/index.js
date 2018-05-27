@@ -16,4 +16,4 @@ export function RadioBase({ className, modifiers, ...props }) {
 	);
 }
 
-export const Radio = withMaterialComponent(RadioBase, MDCRadio);
+export const Radio = withMaterialComponent(MDCRadio)(RadioBase);

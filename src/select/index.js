@@ -21,4 +21,4 @@ export function SelectBase({ className, modifiers, label, ...props }) {
 	);
 }
 
-export const Select = withMaterialComponent(SelectBase, MDCSelect);
+export const Select = withMaterialComponent(MDCSelect)(SelectBase);

@@ -4,8 +4,9 @@ import { strings as persistentDrawerStrings } from '@material/drawer/persistent/
 import { strings as temporaryDrawerStrings } from '@material/drawer/temporary/constants';
 
 import { Base } from '../base';
-import { withMaterialComponent } from '../with-material-component';
+import { compose } from '../compose';
 import { withDefaultProps } from '../with-default-props';
+import { withMaterialComponent } from '../with-material-component';
 
 export function DrawerBase({ children, ...props }) {
 	return (
@@ -24,25 +25,29 @@ export function DrawerBase({ children, ...props }) {
 	);
 }
 
-export const PermanentDrawer = withDefaultProps(DrawerBase, { modifiers: { permanent: true } });
-export const PersistentDrawer = withMaterialComponent(
-	withDefaultProps(DrawerBase, { modifiers: { persistent: true } }),
-	MDCPersistentDrawer,
-	[
-		{ event: persistentDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
-		{ event: persistentDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
-	],
-	['open']
-);
-export const TemporaryDrawer = withMaterialComponent(
-	withDefaultProps(DrawerBase, { modifiers: { temporary: true } }),
-	MDCTemporaryDrawer,
-	[
-		{ event: temporaryDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
-		{ event: temporaryDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
-	],
-	['open']
-);
+export const PermanentDrawer = withDefaultProps({ modifiers: { permanent: true } })(DrawerBase);
+export const PersistentDrawer = compose(
+	withMaterialComponent(
+		MDCPersistentDrawer,
+		[
+			{ event: persistentDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
+			{ event: persistentDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
+		],
+		['open']
+	),
+	withDefaultProps({ modifiers: { persistent: true } })
+)(DrawerBase);
+export const TemporaryDrawer = compose(
+	withMaterialComponent(
+		MDCTemporaryDrawer,
+		[
+			{ event: temporaryDrawerStrings.OPEN_EVENT, handler: 'onOpen' },
+			{ event: temporaryDrawerStrings.CLOSE_EVENT, handler: 'onClose' }
+		],
+		['open']
+	),
+	withDefaultProps({ modifiers: { temporary: true } })
+)(DrawerBase);
 
 export function DrawerHeader(props) {
 	return <Base element="header" classes={{ name: 'mdc-drawer__header' }} {...props} />;
