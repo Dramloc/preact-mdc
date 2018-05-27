@@ -1,12 +1,16 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router';
-import { List, ListItem } from '@preact/mdc/list';
+import { List, ListItem, ListItemText } from '@preact/mdc/list';
+import { Match } from 'preact-router/match';
 import { PersistentDrawer, TemporaryDrawer, DrawerContent } from '@preact/mdc/drawer';
+import cx from 'classnames';
 
 import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';
 
 import { withDisabledUpdates } from '../with-disabled-updates';
+
+import style from './style.scss';
 
 const SCREEN_WIDTH_BREAKPOINT = 799;
 const StaticListItem = withDisabledUpdates(ListItem);
@@ -14,6 +18,34 @@ const StaticListItem = withDisabledUpdates(ListItem);
 function DrawerListItem({ path, ...props }) {
 	return <StaticListItem element={Link} href={path} {...props} />;
 }
+
+const drawerItems = [
+	{ path: '/', text: 'Home' },
+	{ path: '/button', text: 'Button' },
+	{ path: '/card', text: 'Card' },
+	{ path: '/checkbox', text: 'Checkbox' },
+	{ path: '/chips', text: 'Chips' },
+	{ path: '/dialog', text: 'Dialog' },
+	{ path: '/drawer', text: 'Drawer' },
+	{ path: '/elevation', text: 'Elevation' },
+	{ path: '/fab', text: 'FAB' },
+	{ path: '/icon-toggle', text: 'Icon Toggle' },
+	{ path: '/image-list', text: 'Image List' },
+	{ path: '/layout-grid', text: 'Layout Grid' },
+	{ path: '/linear-progress', text: 'Linear Progress Indicator' },
+	{ path: '/list', text: 'List' },
+	{ path: '/menu', text: 'Menu' },
+	{ path: '/radio', text: 'Radio Button' },
+	{ path: '/ripple', text: 'Ripple' },
+	{ path: '/select', text: 'Select' },
+	{ path: '/shape', text: 'Shape' },
+	{ path: '/slider', text: 'Slider' },
+	{ path: '/snackbar', text: 'Snackbar' },
+	{ path: '/switch', text: 'Switch' },
+	{ path: '/tabs', text: 'Tabs' },
+	{ path: '/text-field', text: 'Text Field' },
+	{ path: '/top-app-bar', text: 'Top App Bar' }
+];
 
 export default class AppDrawer extends Component {
 	debounceTimeout = 0;
@@ -79,31 +111,21 @@ export default class AppDrawer extends Component {
 			>
 				<DrawerContent>
 					<List element="nav">
-						<DrawerListItem path="/">Home</DrawerListItem>
-						<DrawerListItem path="/button">Button</DrawerListItem>
-						<DrawerListItem path="/card">Card</DrawerListItem>
-						<DrawerListItem path="/checkbox">Checkbox</DrawerListItem>
-						<DrawerListItem path="/chips">Chips</DrawerListItem>
-						<DrawerListItem path="/dialog">Dialog</DrawerListItem>
-						<DrawerListItem path="/drawer">Drawer</DrawerListItem>
-						<DrawerListItem path="/elevation">Elevation</DrawerListItem>
-						<DrawerListItem path="/fab">FAB</DrawerListItem>
-						<DrawerListItem path="/icon-toggle">Icon Toggle</DrawerListItem>
-						<DrawerListItem path="/image-list">Image List</DrawerListItem>
-						<DrawerListItem path="/layout-grid">Layout Grid</DrawerListItem>
-						<DrawerListItem path="/linear-progress">Linear Progress Indicator</DrawerListItem>
-						<DrawerListItem path="/list">List</DrawerListItem>
-						<DrawerListItem path="/menu">Menu</DrawerListItem>
-						<DrawerListItem path="/radio">Radio Button</DrawerListItem>
-						<DrawerListItem path="/ripple">Ripple</DrawerListItem>
-						<DrawerListItem path="/select">Select</DrawerListItem>
-						<DrawerListItem path="/shape">Shape</DrawerListItem>
-						<DrawerListItem path="/slider">Slider</DrawerListItem>
-						<DrawerListItem path="/snackbar">Snackbar</DrawerListItem>
-						<DrawerListItem path="/switch">Switch</DrawerListItem>
-						<DrawerListItem path="/tabs">Tabs</DrawerListItem>
-						<DrawerListItem path="/text-field">Text Field</DrawerListItem>
-						<DrawerListItem path="/top-app-bar">Top App Bar</DrawerListItem>
+						{drawerItems.map(item => (
+							<DrawerListItem href={item.path} key={item.path}>
+								<Match path={item.path}>
+									{({ matches }) => (
+										<ListItemText
+											className={cx(style['list-item'], {
+												[style['list-item--active']]: matches
+											})}
+										>
+											{item.text}
+										</ListItemText>
+									)}
+								</Match>
+							</DrawerListItem>
+						))}
 					</List>
 				</DrawerContent>
 			</Drawer>
