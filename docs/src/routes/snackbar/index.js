@@ -17,14 +17,14 @@ import style from './style.scss';
 
 function SnackbarHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<SnackbarBase className={style['hero-snackbar']} modifiers={{ active: true }}>
 				<SnackbarText>Message Sent</SnackbarText>
 				<SnackbarActionWrapper>
 					<SnackbarActionButton>Undo</SnackbarActionButton>
 				</SnackbarActionWrapper>
 			</SnackbarBase>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -38,7 +38,7 @@ class SnackbarDemo extends Component {
 	};
 	render({ modifiers }) {
 		return (
-			<div>
+			<Showcase.Demo>
 				<Button onClick={this.showSnackbar}>Show Snackbar</Button>
 				<Snackbar ref={ref => (this.snackbar = ref)} modifiers={modifiers}>
 					<SnackbarText />
@@ -46,7 +46,7 @@ class SnackbarDemo extends Component {
 						<SnackbarActionButton />
 					</SnackbarActionWrapper>
 				</Snackbar>
-			</div>
+			</Showcase.Demo>
 		);
 	}
 }
