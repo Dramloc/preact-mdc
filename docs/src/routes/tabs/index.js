@@ -7,11 +7,13 @@ import Showcase from '../../components/showcase';
 
 function TabsHero() {
 	return (
-		<TabBar>
-			<Tab modifiers={{ active: true }}>Home</Tab>
-			<Tab>Merchandise</Tab>
-			<Tab>About Us</Tab>
-		</TabBar>
+		<Showcase.Demo>
+			<TabBar>
+				<Tab modifiers={{ active: true }}>Home</Tab>
+				<Tab>Merchandise</Tab>
+				<Tab>About Us</Tab>
+			</TabBar>
+		</Showcase.Demo>
 	);
 }
 
@@ -20,53 +22,59 @@ function TabsDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Icon Tabs</Showcase.Section.Title>
-				<TabBar>
-					<Tab modifiers={{ active: true }}>
-						<TabIcon>home</TabIcon>
-					</Tab>
-					<Tab>
-						<TabIcon>shopping_cart</TabIcon>
-					</Tab>
-					<Tab>
-						<TabIcon>info_outline</TabIcon>
-					</Tab>
-				</TabBar>
+				<Showcase.Demo>
+					<TabBar>
+						<Tab modifiers={{ active: true }}>
+							<TabIcon>home</TabIcon>
+						</Tab>
+						<Tab>
+							<TabIcon>shopping_cart</TabIcon>
+						</Tab>
+						<Tab>
+							<TabIcon>info_outline</TabIcon>
+						</Tab>
+					</TabBar>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Icon with Text Tabs</Showcase.Section.Title>
-				<TabBar modifiers={{ 'icons-with-text': true }} activeTabIndex={1}>
-					<Tab>
-						<TabIcon>home</TabIcon>
-						<TabIconText>Home</TabIconText>
-					</Tab>
-					<Tab>
-						<TabIcon>shopping_cart</TabIcon>
-						<TabIconText>Merchandise</TabIconText>
-					</Tab>
-					<Tab>
-						<TabIcon>info_outline</TabIcon>
-						<TabIconText>About Us</TabIconText>
-					</Tab>
-				</TabBar>
+				<Showcase.Demo>
+					<TabBar modifiers={{ 'icons-with-text': true }} activeTabIndex={1}>
+						<Tab>
+							<TabIcon>home</TabIcon>
+							<TabIconText>Home</TabIconText>
+						</Tab>
+						<Tab>
+							<TabIcon>shopping_cart</TabIcon>
+							<TabIconText>Merchandise</TabIconText>
+						</Tab>
+						<Tab>
+							<TabIcon>info_outline</TabIcon>
+							<TabIconText>About Us</TabIconText>
+						</Tab>
+					</TabBar>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Scrolling Tabs</Showcase.Section.Title>
-				<TabBarScroller>
-					<Tab>Passionfruit</Tab>
-					<Tab>Orange</Tab>
-					<Tab>Guava</Tab>
-					<Tab>Pitaya</Tab>
-					<Tab>Pineapple</Tab>
-					<Tab>Mango</Tab>
-					<Tab>Papaya</Tab>
-					<Tab>Lychee</Tab>
-					<Tab>Mangosteen</Tab>
-					<Tab>Banana</Tab>
-					<Tab>Pomelo</Tab>
-					<Tab>Tamarind</Tab>
-					<Tab>Durian</Tab>
-					<Tab>Jackfruit</Tab>
-				</TabBarScroller>
+				<Showcase.Demo>
+					<TabBarScroller>
+						<Tab modifiers={{ active: true }}>Passionfruit</Tab>
+						<Tab>Orange</Tab>
+						<Tab>Guava</Tab>
+						<Tab>Pitaya</Tab>
+						<Tab>Pineapple</Tab>
+						<Tab>Mango</Tab>
+						<Tab>Papaya</Tab>
+						<Tab>Lychee</Tab>
+						<Tab>Mangosteen</Tab>
+						<Tab>Banana</Tab>
+						<Tab>Pomelo</Tab>
+						<Tab>Tamarind</Tab>
+						<Tab>Durian</Tab>
+						<Tab>Jackfruit</Tab>
+					</TabBarScroller>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
