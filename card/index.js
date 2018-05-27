@@ -1,9 +1,9 @@
 import { h } from 'preact';
 
 import { Base } from '../base';
-import { Button } from '../docs/node_modules/@preact/mdc/button';
-import { IconToggle } from '../docs/node_modules/@preact/mdc/icon-toggle';
-import { RippledIcon } from '../docs/node_modules/@preact/mdc/icon';
+import { Button } from '../button';
+import { IconToggle } from '../icon-toggle';
+import { RippledIcon } from '../icon';
 import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
 import { withSurfaceRipple } from '../ripple';
