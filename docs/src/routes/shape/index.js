@@ -66,13 +66,15 @@ function DemoCardActions() {
 
 function ShapeHero() {
 	return (
-		<ShapeContainer className={style['hero-shape-container']}>
-			<Button modifiers={{ unelevated: true }}>Angled Corners</Button>
-			<ShapeContainerCorner modifiers={{ 'top-left': true }} />
-			<ShapeContainerCorner modifiers={{ 'top-right': true }} />
-			<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
-			<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
-		</ShapeContainer>
+		<Showcase.Demo>
+			<ShapeContainer className={style['hero-shape-container']}>
+				<Button modifiers={{ unelevated: true }}>Angled Corners</Button>
+				<ShapeContainerCorner modifiers={{ 'top-left': true }} />
+				<ShapeContainerCorner modifiers={{ 'top-right': true }} />
+				<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
+				<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
+			</ShapeContainer>
+		</Showcase.Demo>
 	);
 }
 
@@ -81,35 +83,41 @@ function ShapeDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Contained Button</Showcase.Section.Title>
-				<ShapeContainer className={style['contained-button-shape-container']}>
-					<Button modifiers={{ unelevated: true }}>Skip</Button>
-					<ShapeContainerCorner modifiers={{ 'top-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
-				</ShapeContainer>
-				<ShapeContainer className={style['contained-button-shape-container']}>
-					<Button modifiers={{ unelevated: true }}>Finish</Button>
-					<ShapeContainerCorner modifiers={{ 'top-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'top-right': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
-				</ShapeContainer>
+				<Showcase.Demo>
+					<ShapeContainer className={style['contained-button-shape-container']}>
+						<Button modifiers={{ unelevated: true }}>Skip</Button>
+						<ShapeContainerCorner modifiers={{ 'top-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
+					</ShapeContainer>
+					<ShapeContainer className={style['contained-button-shape-container']}>
+						<Button modifiers={{ unelevated: true }}>Finish</Button>
+						<ShapeContainerCorner modifiers={{ 'top-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'top-right': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
+					</ShapeContainer>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Contained Button</Showcase.Section.Title>
-				<ShapeContainer className={style['outlined-button-shape-container']}>
-					<Button modifiers={{ outlined: true }}>Skip</Button>
-					<ShapeContainerCorner modifiers={{ 'top-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
-				</ShapeContainer>
-				<ShapeContainer className={style['outlined-button-shape-container']}>
-					<Button modifiers={{ outlined: true }}>Finish</Button>
-					<ShapeContainerCorner modifiers={{ 'top-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'top-right': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
-					<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
-				</ShapeContainer>
-				<Showcase.Section>
-					<Showcase.Section.Title>Outlined</Showcase.Section.Title>
+				<Showcase.Demo>
+					<ShapeContainer className={style['outlined-button-shape-container']}>
+						<Button modifiers={{ outlined: true }}>Skip</Button>
+						<ShapeContainerCorner modifiers={{ 'top-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
+					</ShapeContainer>
+					<ShapeContainer className={style['outlined-button-shape-container']}>
+						<Button modifiers={{ outlined: true }}>Finish</Button>
+						<ShapeContainerCorner modifiers={{ 'top-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'top-right': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
+						<ShapeContainerCorner modifiers={{ 'bottom-right': true }} />
+					</ShapeContainer>
+				</Showcase.Demo>
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Outlined</Showcase.Section.Title>
+				<Showcase.Demo>
 					<ShapeContainer className={style['card-shape-container']}>
 						<Card className={style['card-shape-container__card']} modifiers={{ outlined: true }}>
 							<CardPrimaryAction>
@@ -121,7 +129,7 @@ function ShapeDemos() {
 						<ShapeContainerCorner modifiers={{ 'top-right': true }} />
 						<ShapeContainerCorner modifiers={{ 'bottom-left': true }} />
 					</ShapeContainer>
-				</Showcase.Section>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
