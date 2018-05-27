@@ -1,5 +1,12 @@
 import { h } from 'preact';
-import { ImageList, ImageListImageAspectContainer, ImageListImage, ImageListItem, ImageListSupporting, ImageListLabel } from '@preact/mdc/image-list';
+import {
+	ImageList,
+	ImageListImageAspectContainer,
+	ImageListImage,
+	ImageListItem,
+	ImageListSupporting,
+	ImageListLabel
+} from '@preact/mdc/image-list';
 
 import '@material/image-list/mdc-image-list.scss';
 
@@ -7,7 +14,8 @@ import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
-const url = 'https://material-components.github.io/material-components-web-catalog/static/media/photos';
+const url =
+	'https://material-components.github.io/material-components-web-catalog/static/media/photos';
 const masonryImageListItems = [
 	'3x2/16.jpg',
 	'2x3/1.jpg',
@@ -28,7 +36,7 @@ const masonryImageListItems = [
 
 function ImageListHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<ImageList className={style['hero-image-list']}>
 				{Array(...{ length: 15 }).map(_ => (
 					<ImageListItem className={style['hero-image-list__item']}>
@@ -38,7 +46,7 @@ function ImageListHero() {
 					</ImageListItem>
 				))}
 			</ImageList>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -47,40 +55,44 @@ function ImageListDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Standard Image List with Text Protection</Showcase.Section.Title>
-				<ImageList
-					className={style['standard-image-list']}
-					modifiers={{ 'with-text-protection': true }}
-				>
-					{Array(...{ length: 15 }).map((_, index) => (
-						<ImageListItem className={style['standard-image-list__item']}>
-							<ImageListImageAspectContainer
-								className={style['standard-image-list__image-aspect-container']}
-							>
-								<ImageListImage src={`${url}/3x2/${index + 1}.jpg`} alt="Text label" />
-							</ImageListImageAspectContainer>
-							<ImageListSupporting>
-								<ImageListLabel>Text label</ImageListLabel>
-							</ImageListSupporting>
-						</ImageListItem>
-					))}
-				</ImageList>
+				<Showcase.Demo>
+					<ImageList
+						className={style['standard-image-list']}
+						modifiers={{ 'with-text-protection': true }}
+					>
+						{Array(...{ length: 15 }).map((_, index) => (
+							<ImageListItem className={style['standard-image-list__item']}>
+								<ImageListImageAspectContainer
+									className={style['standard-image-list__image-aspect-container']}
+								>
+									<ImageListImage src={`${url}/3x2/${index + 1}.jpg`} alt="Text label" />
+								</ImageListImageAspectContainer>
+								<ImageListSupporting>
+									<ImageListLabel>Text label</ImageListLabel>
+								</ImageListSupporting>
+							</ImageListItem>
+						))}
+					</ImageList>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Masonry Image List</Showcase.Section.Title>
-				<ImageList className={style['masonry-image-list']} modifiers={{ masonry: true }}>
-					{masonryImageListItems.map((image, index) => (
-						<ImageListItem className={style['masonry-image-list__item']}>
-							<ImageListImage
-								className="masonry-image-list__image"
-								src={`${url}/${image}`}
-								alt="Text label"
-							/>
-							<ImageListSupporting>
-								<ImageListLabel>Text label</ImageListLabel>
-							</ImageListSupporting>
-						</ImageListItem>
-					))}
-				</ImageList>
+				<Showcase.Demo>
+					<ImageList className={style['masonry-image-list']} modifiers={{ masonry: true }}>
+						{masonryImageListItems.map((image, index) => (
+							<ImageListItem className={style['masonry-image-list__item']}>
+								<ImageListImage
+									className="masonry-image-list__image"
+									src={`${url}/${image}`}
+									alt="Text label"
+								/>
+								<ImageListSupporting>
+									<ImageListLabel>Text label</ImageListLabel>
+								</ImageListSupporting>
+							</ImageListItem>
+						))}
+					</ImageList>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
