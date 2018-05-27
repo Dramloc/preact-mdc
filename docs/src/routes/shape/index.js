@@ -1,8 +1,13 @@
 import { Button } from '@preact/mdc/button';
-import { Card, CardPrimaryAction, CardActions, CardActionIcons, withCardAction } from '@preact/mdc/card';
+import {
+	Card,
+	CardPrimaryAction,
+	CardActions,
+	CardActionIcons,
+	CardActionIconToggle,
+	CardActionIcon
+} from '@preact/mdc/card';
 import { h } from 'preact';
-import { IconToggle } from '@preact/mdc/icon-toggle';
-import { RippledIcon } from '@preact/mdc/icon';
 import { ShapeContainer, ShapeContainerCorner } from '@preact/mdc/shape';
 import cx from 'classnames';
 
@@ -15,9 +20,6 @@ import Showcase from '../../components/showcase';
 
 import cardStyle from '../card/style.scss';
 import style from './style.scss';
-
-const ActionIconToggle = withCardAction(IconToggle);
-const ActionIcon = withCardAction(RippledIcon);
 
 function DemoCardPrimary() {
 	return (
@@ -44,8 +46,7 @@ function DemoCardActions() {
 	return (
 		<CardActions>
 			<CardActionIcons>
-				<ActionIconToggle
-					modifiers={{ icon: true }}
+				<CardActionIconToggle
 					on={false}
 					data-toggle-on={{
 						content: 'favorite',
@@ -56,12 +57,8 @@ function DemoCardActions() {
 						label: 'Add to favorites'
 					}}
 				/>
-				<ActionIcon modifiers={{ icon: true }} title="Share">
-					share
-				</ActionIcon>
-				<ActionIcon modifiers={{ icon: true }} title="More options">
-					more_vert
-				</ActionIcon>
+				<CardActionIcon title="Share">share</CardActionIcon>
+				<CardActionIcon title="More options">more_vert</CardActionIcon>
 			</CardActionIcons>
 		</CardActions>
 	);

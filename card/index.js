@@ -1,6 +1,9 @@
 import { h } from 'preact';
 
 import { Base } from '../base';
+import { Button } from '../docs/node_modules/@preact/mdc/button';
+import { IconToggle } from '../docs/node_modules/@preact/mdc/icon-toggle';
+import { RippledIcon } from '../docs/node_modules/@preact/mdc/icon';
 import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
 import { withSurfaceRipple } from '../ripple';
@@ -107,3 +110,13 @@ export function withCardAction(Element) {
 		}
 	);
 }
+
+export const CardActionButton = withDefaultProps(withCardAction(Button), {
+	modifiers: { button: true }
+});
+export const CardActionIconToggle = withDefaultProps(withCardAction(IconToggle), {
+	modifiers: { icon: true }
+});
+export const CardActionIcon = withDefaultProps(withCardAction(RippledIcon), {
+	modifiers: { icon: true }
+});
