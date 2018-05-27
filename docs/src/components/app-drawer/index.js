@@ -44,7 +44,8 @@ const drawerItems = [
 	{ path: '/switch', text: 'Switch' },
 	{ path: '/tabs', text: 'Tabs' },
 	{ path: '/text-field', text: 'Text Field' },
-	{ path: '/top-app-bar', text: 'Top App Bar' }
+	{ path: '/top-app-bar', text: 'Top App Bar' },
+	{ path: '/typography', text: 'Typography' }
 ];
 
 function isWideScreen() {

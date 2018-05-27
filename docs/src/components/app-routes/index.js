@@ -26,6 +26,7 @@ import SwitchShowcase from '../../routes/switch';
 import TabsShowcase from '../../routes/tabs';
 import TextFieldShowcase from '../../routes/text-field';
 import TopAppBarShowcase from '../../routes/top-app-bar';
+import TypographyShowcase from '../../routes/typography';
 
 export default function AppRoutes() {
 	return (
@@ -55,6 +56,7 @@ export default function AppRoutes() {
 			<TabsShowcase path="/tabs" />
 			<TextFieldShowcase path="/text-field" />
 			<TopAppBarShowcase path="/top-app-bar" />
+			<TypographyShowcase path="/typography" />
 		</Router>
 	);
 }
