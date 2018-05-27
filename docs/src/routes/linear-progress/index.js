@@ -9,9 +9,9 @@ import style from './style.scss';
 
 function LinearProgressHero() {
 	return (
-		<div className={style['hero-linear-progress-indicator']}>
+		<Showcase.Demo className={style['hero-linear-progress-indicator']}>
 			<LinearProgress progress={0.5} determinate />
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -20,19 +20,27 @@ function LinearProgressDemos() {
 		<div>
 			<Showcase.Section className={style['demo-linear-progress-indicator']}>
 				<Showcase.Section.Title>Buffered</Showcase.Section.Title>
-				<LinearProgress progress={0.5} buffer={0.75} determinate />
+				<Showcase.Demo>
+					<LinearProgress progress={0.5} buffer={0.75} determinate />
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section className={style['demo-linear-progress-indicator']}>
 				<Showcase.Section.Title>Indeterminate</Showcase.Section.Title>
-				<LinearProgress determinate={false} />
+				<Showcase.Demo>
+					<LinearProgress determinate={false} />
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section className={style['demo-linear-progress-indicator']}>
 				<Showcase.Section.Title>Reversed</Showcase.Section.Title>
-				<LinearProgress progress={0.5} reverse determinate />
+				<Showcase.Demo>
+					<LinearProgress progress={0.5} reverse determinate />
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section className={style['demo-linear-progress-indicator']}>
 				<Showcase.Section.Title>Reversed Buffered</Showcase.Section.Title>
-				<LinearProgress progress={0.5} buffer={0.75} reverse determinate />
+				<Showcase.Demo>
+					<LinearProgress progress={0.5} buffer={0.75} reverse determinate />
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
