@@ -14,7 +14,11 @@ function Box(props) {
 const RippledBox = withSurfaceRipple(Box);
 
 function RippleHero() {
-	return <RippledBox className={style['ripple-demo-box']}>Click here!</RippledBox>;
+	return (
+		<Showcase.Demo>
+			<RippledBox className={style['ripple-demo-box']}>Click here!</RippledBox>
+		</Showcase.Demo>
+	);
 }
 
 function RippleDemos() {
@@ -22,29 +26,37 @@ function RippleDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Bounded Ripple</Showcase.Section.Title>
-				<RippledBox className={style['ripple-demo-box']}>Interact with me!</RippledBox>
+				<Showcase.Demo>
+					<RippledBox className={style['ripple-demo-box']}>Interact with me!</RippledBox>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Unbounded Ripple</Showcase.Section.Title>
-				<RippledIcon className={style['ripple-demo-icon']}>favorite</RippledIcon>
+				<Showcase.Demo>
+					<RippledIcon className={style['ripple-demo-icon']}>favorite</RippledIcon>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Theme Colors: Primary</Showcase.Section.Title>
-				<RippledBox
-					className={cx(style['ripple-demo-box'], style['ripple-demo-box--primary'])}
-					modifiers={{ primary: true }}
-				>
-					Primary
-				</RippledBox>
+				<Showcase.Demo>
+					<RippledBox
+						className={cx(style['ripple-demo-box'], style['ripple-demo-box--primary'])}
+						modifiers={{ primary: true }}
+					>
+						Primary
+					</RippledBox>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Theme Colors: Secondary</Showcase.Section.Title>
-				<RippledBox
-					className={cx(style['ripple-demo-box'], style['ripple-demo-box--secondary'])}
-					modifiers={{ accent: true }}
-				>
-					Secondary
-				</RippledBox>
+				<Showcase.Demo>
+					<RippledBox
+						className={cx(style['ripple-demo-box'], style['ripple-demo-box--secondary'])}
+						modifiers={{ accent: true }}
+					>
+						Secondary
+					</RippledBox>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
