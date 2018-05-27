@@ -36,10 +36,10 @@ function Showcase({
 			<ShowcaseHero>{hero}</ShowcaseHero>
 			<ShowcaseSubtitle>Resources</ShowcaseSubtitle>
 			<List>
-				{guidelinesLink && <ShowcaseGuidelines href={guidelinesLink} />}
-				{documentationLink && <ShowcaseDocumentation href={documentationLink} />}
-				{sourceCodeLink && <ShowcaseSourceCode href={sourceCodeLink} />}
-				{demoLink && <ShowcaseDemo href={demoLink} />}
+				{guidelinesLink && <ShowcaseGuidelinesLink href={guidelinesLink} />}
+				{documentationLink && <ShowcaseDocumentationLink href={documentationLink} />}
+				{sourceCodeLink && <ShowcaseSourceCodeLink href={sourceCodeLink} />}
+				{demoLink && <ShowcaseDemoLink href={demoLink} />}
 				{demos && <ShowcaseSubtitle>Demos</ShowcaseSubtitle>}
 			</List>
 			{demos}
@@ -120,7 +120,7 @@ function ShowcaseFrame({ children }) {
 	return <main className={cx(style['showcase-frame'])}>{children}</main>;
 }
 
-function ShowcaseResource({ href, src, alt, children }) {
+function ShowcaseResourceLink({ href, src, alt, children }) {
 	return (
 		<ListItem element="a" target="_blank" rel="noopener" href={href}>
 			<ListItemGraphic element="span">
@@ -131,65 +131,63 @@ function ShowcaseResource({ href, src, alt, children }) {
 	);
 }
 
-function ShowcaseGuidelines({ href }) {
+function ShowcaseGuidelinesLink({ href }) {
 	return (
-		<ShowcaseResource
+		<ShowcaseResourceLink
 			href={href}
 			src="https://material-components.github.io/material-components-web-catalog/static/media/ic_material_design_24px.svg"
 			alt="Material Design Guidelines icon"
 		>
 			Material Design Guidelines
-		</ShowcaseResource>
+		</ShowcaseResourceLink>
 	);
 }
 
-function ShowcaseDocumentation({ href }) {
+function ShowcaseDocumentationLink({ href }) {
 	return (
-		<ShowcaseResource
+		<ShowcaseResourceLink
 			href={href}
 			src="https://material-components.github.io/material-components-web-catalog/static/media/ic_drive_document_24px.svg"
 			alt="Documentation icon"
 		>
 			Documentation
-		</ShowcaseResource>
+		</ShowcaseResourceLink>
 	);
 }
 
-function ShowcaseSourceCode({ href }) {
+function ShowcaseSourceCodeLink({ href }) {
 	return (
-		<ShowcaseResource
+		<ShowcaseResourceLink
 			href={href}
 			src="https://material-components.github.io/material-components-web-catalog/static/media/ic_code_24px.svg"
 			alt="Source Code icon"
 		>
 			Source Code
-		</ShowcaseResource>
+		</ShowcaseResourceLink>
 	);
 }
 
-function ShowcaseDemo({ href }) {
+function ShowcaseDemoLink({ href }) {
 	return (
-		<ShowcaseResource
+		<ShowcaseResourceLink
 			href={href}
 			src="https://material.io/develop/images/icons/ic_link_24px.svg"
 			alt="Demo icon"
 		>
 			Demo
-		</ShowcaseResource>
+		</ShowcaseResourceLink>
 	);
 }
 
+function ShowcaseDemo({ children }) {
+	return <div>{children}</div>;
+}
+
 Showcase.Hero = ShowcaseHero;
-Showcase.Title = ShowcaseTitle;
-Showcase.Description = ShowcaseDescription;
-Showcase.Subtitle = ShowcaseSubtitle;
 Showcase.Section = ShowcaseSection;
 Showcase.Section.Title = ShowcaseSectionTitle;
 Showcase.Section.Subtitle = ShowcaseSectionSubtitle;
 Showcase.Frame = ShowcaseFrame;
-Showcase.Guidelines = ShowcaseGuidelines;
-Showcase.Documentation = ShowcaseDocumentation;
-Showcase.SourceCode = ShowcaseSourceCode;
 Showcase.Demo = ShowcaseDemo;
 
 export default Showcase;

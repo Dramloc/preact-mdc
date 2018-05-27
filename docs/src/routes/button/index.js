@@ -9,7 +9,7 @@ import style from './style.scss';
 
 function ButtonHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<Button className={style['hero-button']}>Text</Button>
 			<Button className={style['hero-button']} modifiers={{ raised: true }}>
 				Raised
@@ -20,7 +20,23 @@ function ButtonHero() {
 			<Button className={style['hero-button']} modifiers={{ outlined: true }}>
 				Outlined
 			</Button>
-		</div>
+		</Showcase.Demo>
+	);
+}
+
+function ButtonDemo({ modifiers = {}, ...props }) {
+	return (
+		<Showcase.Demo>
+			<Button className={style['demo-button']} modifiers={modifiers} {...props}>
+				Default
+			</Button>
+			<Button className={style['demo-button']} modifiers={{ ...modifiers, dense: true }} {...props}>
+				Dense
+			</Button>
+			<Button className={style['demo-button']} modifiers={modifiers} {...props}>
+				<ButtonIcon>favorite</ButtonIcon>Icon
+			</Button>
+		</Showcase.Demo>
 	);
 }
 
@@ -29,49 +45,23 @@ function ButtonDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Text Button</Showcase.Section.Title>
-				<Button className={style['demo-button']}>Default</Button>
-				<Button className={style['demo-button']} modifiers={{ dense: true }}>
-					Dense
-				</Button>
-				<Button className={style['demo-button']}>
-					<ButtonIcon>favorite</ButtonIcon>Icon
-				</Button>
+				<ButtonDemo />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
-				<Button className={style['demo-button']} modifiers={{ raised: true }}>
-					Default
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ raised: true, dense: true }}>
-					Dense
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ raised: true }}>
-					<ButtonIcon>favorite</ButtonIcon>Icon
-				</Button>
+				<ButtonDemo modifiers={{ raised: true }} />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Raised Button</Showcase.Section.Title>
-				<Button className={style['demo-button']} modifiers={{ unelevated: true }}>
-					Default
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ unelevated: true, dense: true }}>
-					Dense
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ unelevated: true }}>
-					<ButtonIcon>favorite</ButtonIcon>Icon
-				</Button>
+				<ButtonDemo modifiers={{ unelevated: true }} />
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Outlined Button</Showcase.Section.Title>
-				<Button className={style['demo-button']} modifiers={{ outlined: true }}>
-					Default
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ outlined: true, dense: true }}>
-					Dense
-				</Button>
-				<Button className={style['demo-button']} modifiers={{ outlined: true }}>
-					<ButtonIcon>favorite</ButtonIcon>Icon
-				</Button>
+				<ButtonDemo modifiers={{ outlined: true }} />
+			</Showcase.Section>
+			<Showcase.Section>
+				<Showcase.Section.Title>Disabled Button</Showcase.Section.Title>
+				<ButtonDemo disabled />
 			</Showcase.Section>
 		</div>
 	);
