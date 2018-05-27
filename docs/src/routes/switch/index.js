@@ -9,12 +9,12 @@ import style from './style.scss';
 
 function SwitchHero() {
 	return (
-		<div>
+		<Showcase.Demo>
 			<Switch id="hero-switch" />
 			<label className={style['hero-switch-label']} for="hero-switch">
 				off/on
 			</label>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
