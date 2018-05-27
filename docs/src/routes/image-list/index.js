@@ -6,7 +6,7 @@ import {
 	ImageListItem,
 	ImageListSupporting,
 	ImageListLabel
-} from '@preact/mdc/image-list';
+} from '../../../../src/image-list';
 
 import '@material/image-list/mdc-image-list.scss';
 

@@ -1,6 +1,6 @@
 import { h } from 'preact';
 
-import readme from '@preact/mdc/README.md';
+import readme from '../../../../README.md';
 
 import Markdown from '../../components/markdown';
 

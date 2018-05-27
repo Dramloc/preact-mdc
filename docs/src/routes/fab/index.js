@@ -1,4 +1,4 @@
-import { Fab, FabIcon } from '@preact/mdc/fab';
+import { Fab, FabIcon } from '../../../../src/fab';
 import { h } from 'preact';
 
 import '@material/fab/mdc-fab.scss';

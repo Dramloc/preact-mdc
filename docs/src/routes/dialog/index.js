@@ -1,4 +1,4 @@
-import { Button } from '@preact/mdc/button';
+import { Button } from '../../../../src/button';
 import {
 	Dialog,
 	DialogSurface,
@@ -8,9 +8,9 @@ import {
 	DialogFooter,
 	DialogFooterButton,
 	DialogBackdrop
-} from '@preact/mdc/dialog';
+} from '../../../../src/dialog';
 import { h, Component } from 'preact';
-import { Typography } from '@preact/mdc/typography';
+import { Typography } from '../../../../src/typography';
 
 import '@material/button/mdc-button.scss';
 import '@material/dialog/mdc-dialog.scss';

@@ -9,7 +9,7 @@ import {
 	ListDivider,
 	ListGroup,
 	ListGroupSubheader
-} from '@preact/mdc/list';
+} from '../../../../src/list';
 import cx from 'classnames';
 
 import '@material/list/mdc-list.scss';

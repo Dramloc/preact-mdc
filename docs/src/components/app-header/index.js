@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { TopAppBar, TopAppBarNavigationIcon, TopAppBarRow, TopAppBarSection, TopAppBarTitle } from '@preact/mdc/top-app-bar';
+import { TopAppBar, TopAppBarNavigationIcon, TopAppBarRow, TopAppBarSection, TopAppBarTitle } from '../../../../src/top-app-bar';
 
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 

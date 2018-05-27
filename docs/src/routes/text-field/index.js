@@ -1,13 +1,13 @@
-import { FloatingLabelBase } from '@preact/mdc/floating-label';
+import { FloatingLabelBase } from '../../../../src/floating-label';
 import { h } from 'preact';
-import { LineRippleBase } from '@preact/mdc/line-ripple';
-import { NotchedOutlineIdle, NotchedOutlineBase } from '@preact/mdc/notched-outline';
+import { LineRippleBase } from '../../../../src/line-ripple';
+import { NotchedOutlineIdle, NotchedOutlineBase } from '../../../../src/notched-outline';
 import {
 	TextField,
 	TextFieldHelperText,
 	TextFieldInput,
 	TextFieldIcon
-} from '@preact/mdc/text-field';
+} from '../../../../src/text-field';
 import cx from 'classnames';
 
 import '@material/textfield/mdc-text-field.scss';

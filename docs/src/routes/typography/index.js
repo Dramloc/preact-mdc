@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { Typography } from '@preact/mdc/typography';
+import { Typography } from '../../../../src/typography';
 
 import Showcase from '../../components/showcase';
 

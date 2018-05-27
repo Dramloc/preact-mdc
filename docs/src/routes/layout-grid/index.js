@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { LayoutGrid, LayoutGridCell, LayoutGridInner } from '@preact/mdc/layout-grid';
+import { LayoutGrid, LayoutGridCell, LayoutGridInner } from '../../../../src/layout-grid';
 import cx from 'classnames';
 
 import '@material/layout-grid/mdc-layout-grid.scss';

@@ -1,4 +1,4 @@
-import { Button } from '@preact/mdc/button';
+import { Button } from '../../../../src/button';
 import { h, Component } from 'preact';
 
 import '@material/button/mdc-button.scss';
@@ -10,7 +10,7 @@ import {
 	SnackbarActionWrapper,
 	SnackbarActionButton,
 	Snackbar
-} from '@preact/mdc/snackbar';
+} from '../../../../src/snackbar';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';

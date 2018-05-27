@@ -1,6 +1,6 @@
-import { FormField } from '@preact/mdc/form-field';
+import { FormField } from '../../../../src/form-field';
 import { h } from 'preact';
-import { Radio } from '@preact/mdc/radio';
+import { Radio } from '../../../../src/radio';
 
 import '@material/form-field/mdc-form-field.scss';
 import '@material/radio/mdc-radio.scss';

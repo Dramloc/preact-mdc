@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { IconToggle } from '@preact/mdc/icon-toggle';
+import { IconToggle } from '../../../../src/icon-toggle';
 
 import '@material/icon-toggle/mdc-icon-toggle.scss';
 

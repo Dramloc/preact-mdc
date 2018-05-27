@@ -1,6 +1,6 @@
 import { h } from 'preact';
-import { ListItem, ListItemGraphic, ListItemText, List } from '@preact/mdc/list';
-import { Typography } from '@preact/mdc/typography';
+import { ListItem, ListItemGraphic, ListItemText, List } from '../../../../src/list';
+import { Typography } from '../../../../src/typography';
 import Helmet from 'preact-helmet';
 
 import '@material/list/mdc-list.scss';

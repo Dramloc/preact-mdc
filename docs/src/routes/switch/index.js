@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { Switch } from '@preact/mdc/switch';
+import { Switch } from '../../../../src/switch';
 
 import '@material/switch/mdc-switch.scss';
 

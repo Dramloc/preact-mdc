@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { LinearProgress } from '@preact/mdc/linear-progress';
+import { LinearProgress } from '../../../../src/linear-progress';
 
 import '@material/linear-progress/mdc-linear-progress.scss';
 

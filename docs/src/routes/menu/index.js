@@ -1,7 +1,7 @@
-import { Button } from '@preact/mdc/button';
+import { Button } from '../../../../src/button';
 import { h, Component } from 'preact';
-import { ListDivider } from '@preact/mdc/list';
-import { MenuItems, Menu, MenuItem, MenuBase, MenuAnchor } from '@preact/mdc/menu';
+import { ListDivider } from '../../../../src/list';
+import { MenuItems, Menu, MenuItem, MenuBase, MenuAnchor } from '../../../../src/menu';
 
 import '@material/button/mdc-button.scss';
 import '@material/menu/mdc-menu.scss';

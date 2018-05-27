@@ -1,4 +1,4 @@
-import { Elevation, withElevationTransition } from '@preact/mdc/elevation';
+import { Elevation, withElevationTransition } from '../../../../src/elevation';
 import { h, Component } from 'preact';
 import cx from 'classnames';
 

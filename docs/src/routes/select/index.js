@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { Select } from '@preact/mdc/select';
+import { Select } from '../../../../src/select';
 
 import '@material/select/mdc-select.scss';
 

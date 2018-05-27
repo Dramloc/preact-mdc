@@ -1,7 +1,7 @@
 import { h } from 'preact';
-import { List, ListItem, ListItemGraphic } from '@preact/mdc/list';
-import { PermanentDrawer, DrawerHeader, DrawerHeaderContent, DrawerContent } from '@preact/mdc/drawer';
-import { RippledIcon } from '@preact/mdc/icon';
+import { List, ListItem, ListItemGraphic } from '../../../../src/list';
+import { PermanentDrawer, DrawerHeader, DrawerHeaderContent, DrawerContent } from '../../../../src/drawer';
+import { RippledIcon } from '../../../../src/icon';
 
 import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';

@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { RippledIcon } from '@preact/mdc/icon';
+import { RippledIcon } from '../../../../src/icon';
 import {
 	TopAppBar,
 	TopAppBarRow,
@@ -7,7 +7,7 @@ import {
 	TopAppBarTitle,
 	TopAppBarNavigationIcon,
 	TopAppBarActionItem
-} from '@preact/mdc/top-app-bar';
+} from '../../../../src/top-app-bar';
 
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 

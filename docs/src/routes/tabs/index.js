@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { TabBar, Tab, TabBarScroller, TabIcon, TabIconText } from '@preact/mdc/tabs';
+import { TabBar, Tab, TabBarScroller, TabIcon, TabIconText } from '../../../../src/tabs';
 
 import '@material/tabs/mdc-tabs.scss';
 

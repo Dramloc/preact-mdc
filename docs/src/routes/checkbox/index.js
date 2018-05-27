@@ -1,4 +1,4 @@
-import { Checkbox } from '@preact/mdc/checkbox';
+import { Checkbox } from '../../../../src/checkbox';
 import { h } from 'preact';
 
 import '@material/checkbox/mdc-checkbox.scss';

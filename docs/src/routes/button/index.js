@@ -1,4 +1,4 @@
-import { Button, ButtonIcon } from '@preact/mdc/button';
+import { Button, ButtonIcon } from '../../../../src/button';
 import { h } from 'preact';
 
 import '@material/button/mdc-button.scss';

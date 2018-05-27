@@ -1,6 +1,6 @@
 import { h } from 'preact';
-import { RippledIcon } from '@preact/mdc/icon';
-import { withSurfaceRipple } from '@preact/mdc/ripple';
+import { RippledIcon } from '../../../../src/icon';
+import { withSurfaceRipple } from '../../../../src/ripple';
 import cx from 'classnames';
 
 import Showcase from '../../components/showcase';

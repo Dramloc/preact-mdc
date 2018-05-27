@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
 import { Link } from 'preact-router';
-import { List, ListItem, ListItemText } from '@preact/mdc/list';
+import { List, ListItem, ListItemText } from '../../../../src/list';
 import { Match } from 'preact-router/match';
-import { PersistentDrawer, TemporaryDrawer, DrawerContent } from '@preact/mdc/drawer';
+import { PersistentDrawer, TemporaryDrawer, DrawerContent } from '../../../../src/drawer';
 import cx from 'classnames';
 
 import '@material/drawer/mdc-drawer.scss';

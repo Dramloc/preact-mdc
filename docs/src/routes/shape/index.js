@@ -1,4 +1,4 @@
-import { Button } from '@preact/mdc/button';
+import { Button } from '../../../../src/button';
 import {
 	Card,
 	CardPrimaryAction,
@@ -6,10 +6,10 @@ import {
 	CardActionIcons,
 	CardActionIconToggle,
 	CardActionIcon
-} from '@preact/mdc/card';
+} from '../../../../src/card';
 import { h } from 'preact';
-import { ShapeContainer, ShapeContainerCorner } from '@preact/mdc/shape';
-import { Typography } from '@preact/mdc/typography';
+import { ShapeContainer, ShapeContainerCorner } from '../../../../src/shape';
+import { Typography } from '../../../../src/typography';
 
 import '@material/button/mdc-button.scss';
 import '@material/card/mdc-card.scss';

@@ -1,13 +1,15 @@
 import { h } from 'preact';
-import { Slider } from '@preact/mdc/slider';
 
 import '@material/slider/mdc-slider.scss';
 
+import { Slider } from '../../../../src/slider';
 import Showcase from '../../components/showcase';
+
+import style from './style.scss';
 
 function SliderHero() {
 	return (
-		<Showcase.Demo>
+		<Showcase.Demo className={style['hero-slider']}>
 			<Slider min={0} max={100} value={50} aria-label="Select Value" />
 		</Showcase.Demo>
 	);

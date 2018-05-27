@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
-import { List, ListItem, ListDivider, ListItemGraphic } from '@preact/mdc/list';
-import { PermanentDrawer, PersistentDrawer, TemporaryDrawer, DrawerHeader, DrawerHeaderContent, DrawerContent } from '@preact/mdc/drawer';
-import { TopAppBar, TopAppBarNavigationIcon, TopAppBarRow, TopAppBarSection, TopAppBarTitle } from '@preact/mdc/top-app-bar';
+import { List, ListItem, ListDivider, ListItemGraphic } from '../../../../src/list';
+import { PermanentDrawer, PersistentDrawer, TemporaryDrawer, DrawerHeader, DrawerHeaderContent, DrawerContent } from '../../../../src/drawer';
+import { TopAppBar, TopAppBarNavigationIcon, TopAppBarRow, TopAppBarSection, TopAppBarTitle } from '../../../../src/top-app-bar';
 
 import '@material/drawer/mdc-drawer.scss';
 import '@material/list/mdc-list.scss';

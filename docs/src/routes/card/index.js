@@ -8,9 +8,9 @@ import {
 	CardActionButton,
 	CardActionIconToggle,
 	CardActionIcon
-} from '@preact/mdc/card';
+} from '../../../../src/card';
 import { h } from 'preact';
-import { Typography } from '@preact/mdc/typography';
+import { Typography } from '../../../../src/typography';
 import cx from 'classnames';
 
 import '@material/button/mdc-button.scss';
@@ -120,7 +120,7 @@ function CardDemos() {
 						</CardPrimaryAction>
 						<DemoCardActions />
 					</Card>
-				</Showcase.Demo>>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Outlined</Showcase.Section.Title>

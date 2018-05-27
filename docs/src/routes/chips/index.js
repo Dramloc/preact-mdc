@@ -1,4 +1,4 @@
-import { ChipSet, Chip, ChipText, ChipCheckmark, ChipIcon } from '@preact/mdc/chips';
+import { ChipSet, Chip, ChipText, ChipCheckmark, ChipIcon } from '../../../../src/chips';
 import { h } from 'preact';
 
 import '@material/chips/mdc-chips.scss';
