@@ -1,8 +1,10 @@
 import { h, Component } from 'preact';
 
+import { getDisplayName } from '../get-display-name';
+
 export function withMaterialComponent(MDCComponent, listeners = [], bindings = []) {
-	return Element =>
-		class MaterialComponent extends Component {
+	return Element => {
+		class WithMaterialComponent extends Component {
 			constructor() {
 				super();
 				listeners.forEach(listener => {
@@ -39,7 +41,12 @@ export function withMaterialComponent(MDCComponent, listeners = [], bindings = [
 				});
 				return <Element ref={ref => (this.__root = ref)} {...filteredProps} />;
 			}
-		};
+		}
+		if (process.env.NODE_ENV !== 'production') {
+			WithMaterialComponent.displayName = `WithMaterialComponent(${getDisplayName(Element)})`;
+		}
+		return WithMaterialComponent;
+	};
 }
 
 function synchronizeBindings(bindings, MDCComponent, props, nextProps) {
