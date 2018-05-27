@@ -1,6 +1,13 @@
 import { h } from 'preact';
 import { RippledIcon } from '@preact/mdc/icon';
-import { TopAppBar, TopAppBarRow, TopAppBarSection, TopAppBarTitle, TopAppBarNavigationIcon, TopAppBarActionItem } from '@preact/mdc/top-app-bar';
+import {
+	TopAppBar,
+	TopAppBarRow,
+	TopAppBarSection,
+	TopAppBarTitle,
+	TopAppBarNavigationIcon,
+	TopAppBarActionItem
+} from '@preact/mdc/top-app-bar';
 
 import '@material/top-app-bar/mdc-top-app-bar.scss';
 
@@ -10,7 +17,7 @@ import style from './style.scss';
 
 function TopAppBarHero() {
 	return (
-		<div className={style['hero-top-app-bar']}>
+		<Showcase.Demo className={style['hero-top-app-bar']}>
 			<TopAppBar modifiers={{ fixed: true }}>
 				<TopAppBarRow>
 					<TopAppBarSection modifiers={{ 'align-start': true }}>
@@ -24,7 +31,7 @@ function TopAppBarHero() {
 					</TopAppBarSection>
 				</TopAppBarRow>
 			</TopAppBar>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
