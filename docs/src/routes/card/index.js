@@ -10,6 +10,7 @@ import {
 	CardActionIcon
 } from '@preact/mdc/card';
 import { h } from 'preact';
+import { Typography } from '@preact/mdc/typography';
 import cx from 'classnames';
 
 import '@material/button/mdc-button.scss';
@@ -27,21 +28,29 @@ function DemoCardMedia() {
 function DemoCardPrimary() {
 	return (
 		<div className={style['demo-card__primary']}>
-			<h2 className={cx(style['demo-card__title'], 'mdc-typography--headline6')}>
+			<Typography
+				element="h2"
+				className={style['demo-card__title']}
+				modifiers={{ headline6: true }}
+			>
 				Our Changing Planet
-			</h2>
-			<h3 className={cx(style['demo-card__subtitle'], 'mdc-typography--subtitle2')}>
+			</Typography>
+			<Typography
+				element="h3"
+				className={style['demo-card__subtitle']}
+				modifiers={{ subtitle2: true }}
+			>
 				by Kurt Wagner
-			</h3>
+			</Typography>
 		</div>
 	);
 }
 
 function DemoCardSecondary() {
 	return (
-		<div className={cx(style['demo-card__secondary'], 'mdc-typography--body2')}>
+		<Typography element="div" className={style['demo-card__secondary']} modifiers={{ body2: true }}>
 			Visit ten places on our planet that are undergoing the biggest changes today.
-		</div>
+		</Typography>
 	);
 }
 

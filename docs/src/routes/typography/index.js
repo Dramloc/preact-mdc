@@ -1,6 +1,7 @@
 import { h } from 'preact';
+import { Typography } from '@preact/mdc/typography';
+
 import Showcase from '../../components/showcase';
-import { Typography } from '../../../../typography';
 
 function TypographyHero() {
 	return (

@@ -10,6 +10,7 @@ import {
 	DialogBackdrop
 } from '@preact/mdc/dialog';
 import { h, Component } from 'preact';
+import { Typography } from '@preact/mdc/typography';
 
 import '@material/button/mdc-button.scss';
 import '@material/dialog/mdc-dialog.scss';
@@ -138,11 +139,11 @@ class DialogDemos extends Component {
 				</Dialog>
 				<Button onClick={this.open}>Open dialog</Button>
 				{accepted !== undefined && (
-					<p className="mdc-typography--body1">
+					<Typography element="p" modifiers={{ body1: true }}>
 						{accepted
 							? 'Accepted reading my novel, thanks!'
 							: 'Declined to read my novel... Maybe next time?'}
-					</p>
+					</Typography>
 				)}
 			</Showcase.Demo>
 		);

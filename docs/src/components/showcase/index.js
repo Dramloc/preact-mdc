@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { ListItem, ListItemGraphic, ListItemText, List } from '@preact/mdc/list';
-import cx from 'classnames';
+import { Typography } from '@preact/mdc/typography';
 import Helmet from 'preact-helmet';
 
 import '@material/list/mdc-list.scss';
@@ -49,7 +49,7 @@ function Showcase({
 
 function ShowcaseTitle({ children }) {
 	return (
-		<h1 className="mdc-typography--headline5">
+		<Typography element="h1" modifiers={{ headline5: true }}>
 			<Helmet
 				title={children}
 				meta={[
@@ -68,13 +68,13 @@ function ShowcaseTitle({ children }) {
 				]}
 			/>
 			{children}
-		</h1>
+		</Typography>
 	);
 }
 
 function ShowcaseDescription({ children }) {
 	return (
-		<p className="mdc-typography--body1">
+		<Typography element="p" modifiers={{ body1: true }}>
 			<Helmet
 				meta={[
 					{
@@ -88,7 +88,7 @@ function ShowcaseDescription({ children }) {
 				]}
 			/>
 			{children}
-		</p>
+		</Typography>
 	);
 }
 
@@ -97,7 +97,11 @@ function ShowcaseHero({ children }) {
 }
 
 function ShowcaseSubtitle({ children }) {
-	return <h2 className={cx(style.showcase__subtitle, 'mdc-typography--headline6')}>{children}</h2>;
+	return (
+		<Typography element="h2" className={style.showcase__subtitle} modifiers={{ headline6: true }}>
+			{children}
+		</Typography>
+	);
 }
 
 function ShowcaseSection({ children }) {
@@ -106,18 +110,26 @@ function ShowcaseSection({ children }) {
 
 function ShowcaseSectionTitle({ children }) {
 	return (
-		<h3 className={cx(style['showcase__section-title'], 'mdc-typography--subtitle1')}>
+		<Typography
+			element="h3"
+			className={style['showcase__section-title']}
+			modifiers={{ subtitle1: true }}
+		>
 			{children}
-		</h3>
+		</Typography>
 	);
 }
 
 function ShowcaseSectionSubtitle({ children }) {
-	return <h4 className="mdc-typography--body2">{children}</h4>;
+	return (
+		<Typography element="h4" modifiers={{ body2: true }}>
+			{children}
+		</Typography>
+	);
 }
 
 function ShowcaseFrame({ children }) {
-	return <main className={cx(style['showcase-frame'])}>{children}</main>;
+	return <main className={style['showcase-frame']}>{children}</main>;
 }
 
 function ShowcaseResourceLink({ href, src, alt, children }) {
