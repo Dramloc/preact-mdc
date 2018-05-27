@@ -1,30 +1,30 @@
+import { FloatingLabelBase } from '@preact/mdc/floating-label';
 import { h } from 'preact';
-import cx from 'classnames';
-
-import '@material/textfield/mdc-text-field.scss';
-
+import { LineRippleBase } from '@preact/mdc/line-ripple';
+import { NotchedOutlineIdle, NotchedOutlineBase } from '@preact/mdc/notched-outline';
 import {
 	TextField,
 	TextFieldHelperText,
 	TextFieldInput,
 	TextFieldIcon
 } from '@preact/mdc/text-field';
-import { NotchedOutlineIdle, NotchedOutlineBase } from '@preact/mdc/notched-outline';
-import { FloatingLabelBase } from '@preact/mdc/floating-label';
-import { LineRippleBase } from '@preact/mdc/line-ripple';
+import cx from 'classnames';
+
+import '@material/textfield/mdc-text-field.scss';
+
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
 
 function TextFieldHero() {
 	return (
-		<div className={style['text-field-container']}>
+		<Showcase.Demo className={style['text-field-container']}>
 			<TextField className={style['text-field']}>
 				<TextFieldInput id="hero-text-field-id" />
 				<FloatingLabelBase for="hero-text-field-id">Standard</FloatingLabelBase>
 				<LineRippleBase />
 			</TextField>
-		</div>
+		</Showcase.Demo>
 	);
 }
 
@@ -60,11 +60,11 @@ function TextFieldContainer({ modifiers = {} }) {
 
 function TextFieldRow({ className, modifiers }) {
 	return (
-		<div className={cx(style['text-field-row'], className)}>
+		<Showcase.Demo className={cx(style['text-field-row'], className)}>
 			<TextFieldContainer modifiers={modifiers} />
 			<TextFieldContainer modifiers={{ dense: true, ...modifiers }} />
 			<TextFieldContainer modifiers={{ helper: true, ...modifiers }} />
-		</div>
+		</Showcase.Demo>
 	);
 }
 
