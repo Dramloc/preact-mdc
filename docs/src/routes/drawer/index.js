@@ -12,31 +12,33 @@ import style from './style.scss';
 
 function DrawerHero() {
 	return (
-		<PermanentDrawer className={style['hero-drawer']}>
-			<DrawerHeader className={style['hero-drawer__header']}>
-				<DrawerHeaderContent>Header here</DrawerHeaderContent>
-			</DrawerHeader>
-			<DrawerContent>
-				<List>
-					<ListItem modifiers={{ selected: true }}>
-						<ListItemGraphic>inbox</ListItemGraphic>
-						Inbox
-					</ListItem>
-					<ListItem>
-						<ListItemGraphic>star</ListItemGraphic>
-						Star
-					</ListItem>
-					<ListItem>
-						<ListItemGraphic>send</ListItemGraphic>
-						Sent Main
-					</ListItem>
-					<ListItem>
-						<ListItemGraphic>drafts</ListItemGraphic>
-						Drafts
-					</ListItem>
-				</List>
-			</DrawerContent>
-		</PermanentDrawer>
+		<Showcase.Demo>
+			<PermanentDrawer className={style['hero-drawer']}>
+				<DrawerHeader className={style['hero-drawer__header']}>
+					<DrawerHeaderContent>Header here</DrawerHeaderContent>
+				</DrawerHeader>
+				<DrawerContent>
+					<List>
+						<ListItem modifiers={{ selected: true }}>
+							<ListItemGraphic>inbox</ListItemGraphic>
+							Inbox
+						</ListItem>
+						<ListItem>
+							<ListItemGraphic>star</ListItemGraphic>
+							Star
+						</ListItem>
+						<ListItem>
+							<ListItemGraphic>send</ListItemGraphic>
+							Sent Main
+						</ListItem>
+						<ListItem>
+							<ListItemGraphic>drafts</ListItemGraphic>
+							Drafts
+						</ListItem>
+					</List>
+				</DrawerContent>
+			</PermanentDrawer>
+		</Showcase.Demo>
 	);
 }
 
