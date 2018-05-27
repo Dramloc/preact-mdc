@@ -10,13 +10,15 @@ import style from './style.scss';
 
 function LayoutGridHero() {
 	return (
-		<LayoutGrid className={style['demo-grid']}>
-			<LayoutGridInner>
-				<LayoutGridCell className={style['demo-cell']} />
-				<LayoutGridCell className={style['demo-cell']} />
-				<LayoutGridCell className={style['demo-cell']} />
-			</LayoutGridInner>
-		</LayoutGrid>
+		<Showcase.Demo>
+			<LayoutGrid className={style['demo-grid']}>
+				<LayoutGridInner>
+					<LayoutGridCell className={style['demo-cell']} />
+					<LayoutGridCell className={style['demo-cell']} />
+					<LayoutGridCell className={style['demo-cell']} />
+				</LayoutGridInner>
+			</LayoutGrid>
+		</Showcase.Demo>
 	);
 }
 
@@ -25,74 +27,82 @@ function LayoutGridDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Columns</Showcase.Section.Title>
-				<LayoutGrid className={style['demo-grid']}>
-					<LayoutGridInner>
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 6 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 3 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 2 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 1 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 3 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 1 }} />
-						<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 8 }} />
-					</LayoutGridInner>
-				</LayoutGrid>
+				<Showcase.Demo>
+					<LayoutGrid className={style['demo-grid']}>
+						<LayoutGridInner>
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 6 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 3 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 2 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 1 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 3 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 1 }} />
+							<LayoutGridCell className={style['demo-cell']} modifiers={{ span: 8 }} />
+						</LayoutGridInner>
+					</LayoutGrid>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Grid Left Alignment</Showcase.Section.Title>
 				<Showcase.Section.Subtitle>
 					This requires a max-width on the top-level grid element.
 				</Showcase.Section.Subtitle>
-				<LayoutGrid
-					modifiers={{ 'align-left': true }}
-					className={cx(style['demo-grid'], style['demo-grid--alignment'])}
-				>
-					<LayoutGridInner>
-						<LayoutGridCell className={style['demo-cell']} />
-						<LayoutGridCell className={style['demo-cell']} />
-						<LayoutGridCell className={style['demo-cell']} />
-					</LayoutGridInner>
-				</LayoutGrid>
+				<Showcase.Demo>
+					<LayoutGrid
+						modifiers={{ 'align-left': true }}
+						className={cx(style['demo-grid'], style['demo-grid--alignment'])}
+					>
+						<LayoutGridInner>
+							<LayoutGridCell className={style['demo-cell']} />
+							<LayoutGridCell className={style['demo-cell']} />
+							<LayoutGridCell className={style['demo-cell']} />
+						</LayoutGridInner>
+					</LayoutGrid>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Right Alignment</Showcase.Section.Title>
 				<Showcase.Section.Subtitle>
 					This requires a max-width on the top-level grid element.
 				</Showcase.Section.Subtitle>
-				<LayoutGrid
-					modifiers={{ 'align-right': true }}
-					className={cx(style['demo-grid'], style['demo-grid--alignment'])}
-				>
-					<LayoutGridInner>
-						<LayoutGridCell className={style['demo-cell']} />
-						<LayoutGridCell className={style['demo-cell']} />
-						<LayoutGridCell className={style['demo-cell']} />
-					</LayoutGridInner>
-				</LayoutGrid>
+				<Showcase.Demo>
+					<LayoutGrid
+						modifiers={{ 'align-right': true }}
+						className={cx(style['demo-grid'], style['demo-grid--alignment'])}
+					>
+						<LayoutGridInner>
+							<LayoutGridCell className={style['demo-cell']} />
+							<LayoutGridCell className={style['demo-cell']} />
+							<LayoutGridCell className={style['demo-cell']} />
+						</LayoutGridInner>
+					</LayoutGrid>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Cell Alignment</Showcase.Section.Title>
 				<Showcase.Section.Subtitle>
 					Cell alignment requires a cell height smaller than the inner height of the grid.
 				</Showcase.Section.Subtitle>
-				<LayoutGrid
-					modifiers={{ 'align-right': true }}
-					className={cx(style['demo-grid'], style['demo-grid--cell-alignment'])}
-				>
-					<LayoutGridInner className={style['demo-inner']}>
-						<LayoutGridCell
-							className={cx(style['demo-cell'], style['demo-cell--alignment'])}
-							modifiers={{ 'align-top': true }}
-						/>
-						<LayoutGridCell
-							className={cx(style['demo-cell'], style['demo-cell--alignment'])}
-							modifiers={{ 'align-middle': true }}
-						/>
-						<LayoutGridCell
-							className={cx(style['demo-cell'], style['demo-cell--alignment'])}
-							modifiers={{ 'align-bottom': true }}
-						/>
-					</LayoutGridInner>
-				</LayoutGrid>
+				<Showcase.Demo>
+					<LayoutGrid
+						modifiers={{ 'align-right': true }}
+						className={cx(style['demo-grid'], style['demo-grid--cell-alignment'])}
+					>
+						<LayoutGridInner className={style['demo-inner']}>
+							<LayoutGridCell
+								className={cx(style['demo-cell'], style['demo-cell--alignment'])}
+								modifiers={{ 'align-top': true }}
+							/>
+							<LayoutGridCell
+								className={cx(style['demo-cell'], style['demo-cell--alignment'])}
+								modifiers={{ 'align-middle': true }}
+							/>
+							<LayoutGridCell
+								className={cx(style['demo-cell'], style['demo-cell--alignment'])}
+								modifiers={{ 'align-bottom': true }}
+							/>
+						</LayoutGridInner>
+					</LayoutGrid>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
