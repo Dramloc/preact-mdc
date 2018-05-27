@@ -7,9 +7,11 @@ import Showcase from '../../components/showcase';
 
 function FabHero() {
 	return (
-		<Fab aria-label="Favorite">
-			<FabIcon>favorite_outline</FabIcon>
-		</Fab>
+		<Showcase.Demo>
+			<Fab aria-label="Favorite">
+				<FabIcon>favorite_outline</FabIcon>
+			</Fab>
+		</Showcase.Demo>
 	);
 }
 
@@ -18,15 +20,19 @@ function FabDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Standard Floating Action Button</Showcase.Section.Title>
-				<Fab aria-label="Favorite">
-					<FabIcon>favorite_outline</FabIcon>
-				</Fab>
+				<Showcase.Demo>
+					<Fab aria-label="Favorite">
+						<FabIcon>favorite_outline</FabIcon>
+					</Fab>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Mini Floating Action Button</Showcase.Section.Title>
-				<Fab modifiers={{ mini: true }} aria-label="Favorite">
-					<FabIcon>favorite_outline</FabIcon>
-				</Fab>
+				<Showcase.Demo>
+					<Fab modifiers={{ mini: true }} aria-label="Favorite">
+						<FabIcon>favorite_outline</FabIcon>
+					</Fab>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
