@@ -7,17 +7,19 @@ import Showcase from '../../components/showcase';
 
 function IconToggleHero() {
 	return (
-		<IconToggle
-			on={false}
-			data-toggle-on={{
-				label: 'Remove from favorites',
-				content: 'favorite'
-			}}
-			data-toggle-off={{
-				label: 'Add to favorites',
-				content: 'favorite_border'
-			}}
-		/>
+		<Showcase.Demo>
+			<IconToggle
+				on={false}
+				data-toggle-on={{
+					label: 'Remove from favorites',
+					content: 'favorite'
+				}}
+				data-toggle-off={{
+					label: 'Add to favorites',
+					content: 'favorite_border'
+				}}
+			/>
+		</Showcase.Demo>
 	);
 }
 
@@ -26,32 +28,36 @@ function IconToggleDemos() {
 		<div>
 			<Showcase.Section>
 				<Showcase.Section.Title>Pressed</Showcase.Section.Title>
-				<IconToggle
-					on
-					data-toggle-on={{
-						label: 'Remove from favorites',
-						content: 'favorite'
-					}}
-					data-toggle-off={{
-						label: 'Add to favorites',
-						content: 'favorite_border'
-					}}
-				/>
+				<Showcase.Demo>
+					<IconToggle
+						on
+						data-toggle-on={{
+							label: 'Remove from favorites',
+							content: 'favorite'
+						}}
+						data-toggle-off={{
+							label: 'Add to favorites',
+							content: 'favorite_border'
+						}}
+					/>
+				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>
 				<Showcase.Section.Title>Disabled</Showcase.Section.Title>
-				<IconToggle
-					on={false}
-					aria-disabled="true"
-					data-toggle-on={{
-						label: 'Remove from favorites',
-						content: 'favorite'
-					}}
-					data-toggle-off={{
-						label: 'Add to favorites',
-						content: 'favorite_border'
-					}}
-				/>
+				<Showcase.Demo>
+					<IconToggle
+						on={false}
+						aria-disabled="true"
+						data-toggle-on={{
+							label: 'Remove from favorites',
+							content: 'favorite'
+						}}
+						data-toggle-off={{
+							label: 'Add to favorites',
+							content: 'favorite_border'
+						}}
+					/>
+				</Showcase.Demo>
 			</Showcase.Section>
 		</div>
 	);
