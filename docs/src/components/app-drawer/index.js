@@ -47,11 +47,18 @@ const drawerItems = [
 	{ path: '/top-app-bar', text: 'Top App Bar' }
 ];
 
+function isWideScreen() {
+	if (typeof window === 'undefined') {
+		return true;
+	}
+	return document.body.offsetWidth > SCREEN_WIDTH_BREAKPOINT;
+}
+
 export default class AppDrawer extends Component {
 	debounceTimeout = 0;
 	state = {
-		open: document.body.offsetWidth > SCREEN_WIDTH_BREAKPOINT,
-		Drawer: document.body.offsetWidth > SCREEN_WIDTH_BREAKPOINT ? PersistentDrawer : TemporaryDrawer
+		open: isWideScreen(),
+		Drawer: isWideScreen() ? PersistentDrawer : TemporaryDrawer
 	};
 	computeDrawerWidth() {
 		return this.drawer.MDCComponent.drawer.offsetWidth;
@@ -61,18 +68,12 @@ export default class AppDrawer extends Component {
 		this.debounceTimeout = setTimeout(() => this.handleResize(), 50);
 	};
 	handleResize = () => {
-		if (
-			document.body.offsetWidth <= SCREEN_WIDTH_BREAKPOINT &&
-			this.state.Drawer === PersistentDrawer
-		) {
+		if (!isWideScreen() && this.state.Drawer === PersistentDrawer) {
 			setTimeout(() => {
 				this.setState({ Drawer: TemporaryDrawer });
 			}, 225);
 		}
-		else if (
-			document.body.offsetWidth > SCREEN_WIDTH_BREAKPOINT &&
-			this.state.Drawer === TemporaryDrawer
-		) {
+		else if (isWideScreen() && this.state.Drawer === TemporaryDrawer) {
 			setTimeout(() => {
 				this.setState({ Drawer: PersistentDrawer });
 			}, 225);
