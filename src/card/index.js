@@ -2,6 +2,7 @@ import { h } from 'preact';
 
 import { Base } from '../base';
 import { Button } from '../button';
+import { compose } from '../compose';
 import { IconToggle } from '../icon-toggle';
 import { RippledIcon } from '../icon';
 import { withDefaultProps } from '../with-default-props';
@@ -98,25 +99,21 @@ export function CardActionIcons(props) {
 	);
 }
 
-export function withCardAction(Element) {
-	return withDefaultProps(
-		withMaterialClasses(Element, {
-			name: 'mdc-card__action',
-			modifiers: ['button', 'icon']
-		}),
-		{
-			role: 'button',
-			tabindex: '0'
-		}
-	);
-}
+export const withCardAction = compose(
+	withDefaultProps({ role: 'button', tabindex: '0' }),
+	withMaterialClasses({ name: 'mdc-card__action', modifiers: ['button', 'icon'] })
+);
 
-export const CardActionButton = withDefaultProps(withCardAction(Button), {
-	modifiers: { button: true }
-});
-export const CardActionIconToggle = withDefaultProps(withCardAction(IconToggle), {
-	modifiers: { icon: true }
-});
-export const CardActionIcon = withDefaultProps(withCardAction(RippledIcon), {
-	modifiers: { icon: true }
-});
+export const withCardActionButton = compose(
+	withDefaultProps({ modifiers: { button: true } }),
+	withCardAction
+);
+
+export const withCardActionIcon = compose(
+	withDefaultProps({ modifiers: { icon: true } }),
+	withCardAction
+);
+
+export const CardActionButton = withCardActionButton(Button);
+export const CardActionIconToggle = withCardActionIcon(IconToggle);
+export const CardActionIcon = withCardActionIcon(RippledIcon);
