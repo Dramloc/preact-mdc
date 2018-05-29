@@ -6,6 +6,7 @@ import { Base } from '../base';
 import { Icon } from '../icon';
 import { withMaterialComponent } from '../with-material-component';
 
+// FIXME: deprecated (https://github.com/material-components/material-components-web/commit/119645e2c39d32fc7816505c2cebd57cd1ba845e)
 export function IconToggleBase(props) {
 	if (props[strings.DATA_TOGGLE_ON]) {
 		props[strings.DATA_TOGGLE_ON] = JSON.stringify(props[strings.DATA_TOGGLE_ON]);
