@@ -1,0 +1,18 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"modules": "commonjs"
+			}
+		]
+	],
+	"plugins": [
+		[
+			"transform-react-jsx",
+			{
+				"pragma": "h"
+			}
+		]
+	]
+}
