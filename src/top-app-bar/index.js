@@ -3,9 +3,8 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { strings } from '@material/top-app-bar/constants';
 
 import { Base } from '../base';
-import { Icon } from '../icon';
+import { IconButton } from '../icon-button';
 import { withMaterialComponent } from '../with-material-component';
-import { withUnboundedSurfaceRipple } from '../ripple';
 
 export function TopAppBarBase(props) {
 	return (
@@ -61,10 +60,10 @@ export function TopAppBarTitle(props) {
 	);
 }
 
-export function TopAppBarNavigationIconBase(props) {
+export function TopAppBarNavigationIcon(props) {
 	return (
 		<Base
-			element={Icon}
+			element={IconButton}
 			classes={{
 				name: 'mdc-top-app-bar__navigation-icon'
 			}}
@@ -75,12 +74,10 @@ export function TopAppBarNavigationIconBase(props) {
 	);
 }
 
-export const TopAppBarNavigationIcon = withUnboundedSurfaceRipple(TopAppBarNavigationIconBase);
-
-export function TopAppBarActionItemBase(props) {
+export function TopAppBarActionItem(props) {
 	return (
 		<Base
-			element={Icon}
+			element={IconButton}
 			classes={{
 				name: 'mdc-top-app-bar__action-item'
 			}}
@@ -90,5 +87,3 @@ export function TopAppBarActionItemBase(props) {
 		/>
 	);
 }
-
-export const TopAppBarActionItem = withUnboundedSurfaceRipple(TopAppBarNavigationIconBase);

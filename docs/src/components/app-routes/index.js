@@ -10,7 +10,7 @@ import DrawerShowcase from '../../routes/drawer';
 import ElevationShowcase from '../../routes/elevation';
 import FabShowcase from '../../routes/fab';
 import Home from '../../routes/home';
-import IconToggleShowcase from '../../routes/icon-toggle';
+import IconButtonShowcase from '../../routes/icon-button';
 import ImageListShowcase from '../../routes/image-list';
 import LayoutGridShowcase from '../../routes/layout-grid';
 import LinearProgressShowcase from '../../routes/linear-progress';
@@ -40,7 +40,7 @@ export default function AppRoutes() {
 			<DrawerShowcase path="/drawer" />
 			<ElevationShowcase path="/elevation" />
 			<FabShowcase path="/fab" />
-			<IconToggleShowcase path="/icon-toggle" />
+			<IconButtonShowcase path="/icon-button" />
 			<ImageListShowcase path="/image-list" />
 			<LayoutGridShowcase path="/layout-grid" />
 			<LinearProgressShowcase path="/linear-progress" />

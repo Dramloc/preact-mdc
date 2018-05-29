@@ -1,11 +1,17 @@
 import { h } from 'preact';
-import { List, ListItem, ListItemGraphic } from '../../../../src/list';
-import { PermanentDrawer, DrawerHeader, DrawerHeaderContent, DrawerContent } from '../../../../src/drawer';
-import { RippledIcon } from '../../../../src/icon';
 
 import '@material/drawer/mdc-drawer.scss';
+import '@material/icon-button/mdc-icon-button.scss';
 import '@material/list/mdc-list.scss';
 
+import { IconButton } from '../../../../src/icon-button';
+import { List, ListItem, ListItemGraphic } from '../../../../src/list';
+import {
+	PermanentDrawer,
+	DrawerHeader,
+	DrawerHeaderContent,
+	DrawerContent
+} from '../../../../src/drawer';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -54,7 +60,7 @@ function DrawerDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['drawer-frame']} src="/drawer/frame/temporary" />
@@ -68,7 +74,7 @@ function DrawerDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['drawer-frame']} src="/drawer/frame/persistent" />
@@ -82,7 +88,7 @@ function DrawerDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['drawer-frame']} src="/drawer/frame/permanent" />

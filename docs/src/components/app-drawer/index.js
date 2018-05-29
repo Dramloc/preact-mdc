@@ -29,7 +29,7 @@ const drawerItems = [
 	{ path: '/drawer', text: 'Drawer' },
 	{ path: '/elevation', text: 'Elevation' },
 	{ path: '/fab', text: 'FAB' },
-	{ path: '/icon-toggle', text: 'Icon Toggle' },
+	{ path: '/icon-button', text: 'Icon Button' },
 	{ path: '/image-list', text: 'Image List' },
 	{ path: '/layout-grid', text: 'Layout Grid' },
 	{ path: '/linear-progress', text: 'Linear Progress Indicator' },

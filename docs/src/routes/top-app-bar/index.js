@@ -1,5 +1,9 @@
 import { h } from 'preact';
-import { RippledIcon } from '../../../../src/icon';
+
+import '@material/icon-button/mdc-icon-button.scss';
+import '@material/top-app-bar/mdc-top-app-bar.scss';
+
+import { IconButton } from '../../../../src/icon-button';
 import {
 	TopAppBar,
 	TopAppBarRow,
@@ -8,9 +12,6 @@ import {
 	TopAppBarNavigationIcon,
 	TopAppBarActionItem
 } from '../../../../src/top-app-bar';
-
-import '@material/top-app-bar/mdc-top-app-bar.scss';
-
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -47,7 +48,7 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame" />
@@ -61,10 +62,9 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
-
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/fixed" />
 			</Showcase.Section>
 			<Showcase.Section>
@@ -76,7 +76,7 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/dense" />
@@ -90,7 +90,7 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/prominent" />
@@ -104,7 +104,7 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/short" />
@@ -118,7 +118,7 @@ function TopAppBarDemos() {
 						target="_blank"
 						rel="noopener"
 					>
-						<RippledIcon>open_in_new</RippledIcon>
+						<IconButton>open_in_new</IconButton>
 					</a>
 				</Showcase.Section.Title>
 				<iframe className={style['top-app-bar-frame']} src="/top-app-bar/frame/short-collapsed" />

@@ -13,7 +13,7 @@ import { Typography } from '../../../../src/typography';
 
 import '@material/button/mdc-button.scss';
 import '@material/card/mdc-card.scss';
-import '@material/icon-toggle/mdc-icon-toggle.scss';
+import '@material/icon-button/mdc-icon-button.scss';
 import '@material/shape/mdc-shape.scss';
 
 import Showcase from '../../components/showcase';
@@ -60,14 +60,10 @@ function DemoCardActions() {
 			<CardActionIcons>
 				<CardActionIconToggle
 					on={false}
-					data-toggle-on={{
-						content: 'favorite',
-						label: 'Remove from favorites'
-					}}
-					data-toggle-off={{
-						content: 'favorite_border',
-						label: 'Add to favorites'
-					}}
+					data-toggle-on-label="Remove from favorites"
+					data-toggle-on-content="favorite"
+					data-toggle-off-label="Add to favorites"
+					data-toggle-off-content="favorite_border"
 				/>
 				<CardActionIcon title="Share">share</CardActionIcon>
 				<CardActionIcon title="More options">more_vert</CardActionIcon>

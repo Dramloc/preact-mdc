@@ -1,8 +1,10 @@
 import { h } from 'preact';
-import { RippledIcon } from '../../../../src/icon';
-import { withSurfaceRipple } from '../../../../src/ripple';
 import cx from 'classnames';
 
+import '@material/icon-button/mdc-icon-button.scss';
+
+import { IconButton } from '../../../../src/icon-button';
+import { withSurfaceRipple } from '../../../../src/ripple';
 import Showcase from '../../components/showcase';
 
 import style from './style.scss';
@@ -33,7 +35,7 @@ function RippleDemos() {
 			<Showcase.Section>
 				<Showcase.Section.Title>Unbounded Ripple</Showcase.Section.Title>
 				<Showcase.Demo>
-					<RippledIcon className={style['ripple-demo-icon']}>favorite</RippledIcon>
+					<IconButton className={style['ripple-demo-icon']}>favorite</IconButton>
 				</Showcase.Demo>
 			</Showcase.Section>
 			<Showcase.Section>

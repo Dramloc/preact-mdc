@@ -171,6 +171,14 @@
     "@material/theme" "^0.35.0"
     "@material/typography" "^0.35.0"
 
+"@material/icon-button@^0.36.0-0":
+  version "0.36.0-0"
+  resolved "https://registry.yarnpkg.com/@material/icon-button/-/icon-button-0.36.0-0.tgz#99e84d124e16646dc479b931192280589ec7f9be"
+  dependencies:
+    "@material/base" "^0.35.0"
+    "@material/ripple" "^0.36.0-0"
+    "@material/theme" "^0.35.0"
+
 "@material/icon-toggle@^0.35.0":
   version "0.35.0"
   resolved "https://registry.yarnpkg.com/@material/icon-toggle/-/icon-toggle-0.35.0.tgz#9a208c1d379fb2e11db641bb0ecafd0446a36a4f"
@@ -228,6 +236,14 @@
   version "0.35.0"
   resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.35.0.tgz#3670e04e02dd6efc1ff0546e5129b4e96ec55f70"
   dependencies:
+    "@material/base" "^0.35.0"
+    "@material/theme" "^0.35.0"
+
+"@material/ripple@^0.36.0-0":
+  version "0.36.0-0"
+  resolved "https://registry.yarnpkg.com/@material/ripple/-/ripple-0.36.0-0.tgz#e333ae9c146d9b19e57670aa858d55cc7b8951f7"
+  dependencies:
+    "@material/animation" "^0.34.0"
     "@material/base" "^0.35.0"
     "@material/theme" "^0.35.0"
 

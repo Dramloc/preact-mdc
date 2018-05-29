@@ -3,8 +3,7 @@ import { h } from 'preact';
 import { Base } from '../base';
 import { Button } from '../button';
 import { compose } from '../compose';
-import { IconToggle } from '../icon-toggle';
-import { RippledIcon } from '../icon';
+import { IconButton, IconButtonToggle } from '../icon-button';
 import { withDefaultProps } from '../with-default-props';
 import { withMaterialClasses } from '../with-material-classes';
 import { withSurfaceRipple } from '../ripple';
@@ -115,5 +114,5 @@ export const withCardActionIcon = compose(
 );
 
 export const CardActionButton = withCardActionButton(Button);
-export const CardActionIconToggle = withCardActionIcon(IconToggle);
-export const CardActionIcon = withCardActionIcon(RippledIcon);
+export const CardActionIconToggle = withCardActionIcon(IconButtonToggle);
+export const CardActionIcon = withCardActionIcon(IconButton);
