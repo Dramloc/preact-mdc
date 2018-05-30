@@ -1,5 +1,5 @@
 {
-	"name": "@preact/mdc",
+	"name": "preact-mdc",
 	"version": "1.0.0",
 	"description": "Preact wrapper for Material Components Web",
 	"main": "index.js",
